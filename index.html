@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<!--
+  ==========================================================================
+  CONCEPT 1: "THE GALLERY" (DWR-Inspired Editorial Minimalism)
+  Design Intent: A serene, museum-grade editorial aesthetic prioritizing
+  negative space, hairline geometry, and refined serif typography. The palette
+  is crisp white-dominant with black type and understated hairline gold accents.
+  ==========================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VV Gallery — Concept 1: The Gallery (Editorial Minimal)</title>
+  <meta name="description" content="[Placeholder Meta Description: Editorial minimalist furniture gallery serving DeKalb, IL and surrounding regions.]">
+  
+  <!-- Google Fonts: Cormorant Garamond & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Brand Favicons -->
+  <link rel="icon" type="image/png" href="photos/favicon.png">
+  <link rel="shortcut icon" href="photos/favicon.ico">
+  <link rel="apple-touch-icon" href="photos/favicon.png">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SHOPIFY: Global Announcement Bar -->
+  <aside class="announcement-bar" role="region" aria-label="Store Announcement">
+    <div class="container announcement-inner">
+      <span class="announcement-text">Complimentary White-Glove Delivery on Orders Over $2,500 across DeKalb &amp; Kane County</span>
+      <a href="#showroom" class="announcement-link">Visit DeKalb Showroom &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- Navigation -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <div class="nav-left">
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+        <nav class="nav-desktop" aria-label="Primary Navigation">
+          <ul class="nav-list">
+            <li><a href="#curated-rooms" class="nav-link">Living</a></li>
+            <li><a href="#curated-rooms" class="nav-link">Dining</a></li>
+            <li><a href="#curated-rooms" class="nav-link">Bedroom</a></li>
+            <li><a href="#spotlight" class="nav-link">Design Studio</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Centered Editorial Brand Mark -->
+      <div class="brand-center">
+        <a href="#" class="brand-logo" id="brandLogoLink" aria-label="Vane Vintage Gallery Home">
+          <img src="photos/logo.jpg" alt="Vane Vintage Gallery" class="brand-logo-img">
+          <div class="brand-text-wrap" id="brandTextWrap">
+            <span class="brand-title">VANE VINTAGE GALLERY</span>
+            <span class="brand-subtitle">DEKALB &bull; ILLINOIS</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Right Utility Actions -->
+      <div class="nav-right">
+        <a href="#showroom" class="nav-action-link">Showroom Hours</a>
+        <!-- SHOPIFY: Search / Cart Trigger -->
+        <button class="icon-btn" aria-label="Search Catalog">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <button class="icon-btn" aria-label="Cart Summary - 0 items">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-content">
+      <div class="drawer-top-row">
+        <div class="drawer-brand-lockup">
+          <img src="photos/logo.jpg" alt="Vane Vintage Gallery" class="drawer-logo-img">
+          <span class="drawer-brand-text">VANE VINTAGE GALLERY</span>
+        </div>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+      </div>
+      <nav class="drawer-nav">
+        <ul>
+          <li><a href="#curated-rooms">Living Collection</a></li>
+          <li><a href="#curated-rooms">Dining &amp; Entertaining</a></li>
+          <li><a href="#curated-rooms">Bedroom Sanctuaries</a></li>
+          <li><a href="#spotlight">Custom Upholstery</a></li>
+          <li><a href="#collection-grid">New Acquisitions</a></li>
+          <li><a href="#showroom">DeKalb Showroom &amp; Consultation</a></li>
+        </ul>
+      </nav>
+      <div class="drawer-footer">
+        <p class="drawer-hours">Showroom: Mon&ndash;Fri 9:30am&ndash;6pm | Sat 10am&ndash;5pm | Sun Closed</p>
+        <p class="drawer-contact">1586 Barber Greene Rd, DeKalb, IL 60115 | <a href="tel:8473060959">(847) 306-0959</a></p>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- HERO SECTION: Full-Bleed Editorial Minimalist -->
+    <section class="hero-editorial" aria-labelledby="hero-title">
+      <div class="hero-media-wrapper">
+        <img src="photos/furniture/hero-living.jpg" alt="Architectural Minimalist Living Room Interior by VV Gallery" class="hero-img">
+        <div class="media-overlay"></div>
+      </div>
+      <div class="container hero-content-container">
+        <div class="hero-text-box">
+          <p class="eyebrow">The Autumn / Winter Edition</p>
+          <h1 id="hero-title" class="hero-title">Curated Living Spaces Defined by Form and Material</h1>
+          <p class="hero-description">Explore archival reproductions, hand-finished hardwoods, and architectural silhouettes curated exclusively for the modern Midwest residence.</p>
+          <div class="hero-cta-group">
+            <a href="#collection-grid" class="btn-primary">Explore The Collection</a>
+            <a href="#showroom" class="btn-hairline">Book Showroom Walkthrough</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURATED BY ROOM: Hairline Editorial Grid -->
+    <section class="section curated-rooms" id="curated-rooms" aria-labelledby="rooms-heading">
+      <div class="container">
+        <div class="section-header-editorial">
+          <div class="section-title-wrap">
+            <span class="section-num">01 / Curated Spaces</span>
+            <h2 id="rooms-heading" class="section-heading">Explore by Environment</h2>
+          </div>
+          <p class="section-lead">Every piece is proportioned for enduring residential architecture, available to view in our DeKalb gallery floor.</p>
+        </div>
+
+        <div class="rooms-grid">
+          <!-- Room Card 1: Living -->
+          <article class="room-card">
+            <div class="room-media-box">
+              <img src="photos/furniture/room-living.jpg" alt="The Living Room Collection" class="room-img" loading="lazy">
+            </div>
+            <div class="room-info">
+              <h3 class="room-title">The Living Room</h3>
+              <p class="room-meta">Sectionals, Club Chairs &amp; Sculptural Coffee Tables</p>
+              <a href="#collection-grid" class="room-link">View Series &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Room Card 2: Dining -->
+          <article class="room-card">
+            <div class="room-media-box">
+              <img src="photos/furniture/room-dining.jpg" alt="Dining &amp; Entertaining Collection" class="room-img" loading="lazy">
+            </div>
+            <div class="room-info">
+              <h3 class="room-title">Dining &amp; Entertaining</h3>
+              <p class="room-meta">Solid Walnut Tables, Velvet Dining Chairs &amp; Credenzas</p>
+              <a href="#collection-grid" class="room-link">View Series &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Room Card 3: Bedroom -->
+          <article class="room-card">
+            <div class="room-media-box">
+              <img src="photos/furniture/room-bedroom.jpg" alt="The Sleeping Sanctuary Collection" class="room-img" loading="lazy">
+            </div>
+            <div class="room-info">
+              <h3 class="room-title">The Sleeping Sanctuary</h3>
+              <p class="room-meta">Low-Profile Platform Beds, Casegoods &amp; Nightstands</p>
+              <a href="#collection-grid" class="room-link">View Series &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Room Card 4: Lighting & Objects -->
+          <article class="room-card">
+            <div class="room-media-box">
+              <img src="photos/furniture/room-lighting.jpg" alt="Lighting &amp; Objects Collection" class="room-img" loading="lazy">
+            </div>
+            <div class="room-info">
+              <h3 class="room-title">Lighting &amp; Objects</h3>
+              <p class="room-meta">Brushed Brass Pendants, Floor Sculptures &amp; Accent Rugs</p>
+              <a href="#collection-grid" class="room-link">View Series &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SINGLE FEATURED COLLECTION SPOTLIGHT -->
+    <section class="section spotlight-section" id="spotlight" aria-labelledby="spotlight-title">
+      <div class="container">
+        <div class="spotlight-frame">
+          <div class="spotlight-media-col">
+            <div class="spotlight-media-wrapper">
+              <img src="photos/furniture/spotlight-chair.jpg" alt="The Prairie Lounge Series Armchair" class="spotlight-img" loading="lazy">
+              <div class="hotspot-indicator" style="top: 60%; left: 51%;" title="Product Detail">
+                <span class="hotspot-pulse"></span>
+                <div class="hotspot-card">
+                  <span class="hotspot-item-name">The Prairie Lounge Chair</span>
+                  <span class="hotspot-item-price">$1,890</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="spotlight-content-col">
+            <div class="spotlight-inner-text">
+              <div class="spotlight-badge-row">
+                <span class="spotlight-badge">Showroom Spotlight</span>
+                <img src="photos/logo.jpg" alt="Vane Vintage Gallery Emblem" class="spotlight-seal-img">
+              </div>
+              <h2 id="spotlight-title" class="spotlight-heading">The Prairie Lounge Series</h2>
+              <p class="spotlight-story">Engineered with FSC-certified American walnut and full-grain aniline upholstery, this series celebrates uncompromised Midwestern craftsmanship with clean European proportions.</p>
+              
+              <dl class="spotlight-specs">
+                <div class="spec-item">
+                  <dt>Frame Construction</dt>
+                  <dd>Mortise &amp; Tenon Solid Walnut</dd>
+                </div>
+                <div class="spec-item">
+                  <dt>Lead Time / Availability</dt>
+                  <dd>In Stock for Immediate DeKalb Delivery</dd>
+                </div>
+                <div class="spec-item">
+                  <dt>Customization</dt>
+                  <dd>24 Heritage Leather &amp; Boucl&eacute; Options</dd>
+                </div>
+              </dl>
+
+              <div class="spotlight-actions">
+                <button class="btn-primary" type="button">Inquire About Custom Finishes</button>
+                <a href="#showroom" class="link-editorial">Test Sit in Our DeKalb Gallery &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT CATALOG HIGHLIGHTS: Hairline Bordered Matrix -->
+    <section class="section collection-matrix" id="collection-grid" aria-labelledby="collection-heading">
+      <div class="container">
+        <div class="matrix-header">
+          <div>
+            <span class="section-num">02 / Selected Works</span>
+            <h2 id="collection-heading" class="section-heading">Curated Gallery Pieces</h2>
+          </div>
+          <div class="filter-pills" role="tablist" aria-label="Filter Collection">
+            <button class="pill active" role="tab" aria-selected="true">All Selections</button>
+            <button class="pill" role="tab" aria-selected="false">Seating</button>
+            <button class="pill" role="tab" aria-selected="false">Tables</button>
+            <button class="pill" role="tab" aria-selected="false">Storage</button>
+          </div>
+        </div>
+
+        <div class="matrix-grid">
+          <!-- Product 1: Credenza -->
+          <article class="product-item">
+            <div class="product-media-wrap">
+              <img src="photos/furniture/product-credenza.jpg" alt="Sculptural Oak Credenza" class="product-img" loading="lazy">
+              <span class="product-status-tag">In-Store Exclusive</span>
+            </div>
+            <div class="product-details">
+              <div class="product-top-row">
+                <h3 class="product-name">Sculptural Oak Credenza</h3>
+                <span class="product-price">$2,450</span>
+              </div>
+              <p class="product-sub">Solid Oak &bull; Brass Pulls &bull; Studio White</p>
+              <div class="product-actions">
+                <button class="btn-subtle-add" type="button" aria-label="Add to Bag">Add to Collection</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 2: Armchair -->
+          <article class="product-item">
+            <div class="product-media-wrap">
+              <img src="photos/furniture/product-armchair.jpg" alt="Nordic Minimalist Armchair" class="product-img" loading="lazy">
+            </div>
+            <div class="product-details">
+              <div class="product-top-row">
+                <h3 class="product-name">Nordic Minimalist Armchair</h3>
+                <span class="product-price">$1,120</span>
+              </div>
+              <p class="product-sub">Textured Cream Boucl&eacute; &bull; Smoked Ash</p>
+              <div class="product-actions">
+                <button class="btn-subtle-add" type="button" aria-label="Add to Bag">Add to Collection</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 3: Table -->
+          <article class="product-item">
+            <div class="product-media-wrap">
+              <img src="photos/furniture/product-table.jpg" alt="Round Pedestal Dining Table" class="product-img" loading="lazy">
+            </div>
+            <div class="product-details">
+              <div class="product-top-row">
+                <h3 class="product-name">Pedestal Dining Table</h3>
+                <span class="product-price">$2,850</span>
+              </div>
+              <p class="product-sub">Cast Aluminum Base &bull; Satin White Top</p>
+              <div class="product-actions">
+                <button class="btn-subtle-add" type="button" aria-label="Add to Bag">Add to Collection</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 4: Lamp -->
+          <article class="product-item">
+            <div class="product-media-wrap">
+              <img src="photos/furniture/product-lamp.jpg" alt="Architectural Floor Lamp" class="product-img" loading="lazy">
+              <span class="product-status-tag">Quick Ship DeKalb</span>
+            </div>
+            <div class="product-details">
+              <div class="product-top-row">
+                <h3 class="product-name">Architectural Floor Lamp</h3>
+                <span class="product-price">$680</span>
+              </div>
+              <p class="product-sub">Cast Iron &bull; Matte Charcoal Luminaire</p>
+              <div class="product-actions">
+                <button class="btn-subtle-add" type="button" aria-label="Add to Bag">Add to Collection</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOOGLE REVIEWS / CLIENT TESTIMONIALS SECTION -->
+    <section class="section reviews-section" id="reviews" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="section-header-editorial">
+          <div class="section-title-wrap">
+            <span class="section-num">03 / Verified Client Feedback</span>
+            <h2 id="reviews-heading" class="section-heading">Loved by Our Community</h2>
+          </div>
+          <div class="google-rating-summary">
+            <div class="rating-stars-badge">
+              <span class="rating-num">5.0</span>
+              <span class="stars">★★★★★</span>
+            </div>
+            <div class="rating-meta">
+              <span class="rating-count">Based on 6 Google Reviews</span>
+              <a href="https://www.google.com/search?q=vv+gallery+dekalb" target="_blank" rel="noopener noreferrer" class="google-review-link">View all reviews on Google &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Review 1: Esperanza -->
+          <article class="review-card">
+            <div class="review-card-top">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-badge">Verified Customer</span>
+            </div>
+            <p class="review-text">&ldquo;If you're looking for high-quality furniture at amazing prices, this is the place to go! My family and I purchased a dining room set, a recliner, and a couch, and we couldn't be happier with our experience.&rdquo;</p>
+            <div class="review-author-row">
+              <div class="author-info">
+                <h3 class="author-name">Esperanza</h3>
+                <span class="author-purchase">Purchased Dining Room Set, Recliner &amp; Couch</span>
+              </div>
+              <span class="google-pill">Google Review</span>
+            </div>
+          </article>
+
+          <!-- Review 2: Ty Loiseau -->
+          <article class="review-card">
+            <div class="review-card-top">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-badge">Verified Customer</span>
+            </div>
+            <p class="review-text">&ldquo;Bought new couches recently from VV Gallery and couldn’t have been more happy with the experience. Great prices and service. Highly recommend working with them on your next furniture needs!&rdquo;</p>
+            <div class="review-author-row">
+              <div class="author-info">
+                <h3 class="author-name">Ty Loiseau</h3>
+                <span class="author-purchase">Purchased Custom Couches</span>
+              </div>
+              <span class="google-pill">Google Review</span>
+            </div>
+          </article>
+
+          <!-- Review 3: Erika Sanchez -->
+          <article class="review-card">
+            <div class="review-card-top">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-badge">Verified Customer</span>
+            </div>
+            <p class="review-text">&ldquo;I'm so happy with this furniture!! And the service was excellent! I'm so happy, I never imagined having such support throughout the entire process!! My family and I bought a dining set, a massage chair, and a sofa. I highly recommend this.&rdquo;</p>
+            <div class="review-author-row">
+              <div class="author-info">
+                <h3 class="author-name">Erika Sanchez</h3>
+                <span class="author-purchase">Purchased Dining Set, Massage Chair &amp; Sofa</span>
+              </div>
+              <span class="google-pill">Google Review</span>
+            </div>
+          </article>
+
+          <!-- Review 4: Lau Chavez -->
+          <article class="review-card">
+            <div class="review-card-top">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-badge">Verified Customer</span>
+            </div>
+            <p class="review-text">&ldquo;One of the best experiences, without a doubt. You'll find the best furniture with them; they make your home look more beautiful and elegant. Affordable prices. 100% recommended.&rdquo;</p>
+            <div class="review-author-row">
+              <div class="author-info">
+                <h3 class="author-name">Lau Chavez</h3>
+                <span class="author-purchase">Purchased Home Living Collection</span>
+              </div>
+              <span class="google-pill">Google Review</span>
+            </div>
+          </article>
+
+          <!-- Review 5: Guille Garcia -->
+          <article class="review-card">
+            <div class="review-card-top">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-badge">Verified Customer</span>
+            </div>
+            <p class="review-text">&ldquo;The furniture is beautiful and very good quality. I love them and especially the bedrooms.&rdquo;</p>
+            <div class="review-author-row">
+              <div class="author-info">
+                <h3 class="author-name">Guille Garcia</h3>
+                <span class="author-purchase">Purchased Bedroom Suite</span>
+              </div>
+              <span class="google-pill">Google Review</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCAL SHOWROOM / VISIT US STRIP (Essential DeKalb, IL Retail Context) -->
+    <section class="section showroom-strip" id="showroom" aria-labelledby="showroom-title">
+      <div class="container">
+        <div class="showroom-banner">
+          <div class="showroom-text-col">
+            <span class="section-num">04 / DeKalb Flagship</span>
+            <h2 id="showroom-title" class="showroom-heading">Experience Quality &amp; Comfort in Person</h2>
+            <p class="showroom-desc">Visit our DeKalb showroom to explore curated living, dining, and bedroom environments. Touch the fabrics, test the comfort, and consult with our team for personalized home recommendations.</p>
+            
+            <div class="showroom-details-grid">
+              <div class="info-block">
+                <h4>Showroom Location</h4>
+                <address>1586 Barber Greene Rd<br>DeKalb, IL 60115<br><a href="https://www.google.com/maps/dir/?api=1&destination=1586+Barber+Greene+Rd+DeKalb+IL+60115" target="_blank" rel="noopener noreferrer" class="directions-sublink">Get Driving Directions &rarr;</a></address>
+              </div>
+              <div class="info-block">
+                <h4>Store Hours</h4>
+                <p>Monday &ndash; Friday: 9:30 AM &ndash; 6:00 PM<br>Saturday: 10:00 AM &ndash; 5:00 PM<br>Sunday: Closed</p>
+              </div>
+              <div class="info-block">
+                <h4>Direct Line &amp; Delivery</h4>
+                <p>Phone: <a href="tel:8473060959" class="phone-link">(847) 306-0959</a><br>Delivery across DeKalb, Sycamore, Kane County &amp; surrounding areas.</p>
+              </div>
+            </div>
+
+            <div class="showroom-cta-row">
+              <a href="tel:8473060959" class="btn-primary">Call Showroom: (847) 306-0959</a>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=1586+Barber+Greene+Rd+DeKalb+IL+60115" target="_blank" rel="noopener noreferrer" class="btn-hairline">Get Directions &rarr;</a>
+            </div>
+          </div>
+
+          <div class="showroom-map-col">
+            <div class="map-frame" role="region" aria-label="VV Gallery Location Map">
+              <iframe 
+                src="https://maps.google.com/maps?q=1586+Barber+Greene+Rd,+DeKalb,+IL+60115&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="VV Gallery Showroom Map">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Editorial Hairline Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-row">
+        <div class="footer-col brand-col">
+          <div class="footer-brand-lockup">
+            <img src="photos/logo.jpg" alt="Vane Vintage Gallery" class="footer-logo-img">
+            <span class="footer-logo">VANE VINTAGE GALLERY</span>
+          </div>
+          <p class="footer-tagline">An editorial furniture studio providing thoughtful home furnishings and architectural design counsel to northern Illinois.</p>
+          <div class="footer-gold-accent"></div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Curations</h4>
+          <ul class="footer-links">
+            <li><a href="#curated-rooms">Living Collection</a></li>
+            <li><a href="#curated-rooms">Dining Architecture</a></li>
+            <li><a href="#curated-rooms">Bedroom Suites</a></li>
+            <li><a href="#spotlight">Made-To-Order Upholstery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Client Care</h4>
+          <ul class="footer-links">
+            <li><a href="#showroom">DeKalb White-Glove Delivery</a></li>
+            <li><a href="#showroom">In-Home Design Consultation</a></li>
+            <li><a href="#showroom">Showroom Private Appointments</a></li>
+            <li><a href="#showroom">Financing &amp; Material Care</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col newsletter-col">
+          <h4 class="footer-col-title">Gallery Journal</h4>
+          <p class="newsletter-sub">Receive seasonal catalogs and invitation-only preview nights at our DeKalb showroom floor.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Vane Vintage Gallery Journal.');">
+            <label for="email-input" class="sr-only">Email Address</label>
+            <input type="email" id="email-input" placeholder="Enter your email" required class="newsletter-input">
+            <button type="submit" class="newsletter-submit" aria-label="Subscribe">&rarr;</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <p class="copyright">&copy; 2026 Vane Vintage Gallery. All Rights Reserved. DeKalb, Illinois.</p>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility Statement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
