@@ -1769,7 +1769,7 @@ button {
     width: 100%;
   }
 
-  .nav-desktop, .nav-action-link {
+  .nav-desktop, .nav-action-link, .nav-right .nav-link {
     display: none !important;
   }
 
