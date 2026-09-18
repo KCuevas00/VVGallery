@@ -59,23 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Shopping Cart "Coming Soon" Toast Feedback
-  const cartBtns = document.querySelectorAll('.header-cart-btn');
-  cartBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const wrapper = btn.closest('.header-cart-wrapper');
-      const toast = wrapper ? wrapper.querySelector('.cart-toast') : null;
-      if (toast) {
-        toast.classList.add('show');
-        clearTimeout(btn._toastTimer);
-        btn._toastTimer = setTimeout(() => {
-          toast.classList.remove('show');
-        }, 2200);
-      }
-    });
-  });
-
   // Filter Pills (Interactive Catalog Filtering)
   const pills = document.querySelectorAll('.filter-pills .pill');
   const productItems = document.querySelectorAll('.matrix-grid .product-item');

@@ -349,97 +349,43 @@ body.drawer-open .site-header {
   color: var(--color-gold-accent);
 }
 
-.header-cart-wrapper {
-  position: relative;
+/* Modern Grayed-Out Coming Soon Cart Lockup */
+.nav-cart-status {
   display: inline-flex;
   align-items: center;
-}
-
-.header-cart-btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  padding: 0;
-  border-radius: 50%;
-  background: var(--color-bg-subtle);
-  border: 1px solid var(--color-border-hairline);
-  color: var(--color-text-main);
-  cursor: pointer;
-  transition: var(--transition-smooth);
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 7px 14px;
+  border-radius: 24px;
+  color: #8c8c8e;
+  opacity: 0.68;
+  cursor: default;
+  user-select: none;
   flex-shrink: 0;
+  transition: var(--transition-smooth);
 }
 
-.header-cart-btn svg {
-  color: var(--color-text-main);
-  transition: color 0.25s ease;
+.nav-cart-status:hover {
+  opacity: 0.82;
+  background: rgba(0, 0, 0, 0.05);
 }
 
-.header-cart-btn:hover {
-  background: #ffffff;
-  border-color: var(--color-gold-accent);
-}
-
-.header-cart-btn:hover svg {
-  color: var(--color-gold-accent);
-}
-
-.cart-badge-text {
-  position: absolute;
-  top: -6px;
-  right: -8px;
-  background: var(--color-gold-accent);
-  color: #ffffff;
-  font-size: 0.52rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+.cart-status-text {
+  font-size: 0.70rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  padding: 2px 6px;
-  border-radius: 10px;
+  color: #8c8c8e;
   white-space: nowrap;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-  line-height: 1.1;
-  pointer-events: none;
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  line-height: 1;
 }
 
-.cart-toast {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  background: var(--color-bg-dark);
-  color: #ffffff;
-  font-size: 0.72rem;
-  letter-spacing: 0.03em;
-  padding: 6px 12px;
-  border-radius: 4px;
-  white-space: nowrap;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-4px);
-  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
-  z-index: 1002;
-  pointer-events: none;
-}
-
-.cart-toast::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  right: 14px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 5px solid var(--color-bg-dark);
-}
-
-.header-cart-wrapper:hover .cart-toast,
-.cart-toast.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+.cart-status-icon {
+  color: #8c8c8e;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
 }
 
 .icon-btn {
@@ -2083,11 +2029,21 @@ body.drawer-open .site-header {
     justify-content: flex-end;
     margin-left: auto;
     gap: 8px;
+    padding-right: 8px;
   }
 
-  .header-cart-btn {
-    width: 40px;
-    height: 40px;
+  .nav-cart-status {
+    padding: 6px 11px;
+    gap: 6px;
+  }
+
+  .cart-status-text {
+    font-size: 0.66rem;
+  }
+
+  .cart-status-icon {
+    width: 15px;
+    height: 15px;
   }
 
   .section {
@@ -2168,10 +2124,32 @@ body.drawer-open .site-header {
   /* Header spacing */
   .header-inner {
     gap: 8px;
+    padding: 0 4px;
+    box-sizing: border-box;
+  }
+
+  .brand-subtitle {
+    display: none !important;
   }
 
   .nav-right {
     gap: 6px;
+    padding-right: 12px;
+  }
+
+  .nav-cart-status {
+    padding: 5px 9px;
+    gap: 5px;
+  }
+
+  .cart-status-text {
+    font-size: 0.60rem;
+    letter-spacing: 0.05em;
+  }
+
+  .cart-status-icon {
+    width: 14px;
+    height: 14px;
   }
 
   .icon-btn {
@@ -2456,25 +2434,24 @@ body.drawer-open .site-header {
   }
 
   .nav-right {
-    gap: 6px;
+    gap: 4px;
     margin-left: auto;
+    padding-right: 14px;
   }
 
-  .header-cart-btn {
-    width: 36px;
-    height: 36px;
+  .nav-cart-status {
+    padding: 4px 7px;
+    gap: 4px;
   }
 
-  .header-cart-btn svg {
-    width: 17px;
-    height: 17px;
+  .cart-status-text {
+    font-size: 0.55rem;
+    letter-spacing: 0.04em;
   }
 
-  .cart-badge-text {
-    font-size: 0.46rem;
-    padding: 1px 4px;
-    right: -5px;
-    top: -5px;
+  .cart-status-icon {
+    width: 13px;
+    height: 13px;
   }
 
   .icon-btn {
