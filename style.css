@@ -141,6 +141,21 @@ button {
   color: #ffffff;
 }
 
+/* Announcement bar becomes solid white when mobile drawer is open */
+body.drawer-open .announcement-bar {
+  background-color: #ffffff !important;
+  color: var(--color-text-main) !important;
+  border-bottom: 1px solid var(--color-border-hairline) !important;
+}
+
+body.drawer-open .announcement-bar .announcement-text {
+  color: var(--color-text-main) !important;
+}
+
+body.drawer-open .announcement-bar .announcement-link {
+  color: var(--color-gold-accent) !important;
+}
+
 /* Base Site Header: Transparent at Top (Northern Illinois Cleaning style) */
 .site-header {
   position: -webkit-sticky;
@@ -353,6 +368,7 @@ body.drawer-open .site-header {
 .nav-cart-status {
   display: inline-flex;
   align-items: center;
+  flex-direction: row-reverse;
   gap: 8px;
   background: rgba(0, 0, 0, 0.03);
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -378,7 +394,12 @@ body.drawer-open .site-header {
   text-transform: uppercase;
   color: #8c8c8e;
   white-space: nowrap;
-  line-height: 1;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.cart-break br {
+  display: none;
 }
 
 .cart-status-icon {
@@ -2138,18 +2159,28 @@ body.drawer-open .site-header {
   }
 
   .nav-cart-status {
-    padding: 5px 9px;
-    gap: 5px;
-  }
-
-  .cart-status-text {
-    font-size: 0.60rem;
-    letter-spacing: 0.05em;
+    flex-direction: column;
+    padding: 4px 6px;
+    gap: 2px;
+    border-radius: 6px;
+    min-width: 32px;
   }
 
   .cart-status-icon {
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .cart-status-text {
+    font-size: 0.46rem;
+    letter-spacing: 0.04em;
+    line-height: 1.05;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .cart-break br {
+    display: block;
   }
 
   .icon-btn {
@@ -2440,18 +2471,27 @@ body.drawer-open .site-header {
   }
 
   .nav-cart-status {
-    padding: 4px 7px;
-    gap: 4px;
-  }
-
-  .cart-status-text {
-    font-size: 0.55rem;
-    letter-spacing: 0.04em;
+    flex-direction: column;
+    padding: 3px 5px;
+    gap: 2px;
+    min-width: 30px;
   }
 
   .cart-status-icon {
-    width: 13px;
-    height: 13px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .cart-status-text {
+    font-size: 0.44rem;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .cart-break br {
+    display: block;
   }
 
   .icon-btn {
