@@ -349,28 +349,97 @@ body.drawer-open .site-header {
   color: var(--color-gold-accent);
 }
 
-.header-phone-btn {
+.header-cart-wrapper {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+}
+
+.header-cart-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border-radius: 50%;
   background: var(--color-bg-subtle);
   border: 1px solid var(--color-border-hairline);
-  padding: 8px 14px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  font-weight: 600;
   color: var(--color-text-main);
+  cursor: pointer;
   transition: var(--transition-smooth);
+  flex-shrink: 0;
 }
 
-.header-phone-btn:hover {
-  border-color: var(--color-gold-accent);
-  color: var(--color-gold-accent);
+.header-cart-btn svg {
+  color: var(--color-text-main);
+  transition: color 0.25s ease;
+}
+
+.header-cart-btn:hover {
   background: #ffffff;
+  border-color: var(--color-gold-accent);
 }
 
-.header-phone-btn svg {
+.header-cart-btn:hover svg {
   color: var(--color-gold-accent);
+}
+
+.cart-badge-text {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: var(--color-gold-accent);
+  color: #ffffff;
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 10px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  line-height: 1.1;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.cart-toast {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--color-bg-dark);
+  color: #ffffff;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  padding: 6px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+  z-index: 1002;
+  pointer-events: none;
+}
+
+.cart-toast::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: 14px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid var(--color-bg-dark);
+}
+
+.header-cart-wrapper:hover .cart-toast,
+.cart-toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .icon-btn {
@@ -2000,7 +2069,10 @@ body.drawer-open .site-header {
 
   .brand-subtitle {
     font-size: clamp(0.48rem, 1.5vw, 0.54rem);
-    letter-spacing: 0.2em;
+    letter-spacing: 0.12em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .nav-right {
@@ -2009,30 +2081,13 @@ body.drawer-open .site-header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin-left: auto;
     gap: 8px;
   }
 
-  .header-phone-btn span {
-    display: none !important;
-  }
-
-  .header-phone-btn {
+  .header-cart-btn {
     width: 40px;
     height: 40px;
-    padding: 0;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-bg-subtle);
-    border: 1px solid var(--color-border-hairline);
-    flex-shrink: 0;
-  }
-
-  .header-phone-btn svg {
-    width: 18px;
-    height: 18px;
-    color: var(--color-gold-accent);
   }
 
   .section {
@@ -2397,30 +2452,29 @@ body.drawer-open .site-header {
   }
 
   .brand-subtitle {
-    font-size: 0.46rem;
-    letter-spacing: 0.16em;
-    margin-top: 2px;
+    display: none !important;
   }
 
   .nav-right {
-    gap: 4px;
+    gap: 6px;
+    margin-left: auto;
   }
 
-  .header-phone-btn span {
-    display: none;
-  }
-
-  .header-phone-btn {
+  .header-cart-btn {
     width: 36px;
     height: 36px;
-    padding: 0;
-    justify-content: center;
-    border-radius: 50%;
   }
 
-  .header-phone-btn svg {
+  .header-cart-btn svg {
     width: 17px;
     height: 17px;
+  }
+
+  .cart-badge-text {
+    font-size: 0.46rem;
+    padding: 1px 4px;
+    right: -5px;
+    top: -5px;
   }
 
   .icon-btn {
