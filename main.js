@@ -87,14 +87,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Sticky Header elevation on scroll
-  const header = document.getElementById('header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.04)';
+  // Transparent-to-Solid Sticky Header on scroll (Northern Illinois Cleaning style)
+  const header = document.getElementById('header') || document.querySelector('.site-header');
+  let ticking = false;
+
+  function updateNavbarScroll() {
+    if (!header) return;
+    const scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    if (scrollPos > 20) {
+      header.classList.add('scrolled');
     } else {
-      header.style.boxShadow = 'none';
+      header.classList.remove('scrolled');
     }
-  }, { passive: true });
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(updateNavbarScroll);
+      ticking = true;
+    }
+  }
+
+  if (header) {
+    updateNavbarScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    window.addEventListener('pageshow', updateNavbarScroll);
+  }
 });
 
