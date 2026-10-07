@@ -59,33 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Filter Pills (Interactive Catalog Filtering)
-  const pills = document.querySelectorAll('.filter-pills .pill');
-  const productItems = document.querySelectorAll('.matrix-grid .product-item');
 
-  if (pills.length && productItems.length) {
-    pills.forEach(pill => {
-      pill.addEventListener('click', () => {
-        const filter = pill.getAttribute('data-filter') || 'all';
-
-        pills.forEach(p => {
-          p.classList.remove('active');
-          p.setAttribute('aria-selected', 'false');
-        });
-        pill.classList.add('active');
-        pill.setAttribute('aria-selected', 'true');
-
-        productItems.forEach(item => {
-          const category = item.getAttribute('data-category');
-          if (filter === 'all' || category === filter) {
-            item.classList.remove('is-hidden');
-          } else {
-            item.classList.add('is-hidden');
-          }
-        });
-      });
-    });
-  }
 
   // Transparent-to-Solid Sticky Header on scroll (Northern Illinois Cleaning style)
   const header = document.getElementById('header') || document.querySelector('.site-header');
