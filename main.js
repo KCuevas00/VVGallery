@@ -169,8 +169,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Click-to-zoom on all product card media containers (.product-media-wrap)
   document.querySelectorAll('.product-media-wrap').forEach(wrap => {
     wrap.addEventListener('click', (e) => {
-      // If user clicked a direct link, swatch dot, or slider control, don't trigger lightbox zoom
-      if (e.target.closest('a') || e.target.closest('.color-swatch-dots') || e.target.closest('.card-slider-controls')) return;
+      // If user clicked a direct link, swatch dot, or side toggle arrow, don't trigger lightbox zoom
+      if (e.target.closest('a') || e.target.closest('.color-swatch-dots') || e.target.closest('.side-toggle-arrow')) return;
 
       // Find the visible active image inside the wrap (primary or secondary)
       const imgs = wrap.querySelectorAll('img');
@@ -222,39 +222,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Card Slider Arrow Controls & Swipe (e.g. Two-Tone Bedroom Set & Fridge)
-  document.querySelectorAll('.card-slider-controls').forEach(controls => {
-    const wrap = controls.closest('.product-media-wrap');
+  // 4. Right Side Toggle Arrow (e.g. Fridge View on Two-Tone Bedroom Set)
+  document.querySelectorAll('.side-toggle-arrow').forEach(arrow => {
+    const wrap = arrow.closest('.product-media-wrap');
     if (!wrap) return;
 
-    const prevBtn = controls.querySelector('.slider-arrow.prev');
-    const nextBtn = controls.querySelector('.slider-arrow.next');
-    const badge = controls.querySelector('.slider-view-badge');
-
-    const updateView = (viewIndex) => {
-      wrap.setAttribute('data-active-view', viewIndex);
-      if (badge) {
-        badge.textContent = viewIndex === '1' ? 'Mini Fridge (2/2)' : 'Set View (1/2)';
-      }
+    const toggleView = () => {
+      const current = wrap.getAttribute('data-active-view') || '0';
+      const nextView = current === '1' ? '0' : '1';
+      wrap.setAttribute('data-active-view', nextView);
+      // Flip arrow direction when viewing fridge detail
+      arrow.innerHTML = nextView === '1' ? '&#10094;' : '&#10095;';
+      arrow.setAttribute('title', nextView === '1' ? 'Back to Full Set' : 'View Mini Fridge Detail');
+      arrow.setAttribute('aria-label', nextView === '1' ? 'Back to Full Set' : 'View Mini Fridge Detail');
     };
 
-    if (prevBtn) {
-      prevBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const current = wrap.getAttribute('data-active-view') || '0';
-        updateView(current === '1' ? '0' : '1');
-      });
-    }
-
-    if (nextBtn) {
-      nextBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const current = wrap.getAttribute('data-active-view') || '0';
-        updateView(current === '0' ? '1' : '0');
-      });
-    }
+    arrow.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleView();
+    });
 
     // Touch Swipe Support on mobile
     let touchStartX = 0;
@@ -268,14 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
       touchEndX = e.changedTouches[0].screenX;
       const diff = touchEndX - touchStartX;
       if (Math.abs(diff) > 40) {
-        const current = wrap.getAttribute('data-active-view') || '0';
-        if (diff < 0) {
-          // Swiped left -> show next
-          updateView('1');
-        } else {
-          // Swiped right -> show prev
-          updateView('0');
-        }
+        toggleView();
       }
     }, { passive: true });
   });
