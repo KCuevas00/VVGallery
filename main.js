@@ -169,16 +169,18 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Click-to-zoom on all product card media containers (.product-media-wrap)
   document.querySelectorAll('.product-media-wrap').forEach(wrap => {
     wrap.addEventListener('click', (e) => {
-      // If user clicked a direct link inside the wrap, allow default navigation
-      if (e.target.closest('a')) return;
+      // If user clicked a direct link or swatch dot inside the wrap, don't trigger lightbox zoom
+      if (e.target.closest('a') || e.target.closest('.color-swatch-dots')) return;
 
       // Find the visible active image inside the wrap (primary or secondary)
       const imgs = wrap.querySelectorAll('img');
       if (!imgs.length) return;
 
       let chosenImg = imgs[0];
-      // If secondary image is active/visible, prefer it
-      if (imgs.length > 1) {
+      const activeView = wrap.getAttribute('data-active-view');
+      if (activeView === '1' && imgs.length > 1) {
+        chosenImg = imgs[1];
+      } else if (imgs.length > 1) {
         const secondary = wrap.querySelector('.product-img.secondary');
         if (secondary && window.getComputedStyle(secondary).opacity === '1') {
           chosenImg = secondary;
@@ -195,6 +197,27 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         openLightbox(src, title);
       }
+    });
+  });
+
+  // 3. Color Swatch Dot Switching (e.g. Bean Bag Sac Gray vs Cream)
+  document.querySelectorAll('.color-swatch-dots').forEach(swatchContainer => {
+    const dots = swatchContainer.querySelectorAll('.swatch-dot');
+    const wrap = swatchContainer.closest('.product-media-wrap');
+    if (!wrap) return;
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const index = dot.getAttribute('data-color-index') || '0';
+        wrap.setAttribute('data-active-view', index);
+
+        // Update active class on dots
+        dots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+      });
     });
   });
 });

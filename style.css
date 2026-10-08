@@ -1335,17 +1335,70 @@ body.drawer-open .site-header {
   z-index: 1;
 }
 
-.product-media-wrap.has-secondary:hover .product-img.primary {
+.product-media-wrap.has-secondary[data-active-view="1"] .product-img.primary {
   opacity: 0;
 }
 
-.product-media-wrap.has-secondary:hover .product-img.secondary {
+.product-media-wrap.has-secondary[data-active-view="1"] .product-img.secondary {
+  opacity: 1;
+}
+
+/* Fallback hover for non-swatch cards (like fridge) */
+.product-media-wrap.has-secondary:not([data-active-view]):hover .product-img.primary {
+  opacity: 0;
+}
+
+.product-media-wrap.has-secondary:not([data-active-view]):hover .product-img.secondary {
   opacity: 1;
   transform: scale(1.06);
 }
 
 .product-item:hover .product-img {
-  transform: scale(1.06);
+  transform: scale(1.04);
+}
+
+/* Color Swatch Dots */
+.color-swatch-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(17, 17, 17, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.swatch-dot {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: var(--swatch-color, #cccccc);
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  outline: none;
+}
+
+.swatch-dot:hover {
+  transform: scale(1.18);
+  border-color: #ffffff;
+}
+
+.swatch-dot.active {
+  transform: scale(1.22);
+  border-color: #ffffff;
+  box-shadow: 0 0 0 2px var(--color-gold-accent);
 }
 
 .product-thumb-indicator {
