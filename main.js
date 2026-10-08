@@ -169,8 +169,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Click-to-zoom on all product card media containers (.product-media-wrap)
   document.querySelectorAll('.product-media-wrap').forEach(wrap => {
     wrap.addEventListener('click', (e) => {
-      // If user clicked a direct link or swatch dot inside the wrap, don't trigger lightbox zoom
-      if (e.target.closest('a') || e.target.closest('.color-swatch-dots')) return;
+      // If user clicked a direct link, swatch dot, or slider control, don't trigger lightbox zoom
+      if (e.target.closest('a') || e.target.closest('.color-swatch-dots') || e.target.closest('.card-slider-controls')) return;
 
       // Find the visible active image inside the wrap (primary or secondary)
       const imgs = wrap.querySelectorAll('img');
@@ -219,6 +219,64 @@ document.addEventListener('DOMContentLoaded', () => {
         dot.classList.add('active');
       });
     });
+  });
+
+  // 4. Card Slider Arrow Controls & Swipe (e.g. Two-Tone Bedroom Set & Fridge)
+  document.querySelectorAll('.card-slider-controls').forEach(controls => {
+    const wrap = controls.closest('.product-media-wrap');
+    if (!wrap) return;
+
+    const prevBtn = controls.querySelector('.slider-arrow.prev');
+    const nextBtn = controls.querySelector('.slider-arrow.next');
+    const badge = controls.querySelector('.slider-view-badge');
+
+    const updateView = (viewIndex) => {
+      wrap.setAttribute('data-active-view', viewIndex);
+      if (badge) {
+        badge.textContent = viewIndex === '1' ? 'Mini Fridge (2/2)' : 'Set View (1/2)';
+      }
+    };
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const current = wrap.getAttribute('data-active-view') || '0';
+        updateView(current === '1' ? '0' : '1');
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const current = wrap.getAttribute('data-active-view') || '0';
+        updateView(current === '0' ? '1' : '0');
+      });
+    }
+
+    // Touch Swipe Support on mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    wrap.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    wrap.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) > 40) {
+        const current = wrap.getAttribute('data-active-view') || '0';
+        if (diff < 0) {
+          // Swiped left -> show next
+          updateView('1');
+        } else {
+          // Swiped right -> show prev
+          updateView('0');
+        }
+      }
+    }, { passive: true });
   });
 });
 
