@@ -203,7 +203,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Color Swatch Dot Switching (e.g. Bean Bag Sac Gray vs Cream)
   document.querySelectorAll('.color-swatch-dots').forEach(swatchContainer => {
     const dots = swatchContainer.querySelectorAll('.swatch-dot');
-    const wrap = swatchContainer.closest('.product-media-wrap');
+    const productCard = swatchContainer.closest('.product-item');
+    const wrap = productCard ? productCard.querySelector('.product-media-wrap') : swatchContainer.closest('.product-media-wrap');
     if (!wrap) return;
 
     dots.forEach(dot => {

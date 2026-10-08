@@ -1357,47 +1357,51 @@ body.drawer-open .site-header {
   transform: scale(1.04);
 }
 
-/* Color Swatch Dots */
-.color-swatch-dots {
-  position: absolute;
-  bottom: 12px;
-  left: 50%;
-  transform: translateX(-50%);
+/* Color Swatch Row & Dots (Positioned above product text) */
+.product-swatch-row {
   display: flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(17, 17, 17, 0.72);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 5px 10px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  z-index: 5;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.product-swatch-row .product-category-tag {
+  margin-bottom: 0;
+}
+
+.color-swatch-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--color-bg-subtle);
+  padding: 3px 8px;
+  border-radius: 16px;
+  border: 1px solid var(--color-border-hairline);
+  user-select: none;
 }
 
 .swatch-dot {
-  width: 17px;
-  height: 17px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background-color: var(--swatch-color, #cccccc);
-  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  border: 1.5px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   cursor: pointer;
   padding: 0;
   margin: 0;
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
   position: relative;
   outline: none;
 }
 
 .swatch-dot:hover {
   transform: scale(1.18);
-  border-color: #ffffff;
 }
 
 .swatch-dot.active {
   transform: scale(1.22);
-  border-color: #ffffff;
   box-shadow: 0 0 0 2px var(--color-gold-accent);
 }
 
