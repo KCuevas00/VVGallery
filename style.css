@@ -1002,28 +1002,23 @@ body.drawer-open .site-header {
   background-color: var(--color-border-hairline);
 }
 
-.trust-icon-badge {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: #f8f8f8;
+.trust-icon-wrap {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 22px;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+  margin-bottom: 18px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.trust-feature-col:hover .trust-icon-badge {
-  transform: translateY(-3px);
-  background: #f2efe9;
+.trust-feature-col:hover .trust-icon-wrap {
+  transform: translateY(-4px);
 }
 
-.trust-icon-svg {
+.trust-icon-img {
+  width: 92px;
+  height: 92px;
+  object-fit: contain;
   display: block;
-  width: 38px;
-  height: 38px;
-  color: var(--color-text-main);
 }
 
 .trust-feature-title {
