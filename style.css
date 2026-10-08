@@ -2788,3 +2788,338 @@ body.drawer-open .site-header {
   }
 }
 
+/* ==========================================================================
+   DRAWER GROUPING & SUB-NAV STYLES
+   ========================================================================== */
+.drawer-group {
+  margin-bottom: 20px;
+}
+
+.drawer-group:last-child {
+  margin-bottom: 0;
+}
+
+.drawer-group-title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-gold-accent);
+  padding: 8px 2px 4px;
+  border-bottom: 1px solid var(--color-border-hairline);
+  margin-bottom: 6px;
+}
+
+.drawer-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.drawer-group a {
+  font-size: clamp(1.05rem, 4.2vw, 1.25rem);
+  padding: 8px 2px;
+}
+
+/* ==========================================================================
+   POLICY & CONTENT PAGES (Refund, Shipping, Privacy, Financing, FAQ)
+   ========================================================================== */
+.policy-wrapper {
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.policy-notice-box {
+  background: var(--color-bg-subtle);
+  border-left: 3px solid var(--color-gold-accent);
+  padding: 24px 28px;
+  border-radius: 0 4px 4px 0;
+  margin-bottom: 40px;
+}
+
+.policy-notice-box h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  margin-bottom: 8px;
+  color: var(--color-text-main);
+}
+
+.policy-notice-box p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.policy-article {
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--color-border-hairline);
+}
+
+.policy-article:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.policy-article h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--color-text-main);
+}
+
+.policy-article p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-bottom: 14px;
+}
+
+.policy-article p:last-child {
+  margin-bottom: 0;
+}
+
+.policy-article ul {
+  padding-left: 20px;
+  margin-bottom: 14px;
+}
+
+.policy-article li {
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+.delivery-options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 14px;
+}
+
+.delivery-box {
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border-hairline);
+  padding: 22px;
+  border-radius: 4px;
+}
+
+.delivery-box h4 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  color: var(--color-text-main);
+}
+
+.delivery-box p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ==========================================================================
+   FINANCING CARDS & TRUST ELEMENTS
+   ========================================================================== */
+.financing-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-bottom: 20px;
+}
+
+.financing-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border-hairline);
+  border-radius: 4px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.financing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+}
+
+.financing-card.featured {
+  border-color: var(--color-gold-accent);
+}
+
+.financing-card-header {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border-hairline);
+}
+
+.financing-badge {
+  display: inline-block;
+  background: var(--color-gold-accent);
+  color: #ffffff;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+
+.financing-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 6px;
+}
+
+.financing-card-price {
+  font-size: 0.95rem;
+  color: var(--color-gold-dark);
+}
+
+.financing-card-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+}
+
+.financing-perks {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+
+.financing-perks li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-text-main);
+  margin-bottom: 10px;
+}
+
+.financing-perks li span {
+  color: var(--color-gold-accent);
+  font-weight: 700;
+}
+
+.policy-callout-box {
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border-hairline);
+  padding: 36px 32px;
+  border-radius: 4px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.step-item {
+  position: relative;
+  padding-left: 48px;
+}
+
+.step-num {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--color-gold-accent);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.step-item h4 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+  color: var(--color-text-main);
+}
+
+.step-item p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ==========================================================================
+   FAQ ACCORDION LIST
+   ========================================================================== */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid var(--color-border-hairline);
+  border-radius: 4px;
+  padding: 24px 28px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq-item:hover {
+  border-color: var(--color-gold-accent);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.faq-question {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.faq-answer {
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.faq-answer p {
+  margin-bottom: 12px;
+}
+
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.faq-answer ul {
+  padding-left: 20px;
+  margin: 8px 0 12px;
+}
+
+.faq-answer li {
+  margin-bottom: 6px;
+}
+
+.faq-answer a {
+  color: var(--color-gold-accent);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+
