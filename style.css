@@ -3200,15 +3200,42 @@ body.drawer-open .site-header {
   justify-content: center;
 }
 
+.synchrony-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.synchrony-brand-badge {
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #1a1a1a;
+  text-transform: lowercase;
+  display: inline-flex;
+  align-items: center;
+}
+
+.synchrony-brand-badge::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #f6ba00;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
 .financing-partner-pill {
   display: inline-block;
-  align-self: flex-start;
   font-size: 0.72rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #777777;
   font-weight: 600;
-  margin-bottom: 16px;
   padding: 4px 10px;
   background: #f7f7f7;
   border-radius: 3px;
