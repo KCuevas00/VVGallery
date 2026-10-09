@@ -3398,6 +3398,33 @@ body.drawer-open .site-header {
   font-size: 1rem;
 }
 
+.btn-acima {
+  background-color: #1d93f7;
+  background-image: linear-gradient(135deg, #2499fa 0%, #0d7de6 100%);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 13px 26px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 12px rgba(29, 147, 247, 0.32);
+}
+
+.btn-acima:hover {
+  background-color: #0d7de6;
+  background-image: linear-gradient(135deg, #0e85ec 0%, #056ece 100%);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(29, 147, 247, 0.45);
+}
+
 @media (max-width: 900px) {
   .synchrony-showcase-card {
     grid-template-columns: 1fr;
@@ -3420,6 +3447,7 @@ body.drawer-open .site-header {
     padding: 20px 18px;
   }
 
+  .acima-action-row .btn-acima,
   .acima-action-row .btn-primary {
     width: 100%;
     text-align: center;
