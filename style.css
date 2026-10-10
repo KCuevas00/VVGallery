@@ -1127,55 +1127,37 @@ body.drawer-open .site-header {
   color: #666666;
 }
 
-/* Slide 1: Brand Stage */
+/* Slide 1: Brand Stage (Black Box with Big Centered Logo) */
 .hero-stage.brand-stage {
   background: linear-gradient(145deg, #181818 0%, #0d0d0d 100%);
   border: 1px solid rgba(197, 160, 89, 0.35);
   border-radius: 12px;
-  padding: 24px 20px;
+  padding: 16px;
   box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.35);
-  color: #ffffff;
-  text-align: center;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-brand-stage-card {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 220px;
+  transition: transform 0.35s ease;
 }
 
-.hero-brand-emblem-large {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid var(--color-gold-accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 18px rgba(197, 160, 89, 0.2);
+.hero-stage.brand-stage:hover {
+  transform: translateY(-2px);
 }
 
-.hero-brand-emblem-large .hero-brand-emblem-img {
-  width: 76px;
-  height: 76px;
+.hero-brand-logo-large {
+  max-height: 195px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  border-radius: 50%;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.55));
+  transition: transform 0.4s ease;
 }
 
-.hero-brand-stage-title {
-  font-family: var(--font-serif);
-  font-size: 1.45rem;
-  letter-spacing: 0.16em;
-  color: #ffffff;
-  margin: 0;
-  font-weight: 600;
+.hero-stage.brand-stage:hover .hero-brand-logo-large {
+  transform: scale(1.04);
 }
 
 /* Slide 3: Financing Stage (Synchrony & Acima Big Showcase) */
@@ -1466,17 +1448,12 @@ body.drawer-open .site-header {
   .hero-stage-product-img {
     max-height: 145px;
   }
-  .hero-brand-emblem-large {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
+  .hero-stage.brand-stage {
+    height: 160px;
+    padding: 12px;
   }
-  .hero-brand-emblem-large .hero-brand-emblem-img {
-    width: 68px;
-    height: 68px;
-  }
-  .hero-brand-stage-title {
-    font-size: 1.2rem;
+  .hero-brand-logo-large {
+    max-height: 140px;
   }
   .hero-financing-grid {
     gap: 10px;
