@@ -261,18 +261,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // HERO SPECIALS 4-SLIDE AUTO-CAROUSEL
+  // HERO SPECIALS 4-SLIDE AUTO-CAROUSEL (SMOOTH HORIZONTAL SLIDE TRACK)
   // ==========================================================================
   const heroCarousel = document.getElementById('heroCarousel');
   if (heroCarousel) {
+    const track = document.getElementById('heroTrack');
     const slides = heroCarousel.querySelectorAll('.hero-slide');
     const dots = heroCarousel.querySelectorAll('.hero-dot');
+    const prevBtn = heroCarousel.querySelector('.hero-nav-arrow.prev');
+    const nextBtn = heroCarousel.querySelector('.hero-nav-arrow.next');
     let currentIndex = 0;
     let autoInterval = null;
-    const slideDuration = 5500; // 5.5 seconds per slide
+    const slideDuration = 6000; // 6 seconds per slide
 
     const goToSlide = (index) => {
       currentIndex = (index + slides.length) % slides.length;
+      if (track) {
+        track.style.transform = `translate3d(-${currentIndex * 100}%, 0, 0)`;
+      }
       slides.forEach((slide, i) => {
         slide.classList.toggle('active', i === currentIndex);
       });
@@ -284,6 +290,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const nextSlide = () => {
       goToSlide(currentIndex + 1);
+    };
+
+    const prevSlide = () => {
+      goToSlide(currentIndex - 1);
     };
 
     const startAutoPlay = () => {
@@ -306,6 +316,22 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        prevSlide();
+        startAutoPlay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        nextSlide();
+        startAutoPlay();
+      });
+    }
+
     // Pause on hover or focus
     heroCarousel.addEventListener('mouseenter', stopAutoPlay);
     heroCarousel.addEventListener('mouseleave', startAutoPlay);
@@ -326,14 +352,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const diff = touchEndX - touchStartX;
       if (Math.abs(diff) > 40) {
         if (diff < 0) {
-          goToSlide(currentIndex + 1);
+          nextSlide();
         } else {
-          goToSlide(currentIndex - 1);
+          prevSlide();
         }
       }
       startAutoPlay();
     }, { passive: true });
 
+    // Initialize position & timer
+    goToSlide(0);
     startAutoPlay();
   }
 });
