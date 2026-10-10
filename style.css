@@ -953,13 +953,13 @@ body.drawer-open .site-header {
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.85);
   box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.03);
-  padding: clamp(28px, 3.5vw, 44px);
+  padding: clamp(24px, 3vw, 36px);
   border-radius: 10px;
   position: relative;
 }
 
 .hero-text-box.hero-carousel {
-  min-height: 440px;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1008,9 +1008,9 @@ body.drawer-open .site-header {
 .hero-slide-grid {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  gap: clamp(24px, 3.5vw, 48px);
+  gap: clamp(24px, 3.5vw, 44px);
   align-items: center;
-  min-height: 330px;
+  min-height: 290px;
 }
 
 .hero-slide-text {
@@ -1377,7 +1377,29 @@ body.drawer-open .site-header {
   font-size: clamp(0.95rem, 1.8vw, 1.05rem);
   color: var(--color-text-muted);
   line-height: 1.68;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
+}
+
+/* Clean Bedroom Stage (Slide 4 - Only the Bedroom Set Image) */
+.hero-stage.clean-bedroom-stage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.hero-bedroom-clean-img {
+  max-width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.18));
+  transition: transform 0.4s ease;
+}
+
+.hero-stage.clean-bedroom-stage:hover .hero-bedroom-clean-img {
+  transform: scale(1.03);
 }
 
 .hero-cta-group {
@@ -1387,19 +1409,24 @@ body.drawer-open .site-header {
   margin-bottom: 0;
 }
 
-/* Hero Carousel Controls (Dots + Nav Arrows) */
+/* Hero Carousel Controls (Clustered Flanked Arrows & Indicator Dots) */
 .hero-carousel-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  margin-top: 24px;
-  padding-top: 18px;
+  justify-content: flex-start;
+  margin-top: 18px;
+  padding-top: 14px;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
+.hero-nav-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .hero-carousel-dots {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
 }
@@ -1426,12 +1453,6 @@ body.drawer-open .site-header {
   border-radius: 12px;
   background-color: var(--color-bg-dark, #111111);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.hero-carousel-arrows {
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
 .hero-nav-arrow {
