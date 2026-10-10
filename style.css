@@ -1035,96 +1035,29 @@ body.drawer-open .site-header {
   align-items: center;
 }
 
-/* Product Stages (Couch & Bedroom Suite) */
-.hero-stage.product-stage {
-  background: linear-gradient(180deg, #fcfcfb 0%, #f1eee8 100%);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-  padding: 18px 20px 14px;
-  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.hero-stage.product-stage:hover {
-  transform: translateY(-3px);
-}
-
-.hero-stage-podium {
+/* Product Stages (Clean Floating Sectional & Bedroom Suite) */
+.hero-stage.clean-product-stage,
+.hero-stage.clean-bedroom-stage {
   width: 100%;
-  height: 190px;
+  height: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
+  padding: 10px;
 }
 
-.hero-stage-product-img {
+.hero-sectional-clean-img,
+.hero-bedroom-clean-img {
   max-width: 100%;
-  max-height: 175px;
+  max-height: 220px;
   object-fit: contain;
-  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.16));
+  filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.16));
   transition: transform 0.4s ease;
-  z-index: 2;
 }
 
-.hero-stage.product-stage:hover .hero-stage-product-img {
+.hero-stage.clean-product-stage:hover .hero-sectional-clean-img,
+.hero-stage.clean-bedroom-stage:hover .hero-bedroom-clean-img {
   transform: scale(1.03);
-}
-
-.hero-stage-shadow {
-  position: absolute;
-  bottom: 8px;
-  width: 80%;
-  height: 14px;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0) 70%);
-  z-index: 1;
-}
-
-.hero-stage-caption {
-  width: 100%;
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid rgba(0, 0, 0, 0.07);
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  text-align: center;
-  align-items: center;
-}
-
-.hero-stage-badge-tag {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.64rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  background: #d90429;
-  color: #ffffff;
-  padding: 3px 8px;
-  border-radius: 3px;
-  margin-bottom: 2px;
-}
-
-.hero-stage-badge-tag.doorbuster-tag {
-  background: #111111;
-  color: var(--color-gold-light);
-}
-
-.hero-stage-name {
-  font-family: var(--font-sans);
-  font-size: 0.92rem;
-  font-weight: 700;
-  color: #111111;
-  letter-spacing: -0.01em;
-}
-
-.hero-stage-detail {
-  font-size: 0.74rem;
-  color: #666666;
 }
 
 /* Slide 1: Brand Stage (Black Box with Big Centered Logo) */
@@ -1331,33 +1264,20 @@ body.drawer-open .site-header {
   margin-bottom: 22px;
 }
 
-/* Clean Bedroom Stage (Slide 4 - Only the Bedroom Set Image) */
-.hero-stage.clean-bedroom-stage {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-
-.hero-bedroom-clean-img {
-  max-width: 100%;
-  max-height: 220px;
-  object-fit: contain;
-  filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.18));
-  transition: transform 0.4s ease;
-}
-
-.hero-stage.clean-bedroom-stage:hover .hero-bedroom-clean-img {
-  transform: scale(1.03);
-}
-
 .hero-cta-group {
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 18px;
   margin-bottom: 0;
+}
+
+.hero-cta-group .btn-primary,
+.hero-cta-group .btn-hairline {
+  min-width: 220px;
+  text-align: center;
+  justify-content: center;
 }
 
 /* Hero Carousel Controls (Clustered Flanked Arrows & Indicator Dots) */
