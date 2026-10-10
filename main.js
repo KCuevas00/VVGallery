@@ -259,5 +259,83 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, { passive: true });
   });
+
+  // ==========================================================================
+  // HERO SPECIALS 4-SLIDE AUTO-CAROUSEL
+  // ==========================================================================
+  const heroCarousel = document.getElementById('heroCarousel');
+  if (heroCarousel) {
+    const slides = heroCarousel.querySelectorAll('.hero-slide');
+    const dots = heroCarousel.querySelectorAll('.hero-dot');
+    let currentIndex = 0;
+    let autoInterval = null;
+    const slideDuration = 5500; // 5.5 seconds per slide
+
+    const goToSlide = (index) => {
+      currentIndex = (index + slides.length) % slides.length;
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === currentIndex);
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+        dot.setAttribute('aria-selected', i === currentIndex ? 'true' : 'false');
+      });
+    };
+
+    const nextSlide = () => {
+      goToSlide(currentIndex + 1);
+    };
+
+    const startAutoPlay = () => {
+      stopAutoPlay();
+      autoInterval = setInterval(nextSlide, slideDuration);
+    };
+
+    const stopAutoPlay = () => {
+      if (autoInterval) {
+        clearInterval(autoInterval);
+        autoInterval = null;
+      }
+    };
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        goToSlide(index);
+        startAutoPlay();
+      });
+    });
+
+    // Pause on hover or focus
+    heroCarousel.addEventListener('mouseenter', stopAutoPlay);
+    heroCarousel.addEventListener('mouseleave', startAutoPlay);
+    heroCarousel.addEventListener('focusin', stopAutoPlay);
+    heroCarousel.addEventListener('focusout', startAutoPlay);
+
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    heroCarousel.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopAutoPlay();
+    }, { passive: true });
+
+    heroCarousel.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) > 40) {
+        if (diff < 0) {
+          goToSlide(currentIndex + 1);
+        } else {
+          goToSlide(currentIndex - 1);
+        }
+      }
+      startAutoPlay();
+    }, { passive: true });
+
+    startAutoPlay();
+  }
 });
+
 
