@@ -3569,76 +3569,25 @@ body.drawer-open .site-header {
 }
 
 /* ==========================================================================
-   ASHLEY FURNITURE PARTNERSHIP SECTION (AUTHENTIC ASHLEY WEB UI STYLE)
+   ASHLEY FURNITURE PARTNERSHIP SECTION
    ========================================================================== */
 .ashley-partner-section {
-  background-color: #f6f5f2;
+  background-color: #faf9f6;
   border-top: 1px solid var(--color-border-hairline);
   border-bottom: 1px solid var(--color-border-hairline);
-  padding: 80px 0;
+  padding: 88px 0;
 }
 
 .ashley-partner-card {
-  background: #ffffff;
-  border: 1px solid #dedcd8;
-  border-radius: 8px;
-  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
-  position: relative;
-}
-
-/* Ashley Header Bar */
-.ashley-card-header-bar {
-  background: #2b2725;
-  border-top: 4px solid #F48120;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 32px;
-  gap: 16px;
-}
-
-.ashley-header-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.ashley-brand-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background-color: #F48120;
-  box-shadow: 0 0 10px rgba(244, 129, 32, 0.85);
-  display: inline-block;
-  flex-shrink: 0;
-}
-
-.ashley-header-label {
-  font-family: var(--font-sans);
-  font-size: 0.74rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.ashley-header-tag {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #F48120;
-}
-
-/* Card Body Grid */
-.ashley-card-body {
   display: grid;
   grid-template-columns: 1.25fr 0.95fr;
-  gap: 48px;
+  gap: 52px;
   align-items: center;
-  padding: 48px 52px;
+  background: #ffffff;
+  border: 1px solid var(--color-border-hairline);
+  border-radius: 6px;
+  padding: 56px 60px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
 }
 
 .ashley-partner-content {
@@ -3646,63 +3595,28 @@ body.drawer-open .site-header {
   flex-direction: column;
 }
 
-.ashley-eyebrow-wrap {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 16px;
-}
-
-.ashley-eyebrow-tag {
-  background-color: #F48120;
-  color: #ffffff;
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 5px 12px;
-  border-radius: 3px;
-  display: inline-block;
-}
-
-.ashley-warranty-pill {
-  background-color: #f3f3f1;
-  color: #403b38;
-  border: 1px solid #dedcd8;
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 3px;
-  display: inline-block;
-}
-
 .ashley-partner-title {
-  font-family: var(--font-sans);
-  font-size: clamp(1.85rem, 2.6vw, 2.35rem);
-  font-weight: 800;
-  line-height: 1.18;
-  color: #1f1c1a;
-  letter-spacing: -0.02em;
-  margin-bottom: 18px;
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--color-text-main);
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
 }
 
 .ashley-partner-lead {
-  font-size: 1.02rem;
-  line-height: 1.68;
-  color: #4a4542;
-  margin-bottom: 26px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-bottom: 28px;
 }
 
 .ashley-perks-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-bottom: 34px;
+  margin-bottom: 36px;
 }
 
 .ashley-perk-item {
@@ -3716,8 +3630,8 @@ body.drawer-open .site-header {
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  background: rgba(244, 129, 32, 0.12);
-  color: #F48120;
+  background: var(--color-gold-bg);
+  color: var(--color-gold-accent);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -3725,17 +3639,16 @@ body.drawer-open .site-header {
 }
 
 .ashley-perk-text {
-  font-size: 0.94rem;
+  font-size: 0.95rem;
   line-height: 1.55;
-  color: #3d3935;
+  color: var(--color-text-main);
 }
 
 .ashley-perk-text strong {
-  color: #1f1c1a;
-  font-weight: 700;
+  color: var(--color-text-main);
+  font-weight: 600;
 }
 
-/* Ashley Button Styling */
 .ashley-actions-row {
   display: flex;
   flex-wrap: wrap;
@@ -3743,60 +3656,36 @@ body.drawer-open .site-header {
   align-items: center;
 }
 
+/* Ashley Signature Orange CTA Button */
 .btn-ashley {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background-color: #F48120;
   color: #ffffff;
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  padding: 15px 32px;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  padding: 16px 32px;
+  font-weight: 700;
+  border: 1px solid #F48120;
   border-radius: 4px;
-  border: 2px solid #F48120;
-  box-shadow: 0 4px 14px rgba(244, 129, 32, 0.38);
+  box-shadow: 0 4px 14px rgba(244, 129, 32, 0.32);
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.22s ease-in-out;
 }
 
 .btn-ashley:hover {
   background-color: #de6f10;
   border-color: #de6f10;
   color: #ffffff;
-  box-shadow: 0 6px 20px rgba(244, 129, 32, 0.5);
+  box-shadow: 0 6px 20px rgba(244, 129, 32, 0.45);
   transform: translateY(-2px);
 }
 
-.btn-ashley-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  color: #2b2725;
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 16px 30px;
-  border-radius: 4px;
-  border: 2px solid #2b2725;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.22s ease-in-out;
-}
-
-.btn-ashley-secondary:hover {
-  background-color: #2b2725;
-  color: #ffffff;
-  transform: translateY(-2px);
-}
-
-/* Media Showcase Card */
 .ashley-partner-media {
   display: flex;
   justify-content: center;
@@ -3806,35 +3695,23 @@ body.drawer-open .site-header {
   width: 100%;
   max-width: 440px;
   background: #ffffff;
-  border: 1px solid #dedcd8;
+  border: 1px solid var(--color-border-hairline);
   border-radius: 6px;
-  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
+  padding: 36px 32px;
   text-align: center;
-}
-
-.ashley-badge-top-ribbon {
-  background-color: #F48120;
-  color: #ffffff;
-  padding: 7px 16px;
-  text-align: center;
-}
-
-.ashley-badge-top-ribbon .ribbon-text {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  position: relative;
 }
 
 .ashley-logo-frame {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px 24px 20px;
+  padding: 24px 20px 28px;
   background: #fafafa;
-  border-bottom: 1px solid #f0eee9;
+  border-radius: 4px;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 24px;
 }
 
 .ashley-logo-img {
@@ -3845,20 +3722,15 @@ body.drawer-open .site-header {
   display: block;
 }
 
-.ashley-badge-details {
-  padding: 24px 28px 26px;
-}
-
-.ashley-badge-details .ashley-pill-tag {
+.ashley-pill-tag {
   display: inline-block;
-  font-family: var(--font-sans);
   font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  font-weight: 800;
-  color: #F48120;
-  background: rgba(244, 129, 32, 0.1);
-  border: 1px solid rgba(244, 129, 32, 0.3);
+  font-weight: 600;
+  color: var(--color-gold-accent);
+  background: var(--color-gold-bg);
+  border: 1px solid rgba(197, 160, 89, 0.25);
   padding: 5px 14px;
   border-radius: 30px;
   margin-bottom: 12px;
@@ -3867,42 +3739,16 @@ body.drawer-open .site-header {
 .ashley-badge-sub {
   font-size: 0.88rem;
   line-height: 1.5;
-  color: #55504d;
-  margin-bottom: 20px;
-}
-
-.ashley-badge-trust-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 22px;
-  text-align: left;
-  background: #faf9f6;
-  padding: 14px 18px;
-  border-radius: 4px;
-  border: 1px solid #eeeae3;
-}
-
-.trust-item {
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #33302d;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.trust-check {
-  color: #F48120;
-  font-weight: 800;
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
 }
 
 .ashley-badge-specs {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 18px;
-  border-top: 1px solid #eeeae3;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border-hairline);
 }
 
 .spec-col {
@@ -3910,10 +3756,11 @@ body.drawer-open .site-header {
   text-align: center;
 }
 
+/* Orange text for the stats as requested */
 .spec-number {
   display: block;
   font-family: var(--font-sans);
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   font-weight: 800;
   color: #F48120;
   line-height: 1.1;
@@ -3922,50 +3769,27 @@ body.drawer-open .site-header {
 
 .spec-label {
   display: block;
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  font-weight: 600;
-  color: #7a7571;
+  color: var(--color-text-light);
 }
 
 .spec-divider {
   width: 1px;
   height: 28px;
-  background: #eeeae3;
+  background: var(--color-border-hairline);
 }
 
-/* Card Bottom Banner Strip */
-.ashley-card-footer-strip {
-  background: #f7f6f3;
-  border-top: 1px solid #e8e6e1;
-  padding: 12px 24px;
-  text-align: center;
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #736d68;
-}
-
-/* Mobile & Tablet Responsiveness */
 @media (max-width: 960px) {
   .ashley-partner-section {
-    padding: 56px 0;
+    padding: 60px 0;
   }
 
-  .ashley-card-header-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 14px 20px;
-    gap: 8px;
-  }
-
-  .ashley-card-body {
+  .ashley-partner-card {
     grid-template-columns: 1fr;
-    gap: 36px;
-    padding: 32px 20px;
+    gap: 40px;
+    padding: 36px 24px;
   }
 
   .ashley-partner-media {
@@ -3974,6 +3798,7 @@ body.drawer-open .site-header {
 
   .ashley-brand-badge-card {
     max-width: 100%;
+    padding: 28px 20px;
   }
 
   .ashley-actions-row {
@@ -3981,15 +3806,10 @@ body.drawer-open .site-header {
     align-items: stretch;
   }
 
-  .btn-ashley,
-  .btn-ashley-secondary {
+  .ashley-actions-row .btn-ashley,
+  .ashley-actions-row .btn-hairline {
     width: 100%;
     text-align: center;
-  }
-
-  .ashley-card-footer-strip {
-    font-size: 0.68rem;
-    padding: 10px 16px;
   }
 }
 
