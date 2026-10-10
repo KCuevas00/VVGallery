@@ -1064,14 +1064,17 @@ body.drawer-open .site-header {
 .hero-stage.brand-stage {
   background: linear-gradient(145deg, #181818 0%, #0d0d0d 100%);
   border: 1px solid rgba(197, 160, 89, 0.35);
-  border-radius: 12px;
-  padding: 16px;
+  border-radius: 14px;
+  padding: 20px;
   box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 220px;
+  max-width: 300px;
+  height: 300px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
   transition: transform 0.35s ease;
 }
 
@@ -1080,8 +1083,8 @@ body.drawer-open .site-header {
 }
 
 .hero-brand-logo-large {
-  max-height: 195px;
-  max-width: 100%;
+  max-height: 230px;
+  max-width: 230px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -1092,6 +1095,7 @@ body.drawer-open .site-header {
 .hero-stage.brand-stage:hover .hero-brand-logo-large {
   transform: scale(1.04);
 }
+
 
 /* Slide 3: Financing Stage (Synchrony & Acima Big Showcase) */
 .hero-stage.financing-stage {
@@ -1369,11 +1373,16 @@ body.drawer-open .site-header {
     max-height: 145px;
   }
   .hero-stage.brand-stage {
-    height: 160px;
-    padding: 12px;
+    width: 220px;
+    height: 220px;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    padding: 14px;
+    margin: 0 auto;
   }
   .hero-brand-logo-large {
-    max-height: 140px;
+    max-height: 180px;
+    max-width: 180px;
   }
   .hero-financing-grid {
     gap: 10px;
