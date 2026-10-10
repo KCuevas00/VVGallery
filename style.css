@@ -946,19 +946,20 @@ body.drawer-open .site-header {
 }
 
 .hero-text-box {
-  max-width: 710px;
-  background: rgba(255, 255, 255, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.02);
-  padding: clamp(26px, 3.5vw, 42px);
-  border-radius: 6px;
+  max-width: 1040px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.03);
+  padding: clamp(28px, 3.5vw, 44px);
+  border-radius: 10px;
   position: relative;
 }
 
 .hero-text-box.hero-carousel {
-  min-height: 420px;
+  min-height: 440px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1003,152 +1004,258 @@ body.drawer-open .site-header {
   user-select: none;
 }
 
-/* Slide 2-Column Split Layout */
+/* 50/50 Billboard Split Layout */
 .hero-slide-grid {
   display: grid;
-  grid-template-columns: 1fr 190px;
-  gap: 22px;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(24px, 3.5vw, 48px);
   align-items: center;
-  margin-bottom: 20px;
+  min-height: 330px;
 }
 
 .hero-slide-text {
   display: flex;
   flex-direction: column;
-}
-
-.hero-slide-text .hero-description {
-  margin-bottom: 0;
+  justify-content: center;
 }
 
 .hero-slide-visual {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
-/* Product & Brand Visual Cards */
-.hero-visual-card {
+/* ==========================================================================
+   HERO SHOWCASE STAGES (Large Prominent Product & Partner Highlights)
+   ========================================================================== */
+.hero-stage {
   width: 100%;
-  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Product Stages (Couch & Bedroom Suite) */
+.hero-stage.product-stage {
+  background: linear-gradient(180deg, #fcfcfb 0%, #f1eee8 100%);
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
-  padding: 10px;
-  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.03);
+  border-radius: 12px;
+  padding: 18px 20px 14px;
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-stage.product-stage:hover {
+  transform: translateY(-3px);
+}
+
+.hero-stage-podium {
+  width: 100%;
+  height: 190px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.hero-visual-card:hover {
-  transform: translateY(-2px);
-}
-
-.hero-visual-img-wrap {
-  width: 100%;
-  height: 112px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  background: linear-gradient(180deg, #faf9f6 0%, #f0eee9 100%);
-  border-radius: 6px;
-  overflow: hidden;
-  padding: 6px;
+  position: relative;
 }
 
-.hero-visual-img {
+.hero-stage-product-img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 175px;
   object-fit: contain;
-  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.16));
+  transition: transform 0.4s ease;
+  z-index: 2;
 }
 
-.hero-visual-tag {
-  margin-top: 8px;
+.hero-stage.product-stage:hover .hero-stage-product-img {
+  transform: scale(1.03);
+}
+
+.hero-stage-shadow {
+  position: absolute;
+  bottom: 8px;
+  width: 80%;
+  height: 14px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: 1;
+}
+
+.hero-stage-caption {
+  width: 100%;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
   gap: 2px;
+  text-align: center;
+  align-items: center;
 }
 
-.hero-visual-tag .tag-title {
+.hero-stage-badge-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: #d90429;
+  color: #ffffff;
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin-bottom: 2px;
+}
+
+.hero-stage-badge-tag.doorbuster-tag {
+  background: #111111;
+  color: var(--color-gold-light);
+}
+
+.hero-stage-name {
   font-family: var(--font-sans);
-  font-size: 0.76rem;
+  font-size: 0.92rem;
   font-weight: 700;
   color: #111111;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
+  letter-spacing: -0.01em;
 }
 
-.hero-visual-tag .tag-sub {
-  font-size: 0.67rem;
-  color: #777777;
-  white-space: nowrap;
+.hero-stage-detail {
+  font-size: 0.74rem;
+  color: #666666;
 }
 
-/* Slide 1 Brand Emblem Showcase */
-.hero-visual-card.brand-card .hero-brand-emblem-wrap {
+/* Slide 1: Brand Stage */
+.hero-stage.brand-stage {
+  background: linear-gradient(145deg, #181818 0%, #0d0d0d 100%);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  border-radius: 12px;
+  padding: 24px 20px;
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero-brand-stage-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: 112px;
+}
+
+.hero-brand-emblem-large {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid var(--color-gold-accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(145deg, #1f1f1f 0%, #0d0d0d 100%);
-  border-radius: 6px;
-  border: 1px solid rgba(197, 160, 89, 0.3);
+  margin-bottom: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 18px rgba(197, 160, 89, 0.2);
 }
 
-.hero-brand-emblem-img {
-  width: 80px;
-  height: 80px;
+.hero-brand-emblem-large .hero-brand-emblem-img {
+  width: 82px;
+  height: 82px;
   object-fit: contain;
   border-radius: 50%;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* Slide 3 Financing Partner Stack (Synchrony & Acima) */
-.hero-financing-partners-box {
+.brand-stage-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--color-gold-accent);
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.hero-brand-stage-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.hero-brand-stage-sub {
+  font-size: 0.78rem;
+  color: #aaaaaa;
+  margin-bottom: 14px;
+}
+
+.hero-brand-perks-row {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.brand-perk-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e5e5e5;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Slide 3: Financing Stage (Synchrony & Acima Big Showcase) */
+.hero-stage.financing-stage {
   width: 100%;
 }
 
-.hero-partner-card {
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 8px;
-  padding: 9px 12px;
-  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+.hero-financing-grid {
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  transition: transform 0.25s ease;
+  gap: 12px;
+  width: 100%;
 }
 
-.hero-partner-card:hover {
+.hero-partner-showcase {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 14px 18px;
+  box-shadow: 0 6px 18px -4px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-partner-showcase:hover {
   transform: translateY(-2px);
+  box-shadow: 0 10px 24px -4px rgba(0, 0, 0, 0.1);
 }
 
-.hero-partner-card.synchrony-mini {
-  border-left: 3px solid #f6ba00;
+.hero-partner-showcase.synchrony-showcase {
+  border-left: 4px solid #f6ba00;
 }
 
-.hero-partner-card.acima-mini {
-  border-left: 3px solid #1d93f7;
+.hero-partner-showcase.acima-showcase {
+  border-left: 4px solid #1d93f7;
 }
 
-.partner-card-header {
+.partner-showcase-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 6px;
+  gap: 8px;
 }
 
-.synchrony-brand-badge-mini {
+.synchrony-brand-badge-large {
   font-family: var(--font-sans);
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: -0.03em;
   color: #1a1a1a;
@@ -1157,57 +1264,71 @@ body.drawer-open .site-header {
   align-items: center;
 }
 
-.synchrony-brand-badge-mini::after {
+.synchrony-brand-badge-large::after {
   content: "";
   display: inline-block;
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
   background-color: #f6ba00;
   border-radius: 50%;
-  margin-left: 4px;
+  margin-left: 5px;
 }
 
-.acima-brand-badge-mini {
+.acima-brand-badge-large {
   font-family: var(--font-sans);
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   color: #1d93f7;
   text-transform: lowercase;
 }
 
-.partner-badge-chip {
-  font-size: 0.6rem;
+.partner-pill {
+  font-size: 0.65rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  padding: 2px 6px;
-  border-radius: 3px;
-  background-color: rgba(246, 186, 0, 0.15);
-  color: #8c6800;
-  white-space: nowrap;
+  padding: 3px 8px;
+  border-radius: 4px;
 }
 
-.partner-badge-chip.acima-chip {
+.synchrony-pill {
+  background-color: rgba(246, 186, 0, 0.18);
+  color: #8a6500;
+}
+
+.acima-pill {
   background-color: #1d93f7;
   color: #ffffff;
 }
 
-.partner-card-body {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.25;
-}
-
-.partner-card-body strong {
-  font-size: 0.75rem;
-  color: #111111;
+.partner-showcase-title {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
   font-weight: 700;
+  color: #111111;
+  margin: 0;
 }
 
-.partner-card-body span {
-  font-size: 0.66rem;
+.partner-showcase-desc {
+  font-size: 0.74rem;
   color: #666666;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.partner-showcase-perk {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #2e7d32;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 2px;
+}
+
+.perk-check-icon {
+  font-weight: 800;
 }
 
 /* Target / Big Retail Red Special Box */
@@ -1245,15 +1366,15 @@ body.drawer-open .site-header {
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 5vw, 3.1rem);
-  line-height: 1.1;
+  font-size: clamp(2rem, 4.5vw, 2.9rem);
+  line-height: 1.12;
   font-weight: 500;
   color: var(--color-text-main);
   margin-bottom: 16px;
 }
 
 .hero-description {
-  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
   color: var(--color-text-muted);
   line-height: 1.68;
   margin-bottom: 24px;
@@ -1339,53 +1460,43 @@ body.drawer-open .site-header {
   transform: scale(0.94);
 }
 
-@media (max-width: 680px) {
+@media (max-width: 900px) {
   .hero-text-box.hero-carousel {
     min-height: unset;
     padding: 24px 20px;
   }
   .hero-slide-grid {
     grid-template-columns: 1fr;
-    gap: 14px;
-    margin-bottom: 16px;
+    gap: 18px;
+    min-height: unset;
   }
-  .hero-visual-card {
-    flex-direction: row;
-    gap: 12px;
-    padding: 8px 12px;
-    align-items: center;
-    text-align: left;
+  .hero-stage-podium {
+    height: 155px;
   }
-  .hero-visual-img-wrap,
-  .hero-visual-card.brand-card .hero-brand-emblem-wrap {
+  .hero-stage-product-img {
+    max-height: 145px;
+  }
+  .hero-brand-emblem-large {
     width: 80px;
-    height: 56px;
-    flex-shrink: 0;
+    height: 80px;
+    margin-bottom: 10px;
   }
-  .hero-brand-emblem-img {
-    width: 44px;
-    height: 44px;
+  .hero-brand-emblem-large .hero-brand-emblem-img {
+    width: 68px;
+    height: 68px;
   }
-  .hero-visual-tag {
-    margin-top: 0;
+  .hero-brand-stage-title {
+    font-size: 1.2rem;
   }
-  .hero-financing-partners-box {
-    flex-direction: row;
-    gap: 8px;
+  .hero-financing-grid {
+    gap: 10px;
   }
-  .hero-partner-card {
-    flex: 1;
-    padding: 8px 10px;
+  .hero-partner-showcase {
+    padding: 10px 14px;
   }
-  .synchrony-brand-badge-mini,
-  .acima-brand-badge-mini {
-    font-size: 0.92rem;
-  }
-  .partner-card-body strong {
-    font-size: 0.7rem;
-  }
-  .partner-card-body span {
-    font-size: 0.62rem;
+  .synchrony-brand-badge-large,
+  .acima-brand-badge-large {
+    font-size: 1.15rem;
   }
   .hero-special-badge {
     font-size: 0.68rem;
