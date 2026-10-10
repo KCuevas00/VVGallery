@@ -3568,4 +3568,219 @@ body.drawer-open .site-header {
   font-weight: 500;
 }
 
+/* ==========================================================================
+   ASHLEY FURNITURE PARTNERSHIP SECTION
+   ========================================================================== */
+.ashley-partner-section {
+  background-color: #faf9f6;
+  border-top: 1px solid var(--color-border-hairline);
+  border-bottom: 1px solid var(--color-border-hairline);
+  padding: 88px 0;
+}
+
+.ashley-partner-card {
+  display: grid;
+  grid-template-columns: 1.25fr 0.95fr;
+  gap: 52px;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid var(--color-border-hairline);
+  border-radius: 6px;
+  padding: 56px 60px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.ashley-partner-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.ashley-partner-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--color-text-main);
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+
+.ashley-partner-lead {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-bottom: 28px;
+}
+
+.ashley-perks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.ashley-perk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.ashley-perk-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--color-gold-bg);
+  color: var(--color-gold-accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.ashley-perk-text {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text-main);
+}
+
+.ashley-perk-text strong {
+  color: var(--color-text-main);
+  font-weight: 600;
+}
+
+.ashley-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.ashley-partner-media {
+  display: flex;
+  justify-content: center;
+}
+
+.ashley-brand-badge-card {
+  width: 100%;
+  max-width: 440px;
+  background: #ffffff;
+  border: 1px solid var(--color-border-hairline);
+  border-radius: 6px;
+  padding: 36px 32px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.ashley-logo-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px 28px;
+  background: #fafafa;
+  border-radius: 4px;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 24px;
+}
+
+.ashley-logo-img {
+  max-width: 100%;
+  width: 260px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.ashley-pill-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-gold-accent);
+  background: var(--color-gold-bg);
+  border: 1px solid rgba(197, 160, 89, 0.25);
+  padding: 5px 14px;
+  border-radius: 30px;
+  margin-bottom: 12px;
+}
+
+.ashley-badge-sub {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  margin-bottom: 24px;
+}
+
+.ashley-badge-specs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border-hairline);
+}
+
+.spec-col {
+  flex: 1;
+  text-align: center;
+}
+
+.spec-number {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.spec-label {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+}
+
+.spec-divider {
+  width: 1px;
+  height: 28px;
+  background: var(--color-border-hairline);
+}
+
+@media (max-width: 960px) {
+  .ashley-partner-section {
+    padding: 60px 0;
+  }
+
+  .ashley-partner-card {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 36px 24px;
+  }
+
+  .ashley-partner-media {
+    order: -1;
+  }
+
+  .ashley-brand-badge-card {
+    max-width: 100%;
+    padding: 28px 20px;
+  }
+
+  .ashley-actions-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ashley-actions-row .btn-primary,
+  .ashley-actions-row .btn-hairline {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
 
