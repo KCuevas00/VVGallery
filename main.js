@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = heroCarousel.querySelector('.hero-nav-arrow.next');
     let currentIndex = 0;
     let autoInterval = null;
-    const slideDuration = 6000; // 6 seconds per slide
+    const slideDuration = 5000; // 5 seconds per slide
 
     const goToSlide = (index) => {
       currentIndex = (index + slides.length) % slides.length;
@@ -332,11 +332,14 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Pause on hover or focus
-    heroCarousel.addEventListener('mouseenter', stopAutoPlay);
-    heroCarousel.addEventListener('mouseleave', startAutoPlay);
-    heroCarousel.addEventListener('focusin', stopAutoPlay);
-    heroCarousel.addEventListener('focusout', startAutoPlay);
+    // Pause only when hovering over actionable controls/links, so viewing/reading doesn't freeze autoplay
+    const pauseElements = heroCarousel.querySelectorAll('.hero-cta-group, .hero-nav-controls, a, button');
+    pauseElements.forEach(el => {
+      el.addEventListener('mouseenter', stopAutoPlay);
+      el.addEventListener('mouseleave', startAutoPlay);
+      el.addEventListener('focusin', stopAutoPlay);
+      el.addEventListener('focusout', startAutoPlay);
+    });
 
     // Touch swipe support for mobile
     let touchStartX = 0;
@@ -360,7 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
       startAutoPlay();
     }, { passive: true });
 
-    // Initialize position & timer
+    // Initialize position & launch auto play immediately
     goToSlide(0);
     startAutoPlay();
   }

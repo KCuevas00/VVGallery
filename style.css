@@ -959,10 +959,9 @@ body.drawer-open .site-header {
 }
 
 .hero-text-box.hero-carousel {
-  min-height: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   overflow: hidden;
 }
 
@@ -990,7 +989,7 @@ body.drawer-open .site-header {
   transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding-right: 4px;
 }
 
@@ -1010,7 +1009,6 @@ body.drawer-open .site-header {
   grid-template-columns: 1.05fr 0.95fr;
   gap: clamp(24px, 3.5vw, 44px);
   align-items: center;
-  min-height: 290px;
 }
 
 .hero-slide-text {
@@ -1138,18 +1136,22 @@ body.drawer-open .site-header {
   box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.35);
   color: #ffffff;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-brand-stage-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
 .hero-brand-emblem-large {
-  width: 96px;
-  height: 96px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.05);
   border: 2px solid var(--color-gold-accent);
@@ -1161,52 +1163,19 @@ body.drawer-open .site-header {
 }
 
 .hero-brand-emblem-large .hero-brand-emblem-img {
-  width: 82px;
-  height: 82px;
+  width: 76px;
+  height: 76px;
   object-fit: contain;
   border-radius: 50%;
 }
 
-.brand-stage-badge {
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  color: var(--color-gold-accent);
-  text-transform: uppercase;
-  display: inline-block;
-  margin-bottom: 4px;
-}
-
 .hero-brand-stage-title {
   font-family: var(--font-serif);
-  font-size: 1.35rem;
-  letter-spacing: 0.12em;
+  font-size: 1.45rem;
+  letter-spacing: 0.16em;
   color: #ffffff;
-  margin-bottom: 4px;
+  margin: 0;
   font-weight: 600;
-}
-
-.hero-brand-stage-sub {
-  font-size: 0.78rem;
-  color: #aaaaaa;
-  margin-bottom: 14px;
-}
-
-.hero-brand-perks-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  justify-content: center;
-}
-
-.brand-perk-badge {
-  font-size: 0.68rem;
-  font-weight: 600;
-  background: rgba(255, 255, 255, 0.08);
-  color: #e5e5e5;
-  padding: 4px 10px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 /* Slide 3: Financing Stage (Synchrony & Acima Big Showcase) */
