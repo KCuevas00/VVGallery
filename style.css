@@ -1003,22 +1003,27 @@ body.drawer-open .site-header {
 }
 
 .trust-icon-wrap {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #f8f8f8;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 18px;
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  margin-bottom: 22px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
 }
 
 .trust-feature-col:hover .trust-icon-wrap {
   transform: translateY(-4px);
+  background: #f1ede5;
 }
 
-.trust-icon-img {
-  width: 92px;
-  height: 92px;
-  object-fit: contain;
+.trust-icon-svg {
   display: block;
+  width: 38px;
+  height: 38px;
+  color: var(--color-text-main);
 }
 
 .trust-feature-title {
