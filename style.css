@@ -946,13 +946,13 @@ body.drawer-open .site-header {
 }
 
 .hero-text-box {
-  max-width: 590px;
+  max-width: 710px;
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.75);
   box-shadow: 0 20px 48px -10px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.02);
-  padding: clamp(28px, 4vw, 44px);
+  padding: clamp(26px, 3.5vw, 42px);
   border-radius: 6px;
   position: relative;
 }
@@ -989,7 +989,7 @@ body.drawer-open .site-header {
   transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding-right: 4px;
 }
 
@@ -1001,6 +1001,213 @@ body.drawer-open .site-header {
 .hero-slide:not(.active) {
   pointer-events: none;
   user-select: none;
+}
+
+/* Slide 2-Column Split Layout */
+.hero-slide-grid {
+  display: grid;
+  grid-template-columns: 1fr 190px;
+  gap: 22px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hero-slide-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-slide-text .hero-description {
+  margin-bottom: 0;
+}
+
+.hero-slide-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Product & Brand Visual Cards */
+.hero-visual-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.hero-visual-card:hover {
+  transform: translateY(-2px);
+}
+
+.hero-visual-img-wrap {
+  width: 100%;
+  height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #faf9f6 0%, #f0eee9 100%);
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 6px;
+}
+
+.hero-visual-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+}
+
+.hero-visual-tag {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hero-visual-tag .tag-title {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.hero-visual-tag .tag-sub {
+  font-size: 0.67rem;
+  color: #777777;
+  white-space: nowrap;
+}
+
+/* Slide 1 Brand Emblem Showcase */
+.hero-visual-card.brand-card .hero-brand-emblem-wrap {
+  width: 100%;
+  height: 112px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #1f1f1f 0%, #0d0d0d 100%);
+  border-radius: 6px;
+  border: 1px solid rgba(197, 160, 89, 0.3);
+}
+
+.hero-brand-emblem-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Slide 3 Financing Partner Stack (Synchrony & Acima) */
+.hero-financing-partners-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.hero-partner-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 9px 12px;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  transition: transform 0.25s ease;
+}
+
+.hero-partner-card:hover {
+  transform: translateY(-2px);
+}
+
+.hero-partner-card.synchrony-mini {
+  border-left: 3px solid #f6ba00;
+}
+
+.hero-partner-card.acima-mini {
+  border-left: 3px solid #1d93f7;
+}
+
+.partner-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.synchrony-brand-badge-mini {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #1a1a1a;
+  text-transform: lowercase;
+  display: inline-flex;
+  align-items: center;
+}
+
+.synchrony-brand-badge-mini::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #f6ba00;
+  border-radius: 50%;
+  margin-left: 4px;
+}
+
+.acima-brand-badge-mini {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #1d93f7;
+  text-transform: lowercase;
+}
+
+.partner-badge-chip {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 6px;
+  border-radius: 3px;
+  background-color: rgba(246, 186, 0, 0.15);
+  color: #8c6800;
+  white-space: nowrap;
+}
+
+.partner-badge-chip.acima-chip {
+  background-color: #1d93f7;
+  color: #ffffff;
+}
+
+.partner-card-body {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.partner-card-body strong {
+  font-size: 0.75rem;
+  color: #111111;
+  font-weight: 700;
+}
+
+.partner-card-body span {
+  font-size: 0.66rem;
+  color: #666666;
 }
 
 /* Target / Big Retail Red Special Box */
@@ -1132,10 +1339,53 @@ body.drawer-open .site-header {
   transform: scale(0.94);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 680px) {
   .hero-text-box.hero-carousel {
-    min-height: 400px;
+    min-height: unset;
     padding: 24px 20px;
+  }
+  .hero-slide-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .hero-visual-card {
+    flex-direction: row;
+    gap: 12px;
+    padding: 8px 12px;
+    align-items: center;
+    text-align: left;
+  }
+  .hero-visual-img-wrap,
+  .hero-visual-card.brand-card .hero-brand-emblem-wrap {
+    width: 80px;
+    height: 56px;
+    flex-shrink: 0;
+  }
+  .hero-brand-emblem-img {
+    width: 44px;
+    height: 44px;
+  }
+  .hero-visual-tag {
+    margin-top: 0;
+  }
+  .hero-financing-partners-box {
+    flex-direction: row;
+    gap: 8px;
+  }
+  .hero-partner-card {
+    flex: 1;
+    padding: 8px 10px;
+  }
+  .synchrony-brand-badge-mini,
+  .acima-brand-badge-mini {
+    font-size: 0.92rem;
+  }
+  .partner-card-body strong {
+    font-size: 0.7rem;
+  }
+  .partner-card-body span {
+    font-size: 0.62rem;
   }
   .hero-special-badge {
     font-size: 0.68rem;
