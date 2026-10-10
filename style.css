@@ -3580,14 +3580,15 @@ body.drawer-open .site-header {
 
 .ashley-partner-card {
   display: grid;
-  grid-template-columns: 1.25fr 0.95fr;
+  grid-template-columns: 0.9fr 1.3fr;
   gap: 52px;
   align-items: center;
   background: #ffffff;
-  border: 1px solid var(--color-border-hairline);
-  border-radius: 6px;
-  padding: 56px 60px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  border: 2px solid #ded8ce;
+  border-left: 5px solid #F48120;
+  border-radius: 8px;
+  padding: 54px 58px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.05);
 }
 
 .ashley-partner-content {
@@ -3602,6 +3603,7 @@ body.drawer-open .site-header {
   line-height: 1.15;
   color: var(--color-text-main);
   letter-spacing: -0.01em;
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
@@ -3695,7 +3697,7 @@ body.drawer-open .site-header {
   width: 100%;
   max-width: 440px;
   background: #ffffff;
-  border: 1px solid var(--color-border-hairline);
+  border: 1.5px solid #ded8ce;
   border-radius: 6px;
   padding: 36px 32px;
   text-align: center;
@@ -3788,12 +3790,9 @@ body.drawer-open .site-header {
 
   .ashley-partner-card {
     grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 36px 24px;
-  }
-
-  .ashley-partner-media {
-    order: -1;
+    gap: 36px;
+    padding: 34px 22px;
+    border-left: 4px solid #F48120;
   }
 
   .ashley-brand-badge-card {
