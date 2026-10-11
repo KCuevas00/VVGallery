@@ -368,14 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoPlay();
   }
 
-  // Floating Contact Bubble behavior
-  const floatingBubble = document.querySelector('.floating-contact-bubble');
-  if (floatingBubble && (window.location.pathname.includes('contact') || window.location.href.includes('contact.html'))) {
-    floatingBubble.setAttribute('href', 'tel:8473060959');
-    floatingBubble.setAttribute('aria-label', 'Call VV Gallery Showroom');
-    const bubbleText = floatingBubble.querySelector('.bubble-text');
-    if (bubbleText) bubbleText.textContent = 'Call Showroom';
-  }
 });
+
 
 
