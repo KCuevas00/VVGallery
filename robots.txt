@@ -1,0 +1,18 @@
+# robots.txt for https://vanevgallery.com
+User-agent: *
+Allow: /
+
+# Ensure AI search crawlers index the store, images, and content
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://vanevgallery.com/sitemap.xml
