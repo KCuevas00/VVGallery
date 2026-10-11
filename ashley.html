@@ -73,10 +73,10 @@
   <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
     <div class="drawer-content">
       <div class="drawer-top-row">
-        <a href="index.html" class="drawer-brand-lockup" aria-label="VV Gallery Home">
+        <div class="drawer-brand-lockup">
           <img src="photos/logo.jpg" alt="VV Gallery" class="drawer-logo-img">
           <span class="drawer-brand-text">VV GALLERY</span>
-        </a>
+        </div>
         <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
       </div>
       <nav class="drawer-nav">
@@ -93,7 +93,7 @@
         <div class="drawer-group">
           <p class="drawer-group-title">Customer Care</p>
           <ul>
-            <li><a href="financing.html">Financing</a></li>
+            <li><a href="financing.html">Financing ($49 / $1 Down)</a></li>
             <li><a href="story.html">About Us</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="contact.html">Showroom &amp; Directions</a></li>
@@ -115,189 +115,76 @@
     </div>
   </div>
 
-  <main id="main-content">
+  <main id="main-content" class="as-main">
 
-    <!-- Hero (same page-hero pattern as the other inner pages) -->
-    <section class="page-hero as-hero">
-      <div class="container">
-        <!-- Ashley Brand Lockup -->
-        <div class="as-brand-lockup">
-          <img src="photos/brands/ashley-logo.svg" alt="Ashley Furniture" class="as-brand-logo" width="140" height="66">
-          <span class="as-pill-tag">Authorized Regional Partner</span>
-        </div>
-
-        <h1 class="page-hero-title">Order Ashley furniture through us.</h1>
-        <p class="page-hero-desc">Don&rsquo;t see it on our floor? Bring us the name, item number or a link. We&rsquo;ll order it from Ashley and deliver it from our DeKalb location.</p>
-        <div class="as-actions">
-          <a href="#order-inquiry" class="as-btn as-btn--dark">Text or Call to Order</a>
-          <a href="tel:8473060959" class="as-btn as-btn--ghost">Call (847) 306-0959</a>
-        </div>
-
-        <!-- Ashley Brand Highlights -->
-        <div class="as-hero-highlights">
-          <div class="as-highlight-pill">
-            <span class="as-highlight-icon" aria-hidden="true">&#10003;</span>
-            <span>10,000+ Factory Styles</span>
-          </div>
-          <div class="as-highlight-pill">
-            <span class="as-highlight-icon" aria-hidden="true">&#10003;</span>
-            <span>Genuine Factory Warranty</span>
-          </div>
-          <div class="as-highlight-pill">
-            <span class="as-highlight-icon" aria-hidden="true">&#10003;</span>
-            <span>White-Glove Local Delivery</span>
+    <!-- The ad -->
+    <section class="as-ad" aria-labelledby="ashley-title">
+      <div class="as-ad-top">
+        <img src="photos/brands/ashley-furniture-logo.png" alt="Ashley Furniture" class="as-ad-logo" width="220" height="110">
+        <h1 id="ashley-title">Don&rsquo;t see it on our floor? We&rsquo;ll order it.</h1>
+        <p class="as-ad-sub">Send us the Ashley item name, number or link. We order it and deliver it from DeKalb.</p>
+      </div>
+      <div class="as-ad-bottom">
+        <div class="as-ad-local">
+          <img src="photos/logo.jpg" alt="VV Gallery" class="as-ad-local-logo" width="48" height="48">
+          <div class="as-ad-local-text">
+            <span class="as-ad-badge">
+              <svg class="as-ad-badge-icon" width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+              Authorized Regional Partner
+            </span>
+            <span class="as-ad-local-name">VV Gallery</span>
+            <span class="as-ad-local-address">
+              <svg class="as-ad-pin-icon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              1586 Barber Greene Rd, DeKalb
+            </span>
           </div>
         </div>
+        <a href="#contact" class="as-ad-cta">
+          <span>Order Through Us</span>
+          <span class="as-ad-cta-arrow" aria-hidden="true">&rarr;</span>
+        </a>
       </div>
     </section>
 
-    <!-- How ordering works -->
-    <section class="as-section">
-      <div class="as-wrap as-split">
-        <div>
-          <h2 class="as-heading">How ordering works</h2>
-          <p class="as-lead">You pick the piece. We handle the ordering, the freight and the delivery, so you don&rsquo;t have to drive to a big-box store.</p>
-          <div class="as-dealer-note">
-            <span class="as-dealer-badge">Direct Factory Freight</span>
-            <p>Skip the 40-minute drive to Elgin or Rockford. We receive freight at our DeKalb warehouse, inspect every carton for damage, and coordinate local delivery directly to your home.</p>
-          </div>
-        </div>
-        <ol class="as-steps">
-          <li>
-            <h3 class="as-step-title">Send us the item</h3>
-            <p>Browse Ashley online, then send us the item name, item number or a link. Or stop in and we&rsquo;ll look it up together on our screens.</p>
-          </li>
-          <li>
-            <h3 class="as-step-title">We confirm stock and price</h3>
-            <p>We check availability and give you the price before you order. If you want to pay over time, we can go over financing too.</p>
-          </li>
-          <li>
-            <h3 class="as-step-title">We receive it and deliver it</h3>
-            <p>The order ships to our DeKalb location. We check it over when it arrives, call you, and set up a delivery day that works for you.</p>
-          </li>
-        </ol>
+    <!-- Contact box -->
+    <section class="as-contact" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Send us the item.</h2>
+      <p>Text or call with the item name, number or a link. We&rsquo;ll check stock and tell you the price before you order.</p>
+      <div class="as-actions">
+        <a href="sms:8473060959?&body=Hi%20VV%20Gallery%2C%20I%27d%20like%20to%20order%20this%20from%20Ashley%3A%20" class="as-btn as-btn--solid">Text (847) 306-0959</a>
+        <a href="tel:8473060959" class="as-btn as-btn--line">Call us</a>
       </div>
+      <small>Mon&ndash;Fri 10am&ndash;6:30pm, Sat 10am&ndash;5pm. 1586 Barber Greene Rd, DeKalb.</small>
     </section>
 
-    <!-- Direct Order Hub (Fast Text, Call, or Visit) -->
-    <section class="as-section as-request-hub" id="order-inquiry">
-      <div class="as-wrap as-split">
-        <div>
-          <span class="as-eyebrow">Ready to Order?</span>
-          <h2 class="as-heading">Have a piece in mind? Let&rsquo;s get you local pricing.</h2>
-          <p class="as-lead">No need to fill out a long online form. Just text or call us with the Ashley item name, SKU, or a web link &mdash; we check factory stock and quote you immediately.</p>
-          <div class="as-dealer-note" style="margin-top: 24px;">
-            <span class="as-dealer-badge">Showroom Hours</span>
-            <p>Mon&ndash;Fri 10:00am&ndash;6:30pm | Sat 10:00am&ndash;5:00pm<br>1586 Barber Greene Rd, DeKalb, IL</p>
-          </div>
-        </div>
-
-        <div class="as-direct-card">
-          <div class="as-channel-row">
-            <div class="as-channel-icon" aria-hidden="true">&#128241;</div>
-            <div class="as-channel-text">
-              <h3>Text the Showroom Floor</h3>
-              <p>Send a screenshot, link, or item number directly to our team.</p>
-            </div>
-            <a href="sms:8473060959?&body=Hi%20VV%20Gallery%2C%20I%20have%20an%20Ashley%20Furniture%20item%20I%27d%20like%20pricing%20on%3A%20" class="as-btn as-btn--dark">Text (847) 306-0959</a>
-          </div>
-
-          <div class="as-channel-divider"></div>
-
-          <div class="as-channel-row">
-            <div class="as-channel-icon" aria-hidden="true">&#128222;</div>
-            <div class="as-channel-text">
-              <h3>Call Catalog Desk</h3>
-              <p>Talk to an associate to confirm colors, layout, and financing.</p>
-            </div>
-            <a href="tel:8473060959" class="as-btn as-btn--ghost">Call (847) 306-0959</a>
-          </div>
-
-          <div class="as-channel-divider"></div>
-
-          <div class="as-channel-row">
-            <div class="as-channel-icon" aria-hidden="true">&#128205;</div>
-            <div class="as-channel-text">
-              <h3>Stop by Our DeKalb Showroom</h3>
-              <p>Pull up the full catalog on our screens and compare in-stock fabrics.</p>
-            </div>
-            <a href="contact.html" class="as-btn as-btn--ghost">Get Directions</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Modern FAQ Accordion Menu -->
-    <section class="as-section" id="faq">
-      <div class="as-wrap as-split">
-        <div>
-          <span class="as-eyebrow">Common Questions</span>
-          <h2 class="as-heading">Frequently asked questions.</h2>
-          <p class="as-lead">Straightforward answers about Ashley catalog orders, local freight handling, warranties, and financing.</p>
-        </div>
-
-        <div class="faq-accordion">
-          <details class="faq-accordion-item" open>
-            <summary class="faq-accordion-header">
-              <span>Are these authentic Ashley Furniture pieces?</span>
-              <span class="faq-accordion-icon" aria-hidden="true">&#9662;</span>
-            </summary>
-            <div class="faq-accordion-body">
-              <p>Yes, 100%. As an authorized regional partner, VV Gallery orders directly through Ashley Furniture Industries&rsquo; authorized dealer freight network. Every piece comes with genuine manufacturer warranty coverage and original factory packaging.</p>
-            </div>
-          </details>
-
-          <details class="faq-accordion-item">
-            <summary class="faq-accordion-header">
-              <span>How does pricing compare to Ashley HomeStores?</span>
-              <span class="faq-accordion-icon" aria-hidden="true">&#9662;</span>
-            </summary>
-            <div class="faq-accordion-body">
-              <p>Because we operate locally without expensive corporate mall overhead, we offer highly competitive catalog pricing. Plus, you get direct local delivery from Barber Greene Rd, saving both freight fees and the 40+ minute drive to Rockford or Elgin.</p>
-            </div>
-          </details>
-
-          <details class="faq-accordion-item">
-            <summary class="faq-accordion-header">
-              <span>How long does shipping and delivery take?</span>
-              <span class="faq-accordion-icon" aria-hidden="true">&#9662;</span>
-            </summary>
-            <div class="faq-accordion-body">
-              <p>Most factory catalog orders reach our DeKalb location in 5 to 14 business days. When your shipment arrives, our team inspects every carton for defects and calls you immediately to schedule home delivery or free warehouse pickup.</p>
-            </div>
-          </details>
-
-          <details class="faq-accordion-item">
-            <summary class="faq-accordion-header">
-              <span>Can I finance or lease-to-own an Ashley order?</span>
-              <span class="faq-accordion-icon" aria-hidden="true">&#9662;</span>
-            </summary>
-            <div class="faq-accordion-body">
-              <p>Yes! You can take advantage of our financing partners for any Ashley catalog order, including <strong>Synchrony Financial</strong> (0% APR promotional terms for qualifying buyers) and <strong>Acima</strong> (no credit needed lease-to-own with as little as $49 down). <a href="financing.html">Explore financing options &rarr;</a></p>
-            </div>
-          </details>
-
-          <details class="faq-accordion-item">
-            <summary class="faq-accordion-header">
-              <span>What is the return policy on catalog special orders?</span>
-              <span class="faq-accordion-icon" aria-hidden="true">&#9662;</span>
-            </summary>
-            <div class="faq-accordion-body">
-              <p>Pieces ordered specifically from manufacturer catalogs are final sale once processed and cannot be returned or exchanged. Our showroom team will help you verify measurements, fabrics, and left- or right-facing orientation before committing. See our <a href="refund-policy.html">refund policy</a>.</p>
-            </div>
-          </details>
-
-          <details class="faq-accordion-item">
-            <summary class="faq-accordion-header">
-              <span>Where do you deliver?</span>
-              <span class="faq-accordion-icon" aria-hidden="true">&#9662;</span>
-            </summary>
-            <div class="faq-accordion-body">
-              <p>We deliver across DeKalb, Sycamore, Cortland, Rochelle, Genoa, and surrounding Kane/DeKalb County areas. Doorstep drop-off and room-of-choice setup are both available, or you can pick up for free at our showroom. See our <a href="shipping-policy.html">delivery areas</a>.</p>
-            </div>
-          </details>
-        </div>
-      </div>
+    <!-- FAQ -->
+    <section class="as-faq" aria-labelledby="faq-title">
+      <h2 class="as-faq-title" id="faq-title">Questions</h2>
+      <details open>
+        <summary>How does ordering work?</summary>
+        <p>Send us the item name, number or a link, or stop in and we&rsquo;ll look it up together. We confirm stock and your price before you order, then the piece ships to our DeKalb location.</p>
+      </details>
+      <details>
+        <summary>How long does it take?</summary>
+        <p>Most catalog orders reach our DeKalb location in 5 to 14 business days. We check it over when it arrives and call you to schedule delivery. See our <a href="shipping-policy.html">shipping policy</a>.</p>
+      </details>
+      <details>
+        <summary>Can I return a catalog order?</summary>
+        <p>No. Pieces ordered from a manufacturer catalog are final sale, so check the size, color and left or right facing with us before you commit. See our <a href="refund-policy.html">refund policy</a>.</p>
+      </details>
+      <details>
+        <summary>Can I pay over time?</summary>
+        <p>Yes. Acima lease-to-own and Synchrony financing are available. Acima needs no credit, just steady income and a checking account. <a href="financing.html">See financing options</a>.</p>
+      </details>
+      <details>
+        <summary>Where do you deliver?</summary>
+        <p>We deliver across DeKalb County and nearby towns, or you can pick up for free at our showroom. See our <a href="shipping-policy.html">delivery areas</a>.</p>
+      </details>
     </section>
 
   </main>
