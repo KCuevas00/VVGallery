@@ -2707,6 +2707,31 @@ body.drawer-open .site-header {
   white-space: nowrap;
 }
 
+.google-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid var(--color-border-hairline, #e2ded8);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.google-badge:hover {
+  transform: scale(1.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+}
+
+.google-badge svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+
 /* LOCAL SHOWROOM / VISIT US STRIP */
 .showroom-strip {
   background-color: var(--color-bg-subtle);
