@@ -37,7 +37,6 @@
 .as-pill-tag {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
   font-family: var(--font-sans);
   font-size: 0.76rem;
   font-weight: 700;
@@ -46,14 +45,6 @@
   color: var(--as-ink);
   border-left: 1px solid var(--color-border-hairline);
   padding-left: 14px;
-}
-
-.as-pill-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: var(--as-orange);
-  box-shadow: 0 0 0 2px var(--as-orange-tint);
 }
 
 .as-hero-highlights {
@@ -154,6 +145,15 @@
 }
 
 /* ---------- Hero ---------- */
+.as-hero {
+  position: relative;
+  background: linear-gradient(180deg, rgba(16, 14, 12, 0.78) 0%, rgba(16, 14, 12, 0.65) 50%, rgba(16, 14, 12, 0.84) 100%),
+              url('photos/story-showroom-full.jpg') center 45% / cover no-repeat;
+  color: #ffffff;
+  padding-bottom: 64px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
 .as-hero .page-hero-title {
   font-size: clamp(2.3rem, 5vw, 4rem);
   font-weight: 500;
@@ -163,19 +163,77 @@
   margin-left: auto;
   margin-right: auto;
   text-wrap: balance;
+  color: #ffffff;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
 }
 
 .as-hero .page-hero-desc {
-  max-width: 560px;
+  max-width: 580px;
   margin-bottom: 28px;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
 }
 
 .as-hero .as-actions {
   justify-content: center;
 }
 
-.as-hero {
-  padding-bottom: 56px;
+.as-hero .as-btn--dark {
+  background: #ffffff;
+  color: var(--as-ink);
+}
+
+.as-hero .as-btn--dark:hover {
+  background: var(--color-gold-accent);
+  color: #ffffff;
+}
+
+.as-hero .as-btn--ghost {
+  border-color: rgba(255, 255, 255, 0.75);
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.as-hero .as-btn--ghost:hover {
+  background: #ffffff;
+  color: var(--as-ink);
+  border-color: #ffffff;
+}
+
+.as-hero-highlights {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(14px, 3vw, 28px);
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.as-highlight-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.94);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.as-highlight-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(248, 141, 42, 0.28);
+  color: #ffab5c;
+  font-size: 11px;
+  font-weight: 700;
 }
 
 /* ---------- Shared section layout ---------- */

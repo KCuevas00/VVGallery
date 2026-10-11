@@ -520,6 +520,9 @@ body.drawer-open .site-header {
   display: flex;
   align-items: center;
   gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .drawer-logo-img {
