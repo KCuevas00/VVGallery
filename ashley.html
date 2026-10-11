@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -129,7 +129,7 @@
         <h1 class="page-hero-title">Order Ashley furniture through us.</h1>
         <p class="page-hero-desc">Don&rsquo;t see it on our floor? Bring us the name, item number or a link. We&rsquo;ll order it from Ashley and deliver it from our DeKalb location.</p>
         <div class="as-actions">
-          <a href="#request" class="as-btn as-btn--dark">Send us the item</a>
+          <a href="#order-inquiry" class="as-btn as-btn--dark">Text or Call to Order</a>
           <a href="tel:8473060959" class="as-btn as-btn--ghost">Call (847) 306-0959</a>
         </div>
 
@@ -179,82 +179,124 @@
       </div>
     </section>
 
-    <!-- Request form -->
-    <section class="as-section as-request" id="request">
+    <!-- Direct Order Hub (Fast Text, Call, or Visit) -->
+    <section class="as-section as-request-hub" id="order-inquiry">
       <div class="as-wrap as-split">
         <div>
-          <h2 class="as-heading">Tell us what you want.</h2>
-          <p class="as-lead">Fill this in and it opens a text message to our showroom with your details already typed. Just press send.</p>
-          <p class="as-contact-lines">
-            Prefer to talk? Call or text <a href="tel:8473060959">(847) 306-0959</a>.<br>
-            Mon&ndash;Fri 10am&ndash;6:30pm, Sat 10am&ndash;5pm.<br>
-            Or visit us at <a href="contact.html">1586 Barber Greene Rd</a>.
-          </p>
+          <span class="as-eyebrow">Ready to Order?</span>
+          <h2 class="as-heading">Have a piece in mind? Let&rsquo;s get you local pricing.</h2>
+          <p class="as-lead">No need to fill out a long online form. Just text or call us with the Ashley item name, SKU, or a web link &mdash; we check factory stock and quote you immediately.</p>
+          <div class="as-dealer-note" style="margin-top: 24px;">
+            <span class="as-dealer-badge">Showroom Hours</span>
+            <p>Mon&ndash;Fri 10:00am&ndash;6:30pm | Sat 10:00am&ndash;5:00pm<br>1586 Barber Greene Rd, DeKalb, IL</p>
+          </div>
         </div>
 
-        <form class="as-form" id="ashleyForm" novalidate>
-          <div class="as-field">
-            <label for="ashley-name">Your name</label>
-            <input type="text" id="ashley-name" autocomplete="name" required>
+        <div class="as-direct-card">
+          <div class="as-channel-row">
+            <div class="as-channel-icon" aria-hidden="true">&#128241;</div>
+            <div class="as-channel-text">
+              <h3>Text the Showroom Floor</h3>
+              <p>Send a screenshot, link, or item number directly to our team.</p>
+            </div>
+            <a href="sms:8473060959?&body=Hi%20VV%20Gallery%2C%20I%20have%20an%20Ashley%20Furniture%20item%20I%27d%20like%20pricing%20on%3A%20" class="as-btn as-btn--dark">Text (847) 306-0959</a>
           </div>
-          <div class="as-field">
-            <label for="ashley-dept">Department <span class="as-hint">Optional &mdash; helps us pull the right Ashley catalog faster</span></label>
-            <select id="ashley-dept" class="as-select">
-              <option value="">Select a category (optional)...</option>
-              <option value="Living Room / Sectional / Couch">Living Room / Sectionals / Couches</option>
-              <option value="Bedroom Set / Bed / Dresser">Bedroom Sets, Beds &amp; Dressers</option>
-              <option value="Recliner / Power Motion Seating">Recliners &amp; Power Motion Seating</option>
-              <option value="Dining Room / Kitchen Table">Dining Sets &amp; Kitchen Tables</option>
-              <option value="Home Office / Accent Furniture">Home Office &amp; Accent Furniture</option>
-              <option value="Other Ashley Item">Other Ashley Item</option>
-            </select>
+
+          <div class="as-channel-divider"></div>
+
+          <div class="as-channel-row">
+            <div class="as-channel-icon" aria-hidden="true">&#128222;</div>
+            <div class="as-channel-text">
+              <h3>Call Catalog Desk</h3>
+              <p>Talk to an associate to confirm colors, layout, and financing.</p>
+            </div>
+            <a href="tel:8473060959" class="as-btn as-btn--ghost">Call (847) 306-0959</a>
           </div>
-          <div class="as-field">
-            <label for="ashley-item">Item name, number or link
-              <span class="as-hint">For example &ldquo;Darcy sectional&rdquo; or a link from ashleyfurniture.com</span>
-            </label>
-            <input type="text" id="ashley-item" required>
+
+          <div class="as-channel-divider"></div>
+
+          <div class="as-channel-row">
+            <div class="as-channel-icon" aria-hidden="true">&#128205;</div>
+            <div class="as-channel-text">
+              <h3>Stop by Our DeKalb Showroom</h3>
+              <p>Pull up the full catalog on our screens and compare in-stock fabrics.</p>
+            </div>
+            <a href="contact.html" class="as-btn as-btn--ghost">Get Directions</a>
           </div>
-          <div class="as-field">
-            <label for="ashley-notes">Anything else? <span class="as-hint">Color, size, left or right facing, room measurements</span></label>
-            <textarea id="ashley-notes" rows="4"></textarea>
-          </div>
-          <div>
-            <button type="submit" class="as-btn as-btn--dark">Text this to the showroom</button>
-          </div>
-          <p class="as-form-note" id="ashleyFormNote">On a computer? Your phone&rsquo;s text app may not open. Call us at (847) 306-0959 instead.</p>
-        </form>
+        </div>
       </div>
     </section>
 
-    <!-- Before you order -->
-    <section class="as-section">
-      <div class="as-wrap">
-        <div class="as-split" style="margin-bottom: 36px;">
-          <h2 class="as-heading">Before you order</h2>
+    <!-- Modern FAQ Accordion Menu -->
+    <section class="as-section" id="faq">
+      <div class="as-wrap as-split">
+        <div>
+          <span class="as-eyebrow">Common Questions</span>
+          <h2 class="as-heading">Frequently asked questions.</h2>
+          <p class="as-lead">Straightforward answers about Ashley catalog orders, local freight handling, warranties, and financing.</p>
         </div>
-        <dl class="as-facts">
-          <div class="as-fact">
-            <dt>100% authentic Ashley pieces</dt>
-            <dd>Every item is ordered directly through Ashley Furniture Industries&rsquo; authorized dealer network. Pieces arrive in genuine factory packaging with full manufacturer warranty protection.</dd>
-          </div>
-          <div class="as-fact">
-            <dt>How long it takes</dt>
-            <dd>Most catalog orders reach our DeKalb location in 5 to 14 business days. When yours arrives, we call you to schedule delivery. See our <a href="shipping-policy.html">shipping policy</a>.</dd>
-          </div>
-          <div class="as-fact">
-            <dt>Catalog orders are final sale</dt>
-            <dd>Pieces ordered from a manufacturer catalog can&rsquo;t be returned or exchanged. Check the size, color and left or right facing with us before you commit. See our <a href="refund-policy.html">refund policy</a>.</dd>
-          </div>
-          <div class="as-fact">
-            <dt>Paying over time</dt>
-            <dd>Acima lease-to-own and Synchrony financing are available. Acima needs no credit, just steady income and a checking account. <a href="financing.html">See financing options</a>.</dd>
-          </div>
-          <div class="as-fact">
-            <dt>Where we deliver</dt>
-            <dd>We deliver across DeKalb County and nearby towns, or you can pick up for free at our showroom. <a href="shipping-policy.html">See delivery areas</a>.</dd>
-          </div>
-        </dl>
+
+        <div class="faq-accordion">
+          <details class="faq-accordion-item" open>
+            <summary class="faq-accordion-header">
+              <span>Are these authentic Ashley Furniture pieces?</span>
+              <span class="faq-accordion-icon" aria-hidden="true">&#9662;</span>
+            </summary>
+            <div class="faq-accordion-body">
+              <p>Yes, 100%. As an authorized regional partner, VV Gallery orders directly through Ashley Furniture Industries&rsquo; authorized dealer freight network. Every piece comes with genuine manufacturer warranty coverage and original factory packaging.</p>
+            </div>
+          </details>
+
+          <details class="faq-accordion-item">
+            <summary class="faq-accordion-header">
+              <span>How does pricing compare to Ashley HomeStores?</span>
+              <span class="faq-accordion-icon" aria-hidden="true">&#9662;</span>
+            </summary>
+            <div class="faq-accordion-body">
+              <p>Because we operate locally without expensive corporate mall overhead, we offer highly competitive catalog pricing. Plus, you get direct local delivery from Barber Greene Rd, saving both freight fees and the 40+ minute drive to Rockford or Elgin.</p>
+            </div>
+          </details>
+
+          <details class="faq-accordion-item">
+            <summary class="faq-accordion-header">
+              <span>How long does shipping and delivery take?</span>
+              <span class="faq-accordion-icon" aria-hidden="true">&#9662;</span>
+            </summary>
+            <div class="faq-accordion-body">
+              <p>Most factory catalog orders reach our DeKalb location in 5 to 14 business days. When your shipment arrives, our team inspects every carton for defects and calls you immediately to schedule home delivery or free warehouse pickup.</p>
+            </div>
+          </details>
+
+          <details class="faq-accordion-item">
+            <summary class="faq-accordion-header">
+              <span>Can I finance or lease-to-own an Ashley order?</span>
+              <span class="faq-accordion-icon" aria-hidden="true">&#9662;</span>
+            </summary>
+            <div class="faq-accordion-body">
+              <p>Yes! You can take advantage of our financing partners for any Ashley catalog order, including <strong>Synchrony Financial</strong> (0% APR promotional terms for qualifying buyers) and <strong>Acima</strong> (no credit needed lease-to-own with as little as $49 down). <a href="financing.html">Explore financing options &rarr;</a></p>
+            </div>
+          </details>
+
+          <details class="faq-accordion-item">
+            <summary class="faq-accordion-header">
+              <span>What is the return policy on catalog special orders?</span>
+              <span class="faq-accordion-icon" aria-hidden="true">&#9662;</span>
+            </summary>
+            <div class="faq-accordion-body">
+              <p>Pieces ordered specifically from manufacturer catalogs are final sale once processed and cannot be returned or exchanged. Our showroom team will help you verify measurements, fabrics, and left- or right-facing orientation before committing. See our <a href="refund-policy.html">refund policy</a>.</p>
+            </div>
+          </details>
+
+          <details class="faq-accordion-item">
+            <summary class="faq-accordion-header">
+              <span>Where do you deliver?</span>
+              <span class="faq-accordion-icon" aria-hidden="true">&#9662;</span>
+            </summary>
+            <div class="faq-accordion-body">
+              <p>We deliver across DeKalb, Sycamore, Cortland, Rochelle, Genoa, and surrounding Kane/DeKalb County areas. Doorstep drop-off and room-of-choice setup are both available, or you can pick up for free at our showroom. See our <a href="shipping-policy.html">delivery areas</a>.</p>
+            </div>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -318,26 +360,5 @@
   </footer>
 
   <script src="main.js"></script>
-  <script>
-    // No backend yet: build a text message to the showroom with the form details.
-    (function () {
-      var form = document.getElementById('ashleyForm');
-      if (!form) return;
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var name = document.getElementById('ashley-name');
-        var item = document.getElementById('ashley-item');
-        var deptEl = document.getElementById('ashley-dept');
-        var dept = deptEl ? deptEl.value : '';
-        var notes = document.getElementById('ashley-notes').value.trim();
-        if (!name.value.trim() || !item.value.trim()) {
-          (name.value.trim() ? item : name).focus();
-          return;
-        }
-        var body = 'Hi VV Gallery, this is ' + name.value.trim() + '. I\'d like to order this from Ashley' + (dept ? ' (' + dept + ')' : '') + ': ' + item.value.trim() + '.' + (notes ? ' Notes: ' + notes : '');
-        window.location.href = 'sms:8473060959?&body=' + encodeURIComponent(body);
-      });
-    })();
-  </script>
 </body>
 </html>
