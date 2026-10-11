@@ -1854,20 +1854,37 @@ body.drawer-open .site-header {
 .spotlight-actions {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 8px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.spotlight-actions .btn-primary {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
 }
 
 .link-editorial {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 16px;
   font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-text-main);
   font-weight: 600;
-  display: inline-block;
+  border: none;
+  background: transparent;
+  transition: var(--transition-smooth);
 }
 
 .link-editorial:hover {
   color: var(--color-gold-accent);
+  transform: translateY(-1px);
 }
 
 /* COLLECTION MATRIX (Hairline bordered product catalog) */
