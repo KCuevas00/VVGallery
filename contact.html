@@ -12,7 +12,7 @@
   
   <link rel="icon" type="image/png" href="photos/favicon.png">
   <link rel="shortcut icon" href="photos/favicon.ico">
-  <link rel="stylesheet" href="style.css?v=2.2">
+  <link rel="stylesheet" href="style.css?v=2.4">
   <link rel="canonical" href="https://vanevgallery.com/contact.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="VV Gallery">
@@ -148,12 +148,6 @@
     <!-- Spacious Contact & Showroom Section -->
     <section class="contact-page-section">
       <div class="container">
-        
-        <div class="contact-intro-card">
-          <span class="contact-kicker">Stop In &amp; Say Hello</span>
-          <h2 class="contact-section-title">Visit Our Showroom</h2>
-          <p class="contact-lead-text">We're located on Barber Greene Rd with plenty of free parking right out front. No high-pressure sales reps &mdash; just honest folks ready to help you find comfortable furniture for your home.</p>
-        </div>
 
         <div class="contact-layout-grid">
           
@@ -163,10 +157,15 @@
             <!-- Address & Directions Card -->
             <div class="contact-feature-card">
               <div class="contact-card-header">
-                <div class="contact-icon-circle" aria-hidden="true">&#128205;</div>
+                <div class="contact-icon-circle" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
                 <div>
                   <span class="contact-card-eyebrow">Visit Our Showroom</span>
-                  <h3 class="contact-card-title">Showroom Address</h3>
+                  <h2 class="contact-card-title">Showroom Address</h2>
                 </div>
               </div>
               <p class="contact-card-body">
@@ -181,7 +180,12 @@
             <!-- Hours of Operation Card -->
             <div class="contact-feature-card">
               <div class="contact-card-header">
-                <div class="contact-icon-circle" aria-hidden="true">&#128339;</div>
+                <div class="contact-icon-circle" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
                 <div>
                   <span class="contact-card-eyebrow">Open 6 Days a Week</span>
                   <h3 class="contact-card-title">Hours of Operation</h3>
@@ -190,14 +194,18 @@
               <ul class="contact-hours-list">
                 <li><span>Monday &ndash; Friday:</span> <strong>10:00 AM &ndash; 6:30 PM</strong></li>
                 <li><span>Saturday:</span> <strong>10:00 AM &ndash; 5:00 PM</strong></li>
-                <li><span>Sunday:</span> <span class="hours-closed">Closed (Family &amp; Faith Day)</span></li>
+                <li><span>Sunday:</span> <span class="hours-closed">Closed</span></li>
               </ul>
             </div>
 
             <!-- Call or Text Card -->
             <div class="contact-feature-card">
               <div class="contact-card-header">
-                <div class="contact-icon-circle" aria-hidden="true">&#128222;</div>
+                <div class="contact-icon-circle" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
                 <div>
                   <span class="contact-card-eyebrow">Fast Inventory Check</span>
                   <h3 class="contact-card-title">Call or Text</h3>
@@ -215,7 +223,14 @@
             <!-- Delivery & Service Area Card -->
             <div class="contact-feature-card">
               <div class="contact-card-header">
-                <div class="contact-icon-circle" aria-hidden="true">&#128666;</div>
+                <div class="contact-icon-circle" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="1" y="3" width="15" height="13"></rect>
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                  </svg>
+                </div>
                 <div>
                   <span class="contact-card-eyebrow">Local Freight &amp; Delivery</span>
                   <h3 class="contact-card-title">Delivery Area</h3>
@@ -227,10 +242,49 @@
               <a href="shipping-policy.html" class="contact-link-action">View Full Delivery Policy &rarr;</a>
             </div>
 
-            <!-- Connect & Social Media Card -->
+          </div>
+
+          <!-- Right Column: Massive High-End Interactive Map + Connect & Follow -->
+          <div class="contact-map-column">
+            
+            <div class="contact-map-card">
+              <div class="map-card-top-bar">
+                <span class="map-status-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block; vertical-align: -2px; margin-right: 4px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Showroom Location
+                </span>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=1586+Barber+Greene+Rd+DeKalb+IL+60115" target="_blank" rel="noopener noreferrer" class="map-open-link">Open in Google Maps &rarr;</a>
+              </div>
+              <div class="contact-map-frame">
+                <iframe 
+                  src="https://maps.google.com/maps?q=1586+Barber+Greene+Rd,+DeKalb,+IL+60115&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                  width="100%" 
+                  height="100%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="VV Gallery Showroom Map">
+                </iframe>
+              </div>
+              <div class="map-card-bottom-bar">
+                <div class="map-address-snippet">
+                  <strong>VV Gallery Furniture &amp; Mattresses</strong>
+                  <span>1586 Barber Greene Rd, DeKalb, IL 60115</span>
+                </div>
+                <a href="tel:8473060959" class="btn-primary" style="padding: 10px 20px; font-size: 0.85rem;">Call Showroom</a>
+              </div>
+            </div>
+
+            <!-- Connect & Social Media Card (Right Grid Below Map) -->
             <div class="contact-feature-card contact-social-card">
               <div class="contact-card-header">
-                <div class="contact-icon-circle" aria-hidden="true">&#128247;</div>
+                <div class="contact-icon-circle" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                    <circle cx="12" cy="13" r="4"></circle>
+                  </svg>
+                </div>
                 <div>
                   <span class="contact-card-eyebrow">Stay In Touch</span>
                   <h3 class="contact-card-title">Connect &amp; Follow</h3>
@@ -241,9 +295,9 @@
               </p>
               <div class="contact-social-grid">
                 
-                <a href="https://www.facebook.com/profile.php?id=61573859170150" target="_blank" rel="noopener noreferrer" class="social-brand-card facebook-card">
-                  <div class="social-brand-icon fb-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <a href="https://www.facebook.com/profile.php?id=61573859170150" target="_blank" rel="noopener noreferrer" class="social-brand-card">
+                  <div class="social-brand-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                     </svg>
                   </div>
@@ -254,9 +308,9 @@
                   <span class="social-brand-arrow" aria-hidden="true">&rarr;</span>
                 </a>
 
-                <a href="https://www.instagram.com/vanevintagegallery" target="_blank" rel="noopener noreferrer" class="social-brand-card instagram-card">
-                  <div class="social-brand-icon ig-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <a href="https://www.instagram.com/vanevintagegallery" target="_blank" rel="noopener noreferrer" class="social-brand-card">
+                  <div class="social-brand-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                       <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
@@ -269,13 +323,13 @@
                   <span class="social-brand-arrow" aria-hidden="true">&rarr;</span>
                 </a>
 
-                <a href="https://share.google/8glchlT7H6oo3atPb" target="_blank" rel="noopener noreferrer" class="social-brand-card google-card">
-                  <div class="social-brand-icon google-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-                      <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
-                      <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
-                      <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.03 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
-                      <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                <a href="https://share.google/8glchlT7H6oo3atPb" target="_blank" rel="noopener noreferrer" class="social-brand-card">
+                  <div class="social-brand-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
                     </svg>
                   </div>
                   <div class="social-brand-info">
@@ -288,37 +342,6 @@
               </div>
             </div>
 
-          </div>
-
-          <!-- Right Column: Massive High-End Interactive Map -->
-          <div class="contact-map-column">
-            <div class="contact-sticky-map-wrapper">
-              <div class="contact-map-card">
-                <div class="map-card-top-bar">
-                  <span class="map-status-badge">&#128205; Showroom Location</span>
-                  <a href="https://www.google.com/maps/dir/?api=1&destination=1586+Barber+Greene+Rd+DeKalb+IL+60115" target="_blank" rel="noopener noreferrer" class="map-open-link">Open in Google Maps &rarr;</a>
-                </div>
-                <div class="contact-map-frame">
-                  <iframe 
-                    src="https://maps.google.com/maps?q=1586+Barber+Greene+Rd,+DeKalb,+IL+60115&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade"
-                    title="VV Gallery Showroom Map">
-                  </iframe>
-                </div>
-                <div class="map-card-bottom-bar">
-                  <div class="map-address-snippet">
-                    <strong>VV Gallery Furniture &amp; Mattresses</strong>
-                    <span>1586 Barber Greene Rd, DeKalb, IL 60115</span>
-                  </div>
-                  <a href="tel:8473060959" class="btn-primary" style="padding: 10px 20px; font-size: 0.85rem;">Call Showroom</a>
-                </div>
-              </div>
-            </div>
           </div>
 
         </div>
