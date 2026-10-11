@@ -367,6 +367,19 @@ document.addEventListener('DOMContentLoaded', () => {
     goToSlide(0);
     startAutoPlay();
   }
+
+  // Floating Contact Bubble behavior
+  const floatingBubble = document.querySelector('.floating-contact-bubble');
+  if (floatingBubble && (window.location.pathname.includes('contact') || window.location.href.includes('contact.html'))) {
+    floatingBubble.setAttribute('href', '#inquiry');
+    floatingBubble.addEventListener('click', (e) => {
+      const target = document.getElementById('inquiry') || document.querySelector('.showroom-details-grid');
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
 });
 
 
