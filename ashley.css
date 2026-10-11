@@ -62,122 +62,135 @@
   max-width: 30ch;
 }
 
-.as-ad-bottom {
+/* ---------- Split Visual Card (Two-Tone Card) ---------- */
+.as-split-card {
   flex: 0 0 auto;
-  background: linear-gradient(135deg, #f48120 0%, #eb7512 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.28);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 5% 7%;
+  background: #141312;
+  border-top: 1px solid rgba(244, 129, 32, 0.22);
+  color: #fff;
+  min-height: 84px;
 }
 
-.as-ad-local {
+.as-split-brand-panel {
+  position: relative;
+  flex: 1 1 48%;
+  background: #100f0e;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.as-split-glow {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  width: 90px;
+  height: 90px;
+  transform: translate(-30%, -50%);
+  background: radial-gradient(circle, rgba(244, 129, 32, 0.45) 0%, rgba(244, 129, 32, 0.14) 50%, transparent 75%);
+  pointer-events: none;
+  filter: blur(8px);
+}
+
+.as-split-brand-content {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   gap: 12px;
   min-width: 0;
-  color: var(--as-ink);
 }
 
-.as-ad-local-logo {
-  width: clamp(40px, 9vw, 48px);
-  height: clamp(40px, 9vw, 48px);
+.as-split-logo {
+  width: 44px;
+  height: 44px;
   object-fit: cover;
   border-radius: 8px;
-  border: 2px solid #fff;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  border: 1.5px solid rgba(244, 129, 32, 0.75);
+  box-shadow: 0 0 16px rgba(244, 129, 32, 0.35);
   flex-shrink: 0;
 }
 
-.as-ad-local-text {
+.as-split-brand-text {
   display: flex;
   flex-direction: column;
+  gap: 2px;
   min-width: 0;
 }
 
-.as-ad-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: clamp(0.58rem, 1.8vw, 0.68rem);
+.as-split-brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
   font-weight: 700;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--as-ink);
-  background: rgba(255, 255, 255, 0.45);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  padding: 2px 7px;
-  border-radius: 999px;
-  margin-bottom: 3px;
-  width: fit-content;
-  backdrop-filter: blur(4px);
-  line-height: 1.2;
-}
-
-.as-ad-badge-icon {
-  flex-shrink: 0;
-  color: #c9560a;
-}
-
-.as-ad-local-name {
-  font-family: var(--font-serif);
-  font-size: clamp(1.05rem, 3.8vw, 1.45rem);
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--as-ink);
+  color: #f7f5f0;
   line-height: 1.1;
+  text-transform: uppercase;
   white-space: nowrap;
 }
 
-.as-ad-local-address {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: clamp(0.66rem, 2vw, 0.78rem);
+.as-split-brand-badge {
+  font-size: 0.72rem;
   font-weight: 600;
-  color: rgba(22, 21, 19, 0.88);
-  margin-top: 3px;
+  color: var(--as-orange);
+  letter-spacing: 0.02em;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
-.as-ad-pin-icon {
-  flex-shrink: 0;
-  color: var(--as-ink);
+.as-split-cta-panel {
+  flex: 1 1 52%;
+  background: #191816;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
 }
 
-.as-ad-cta {
+.as-split-pitch {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: #d6d1c7;
+  font-weight: 500;
+  max-width: 22ch;
+}
+
+.as-split-btn {
   flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--as-ink);
-  color: #fff;
-  font-size: clamp(0.76rem, 2.2vw, 0.88rem);
+  background: var(--as-orange);
+  color: #141312;
+  font-size: 0.8rem;
   font-weight: 700;
-  padding: 12px 18px;
-  border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.16);
-  transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  white-space: nowrap;
+  letter-spacing: 0.01em;
+  padding: 10px 16px;
+  border-radius: 4px;
   text-decoration: none;
+  box-shadow: 0 2px 10px rgba(244, 129, 32, 0.3);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
 }
 
-.as-ad-cta:hover {
-  background: #000;
+.as-split-btn:hover {
+  background: #ffa047;
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 4px 14px rgba(244, 129, 32, 0.45);
 }
 
-.as-ad-cta:hover .as-ad-cta-arrow {
-  transform: translateX(3px);
-}
-
-.as-ad-cta-arrow {
+.as-split-arrow {
   display: inline-block;
   transition: transform 0.2s ease;
+}
+
+.as-split-btn:hover .as-split-arrow {
+  transform: translateX(3px);
 }
 
 /* ---------- Contact box ---------- */
@@ -299,7 +312,7 @@
   border-bottom: 1px solid var(--as-orange);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
   .as-ad {
     aspect-ratio: auto;
   }
@@ -308,21 +321,33 @@
     padding: 24px 20px 18px;
   }
 
-  .as-ad-bottom {
+  .as-split-card {
     flex-direction: column;
-    align-items: stretch;
+  }
+
+  .as-split-brand-panel {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 14px 18px;
+  }
+
+  .as-split-cta-panel {
+    flex-direction: column;
+    align-items: flex-start;
     gap: 12px;
-    padding: 16px 18px;
+    padding: 14px 18px 16px;
   }
 
-  .as-ad-local {
-    justify-content: flex-start;
+  .as-split-pitch {
+    max-width: 100%;
+    font-size: 0.88rem;
   }
 
-  .as-ad-cta {
-    justify-content: center;
+  .as-split-btn {
     width: 100%;
+    justify-content: center;
     padding: 11px 16px;
   }
 }
+
 
