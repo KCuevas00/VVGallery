@@ -5103,6 +5103,143 @@ body.drawer-open .site-header {
   }
 }
 
+/* Contact Page Simple Message Form */
+.contact-form-section {
+  margin-top: 56px;
+  padding-top: 48px;
+  border-top: 1px solid var(--color-border-hairline, #e7e2d9);
+}
+
+.contact-form-card {
+  max-width: 680px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid var(--color-border-hairline, #e7e2d9);
+  border-radius: 8px;
+  padding: 38px 42px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.contact-form-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.contact-form-eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-gold-accent, #c5a059);
+  margin-bottom: 6px;
+}
+
+.contact-form-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.7rem, 3.2vw, 2.15rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-text-main, #141312);
+  margin: 0 0 10px;
+}
+
+.contact-form-desc {
+  font-family: var(--font-sans);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  color: var(--color-text-muted, #55524e);
+  margin: 0;
+}
+
+.simple-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-main, #141312);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: #faf9f6;
+  border: 1px solid var(--color-border-hairline, #e7e2d9);
+  border-radius: 4px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-text-main, #141312);
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: var(--color-gold-accent, #c5a059);
+  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+}
+
+.form-textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.form-submit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.form-submit-note {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--color-text-light, #9e9a93);
+}
+
+@media (max-width: 600px) {
+  .contact-form-card {
+    padding: 26px 20px;
+  }
+  .form-row-2col {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .form-submit-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .form-submit-row .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
 
 
 

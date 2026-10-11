@@ -12,7 +12,7 @@
   
   <link rel="icon" type="image/png" href="photos/favicon.png">
   <link rel="shortcut icon" href="photos/favicon.ico">
-  <link rel="stylesheet" href="style.css?v=2.4">
+  <link rel="stylesheet" href="style.css?v=2.5">
   <link rel="canonical" href="https://vanevgallery.com/contact.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="VV Gallery">
@@ -154,29 +154,6 @@
           <!-- Left Column: Detailed Info Cards -->
           <div class="contact-info-column">
             
-            <!-- Address & Directions Card -->
-            <div class="contact-feature-card">
-              <div class="contact-card-header">
-                <div class="contact-icon-circle" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
-                </div>
-                <div>
-                  <span class="contact-card-eyebrow">Visit Our Showroom</span>
-                  <h2 class="contact-card-title">Showroom Address</h2>
-                </div>
-              </div>
-              <p class="contact-card-body">
-                <strong>1586 Barber Greene Rd</strong><br>
-                DeKalb, IL 60115
-              </p>
-              <a href="https://www.google.com/maps/dir/?api=1&destination=1586+Barber+Greene+Rd+DeKalb+IL+60115" target="_blank" rel="noopener noreferrer" class="contact-link-action">
-                Get Driving Directions &rarr;
-              </a>
-            </div>
-
             <!-- Hours of Operation Card -->
             <div class="contact-feature-card">
               <div class="contact-card-header">
@@ -344,6 +321,40 @@
 
           </div>
 
+        </div>
+
+        <!-- Simple Message Form Below Everything -->
+        <div class="contact-form-section">
+          <div class="contact-form-card">
+            <div class="contact-form-header">
+              <span class="contact-form-eyebrow">Have a Question?</span>
+              <h2 class="contact-form-title">Send Us a Message</h2>
+              <p class="contact-form-desc">Ask about in-stock pieces, custom fabrics, or delivery timelines. We'll get back to you shortly.</p>
+            </div>
+
+            <form class="simple-contact-form" onsubmit="event.preventDefault(); alert('Thank you! We received your message and will reach out to you shortly.'); this.reset();">
+              <div class="form-row-2col">
+                <div class="form-field">
+                  <label for="contact-name" class="form-label">Your Name</label>
+                  <input type="text" id="contact-name" name="name" required placeholder="John Doe" class="form-input">
+                </div>
+                <div class="form-field">
+                  <label for="contact-phone" class="form-label">Phone or Email</label>
+                  <input type="text" id="contact-phone" name="contact" required placeholder="(847) 000-0000 or email" class="form-input">
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="contact-message" class="form-label">How can we help?</label>
+                <textarea id="contact-message" name="message" rows="4" required placeholder="Tell us what you're looking for or ask any questions..." class="form-textarea"></textarea>
+              </div>
+
+              <div class="form-submit-row">
+                <button type="submit" class="btn-primary" style="padding: 13px 32px;">Send Message &rarr;</button>
+                <span class="form-submit-note">We typically respond within 1&ndash;2 business hours.</span>
+              </div>
+            </form>
+          </div>
         </div>
 
       </div>
