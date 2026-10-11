@@ -28,6 +28,7 @@
   <link rel="apple-touch-icon" href="photos/favicon.png">
 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="hero.css">
 </head>
 
 <body>
@@ -138,140 +139,99 @@
 
   <main id="main-content">
 
-    <!-- HERO SECTION: Clean & Punchy -->
-    <section class="hero-editorial" aria-labelledby="hero-title">
-      <div class="hero-media-wrapper">
-        <img src="photos/furniture/hero-living.jpg" alt="Quality home furniture at VV Gallery" class="hero-img">
-        <div class="media-overlay"></div>
-      </div>
-      <div class="container hero-content-container">
-        <div class="hero-text-box hero-carousel" id="heroCarousel" aria-roledescription="carousel" aria-label="Featured Showroom Specials">
-          
-          <div class="hero-slides-wrapper">
-            <div class="hero-slides-track" id="heroTrack">
-              <!-- Slide 1: Store Deals & Value (VV Gallery Official Brand Lockup) -->
-              <div class="hero-slide active" role="group" aria-roledescription="slide" aria-label="1 of 4" data-slide-index="0">
-                <div class="hero-slide-grid">
-                  <div class="hero-slide-text">
-                    <span class="eyebrow">Local Furniture &bull; DeKalb, IL</span>
-                    <h1 id="hero-title" class="hero-title">Quality Furniture for Real Homes</h1>
-                    <p class="hero-description">Direct factory pricing on modular lovesacs, power sectionals, lighted vanities, and luxury pillowtop mattresses.</p>
-                    <div class="hero-cta-group">
-                      <a href="#collection-grid" class="btn-primary">View In-Stock Deals</a>
-                      <a href="contact.html" class="btn-hairline">Visit Showroom</a>
-                    </div>
-                  </div>
-                  <div class="hero-slide-visual">
-                    <div class="hero-stage brand-stage">
-                      <img src="photos/logo-circle.png" alt="VV Gallery Official Logo" class="hero-brand-logo-large">
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <!-- HERO: 4 concept slides (full-bleed photo / product split / shop by room / financing).
+         Keep the ids and classes heroCarousel, heroTrack, hero-slide, hero-dot, hero-nav-arrow:
+         main.js drives the carousel through them. Styles live in hero.css. -->
+    <section class="hx-hero" aria-labelledby="hero-title">
+      <div class="hero-carousel" id="heroCarousel" aria-roledescription="carousel" aria-label="Featured at VV Gallery">
+        <div class="hero-slides-wrapper">
+          <div class="hero-slides-track" id="heroTrack">
 
-              <!-- Slide 2: Modular Cloud Sectionals & Lovesacs (THE SPECIAL + Couch Image) -->
-              <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="2 of 4" data-slide-index="1">
-                <div class="hero-slide-grid">
-                  <div class="hero-slide-text">
-                    <div class="hero-special-badge">
-                      <span class="badge-icon" aria-hidden="true">🏷️</span>
-                      <span>LIMITED-TIME SPECIAL &bull; SAVE UP TO $400 ON SETS</span>
-                    </div>
-                    <h2 class="hero-title">Modular Cloud Sectionals &amp; Lovesacs</h2>
-                    <p class="hero-description">Deep-seated relaxation with stain-resistant, pet-friendly fabrics. Expandable layouts starting at direct local pricing.</p>
-                    <div class="hero-cta-group">
-                      <a href="living.html" class="btn-primary">Shop Living Deals &rarr;</a>
-                      <a href="tel:8473060959" class="btn-hairline">Call for Colors</a>
-                    </div>
-                  </div>
-                  <div class="hero-slide-visual">
-                    <div class="hero-stage clean-product-stage">
-                      <img src="photos/furniture/living-sectional-recliner-caramel.png" alt="Caramel Power Cloud Reclining Sectional" class="hero-sectional-clean-img" loading="lazy">
-                    </div>
-                  </div>
-                </div>
+            <!-- Concept 1: Full-bleed room photo (Arhaus / RH style) -->
+            <div class="hero-slide hx-s1 active" role="group" aria-roledescription="slide" aria-label="1 of 4">
+              <div class="hx-bg">
+                <img src="photos/furniture/hero-living.jpg" alt="A styled living room with furniture from VV Gallery">
               </div>
-
-              <!-- Slide 3: Financing Special (Synchrony & Acima Official Styling) -->
-              <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="3 of 4" data-slide-index="2">
-                <div class="hero-slide-grid">
-                  <div class="hero-slide-text">
-                    <span class="eyebrow">Flexible Payment Options</span>
-                    <h2 class="hero-title">Take It Home Today with Flexible Financing</h2>
-                    <p class="hero-description">Instant approvals with 0% interest Synchrony terms or no credit needed Acima leasing. Take your furniture home today for as little as $0&ndash;$49 down.</p>
-                    <div class="hero-cta-group">
-                      <a href="financing.html" class="btn-primary">Explore Financing Plans &rarr;</a>
-                      <a href="contact.html" class="btn-hairline">Apply in Showroom</a>
-                    </div>
-                  </div>
-                  <div class="hero-slide-visual">
-                    <div class="hero-stage financing-stage">
-                      <div class="hero-financing-grid">
-                        <!-- Synchrony Showcase Card -->
-                        <div class="hero-partner-showcase synchrony-showcase">
-                          <div class="partner-showcase-top">
-                            <span class="synchrony-brand-badge-large">synchrony</span>
-                            <span class="partner-pill synchrony-pill">0% APR Promo</span>
-                          </div>
-                          <h3 class="partner-showcase-title">Buy Now. Pay Over Time.</h3>
-                          <p class="partner-showcase-desc">Promotional 0% interest financing terms for qualified buyers.</p>
-                          <div class="partner-showcase-perk">
-                            <span class="perk-check-icon">&#10003;</span> Flexible Monthly Terms
-                          </div>
-                        </div>
-                        <!-- Acima Showcase Card -->
-                        <div class="hero-partner-showcase acima-showcase">
-                          <div class="partner-showcase-top">
-                            <span class="acima-brand-badge-large">acima</span>
-                            <span class="partner-pill acima-pill">No Credit Needed</span>
-                          </div>
-                          <h3 class="partner-showcase-title">Take Home Today for $0&ndash;$49</h3>
-                          <p class="partner-showcase-desc">Lease-to-own with instant online or in-store approvals.</p>
-                          <div class="partner-showcase-perk">
-                            <span class="perk-check-icon">&#10003;</span> 90-Day Early Purchase Option
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Slide 4: Mattress & Bedroom Doorbuster (Clean Bedroom Set Image Only) -->
-              <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="4 of 4" data-slide-index="3">
-                <div class="hero-slide-grid">
-                  <div class="hero-slide-text">
-                    <span class="eyebrow">In-Stock &bull; Fast Local Delivery</span>
-                    <h2 class="hero-title">Rest Easy: Luxury Mattresses &amp; Bedroom Sets</h2>
-                    <p class="hero-description">Plush pillowtop, hybrid, and memory foam mattresses in Queen &amp; King sizes. Complete bedroom suites with LED headboards ready to ship.</p>
-                    <div class="hero-cta-group">
-                      <a href="mattresses.html" class="btn-primary">Shop Mattresses &amp; Beds &rarr;</a>
-                      <a href="contact.html" class="btn-hairline">Visit Showroom</a>
-                    </div>
-                  </div>
-                  <div class="hero-slide-visual">
-                    <div class="hero-stage clean-bedroom-stage">
-                      <img src="photos/furniture/bedroom-set-rustic-chevron-led.png" alt="Rustic Chevron LED Bedroom Suite" class="hero-bedroom-clean-img" loading="lazy">
-                    </div>
+              <div class="container hx-s1-inner">
+                <div class="hx-copy">
+                  <h1 id="hero-title" class="hx-title">Quality furniture for real homes.</h1>
+                  <p class="hx-sub">In-stock sofas, bedroom sets and dining tables at honest prices. Family owned, on Barber Greene Rd in DeKalb.</p>
+                  <div class="hx-actions">
+                    <a href="#collection-grid" class="hx-btn hx-btn--light">Shop in-stock furniture</a>
+                    <a href="contact.html" class="hx-btn hx-btn--ghost-light">Visit the showroom</a>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <!-- Carousel Controls: Clustered Flanked Arrows & Indicator Dots -->
-          <div class="hero-carousel-nav" aria-label="Hero carousel navigation">
-            <div class="hero-nav-controls">
-              <button type="button" class="hero-nav-arrow prev" aria-label="Previous Slide">
+            <!-- Concept 2: One hero product, split layout (Design Within Reach / Room & Board style) -->
+            <div class="hero-slide hx-s2" role="group" aria-roledescription="slide" aria-label="2 of 4">
+              <div class="container hx-grid">
+                <div class="hx-copy">
+                  <h2 class="hx-title">The caramel sectional recliner.</h2>
+                  <p class="hx-sub">Reclining seats, a center console with cup holders and a pull-out storage ottoman. In stock now for <strong>$998</strong>.</p>
+                  <div class="hx-actions">
+                    <a href="living.html" class="hx-btn hx-btn--dark">See living room</a>
+                    <a href="contact.html" class="hx-btn hx-btn--ghost-dark">Come sit in it</a>
+                  </div>
+                </div>
+                <div class="hx-stage">
+                  <img src="photos/furniture/living-sectional-recliner-caramel.png" alt="Caramel sectional recliner with console and storage ottoman">
+                </div>
+              </div>
+            </div>
+
+            <!-- Concept 3: bedroom set, mirrored split (same family as slide 2) -->
+            <div class="hero-slide hx-s2 hx-s3" role="group" aria-roledescription="slide" aria-label="3 of 4">
+              <div class="container hx-grid">
+                <div class="hx-stage">
+                  <img src="photos/furniture/bedroom-set-two-tone-led-fridge.png" alt="Two-tone LED queen bedroom set with a mini fridge nightstand">
+                </div>
+                <div class="hx-copy">
+                  <h2 class="hx-title">The bedroom set with a mini fridge.</h2>
+                  <p class="hx-sub">Queen bed with under-bed LED lighting, dresser, mirror, and a nightstand with a built-in mini fridge and speaker. Complete 4-piece set for <strong>$998</strong>.</p>
+                  <div class="hx-actions">
+                    <a href="mattresses.html" class="hx-btn hx-btn--dark">See bedroom sets</a>
+                    <a href="contact.html" class="hx-btn hx-btn--ghost-dark">Come see it</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Concept 4: financing over a full-bleed photo (same family as slide 1) -->
+            <div class="hero-slide hx-s1 hx-s4" role="group" aria-roledescription="slide" aria-label="4 of 4">
+              <div class="hx-bg">
+                <img src="photos/financing/synchrony-lifestyle.jpg" alt="Relaxing at home with new furniture from VV Gallery">
+              </div>
+              <div class="container hx-s1-inner">
+                <div class="hx-copy">
+                  <h2 class="hx-title">Take it home today for $49 down.</h2>
+                  <p class="hx-sub">Acima lease-to-own needs no credit, just steady income and a checking account. Synchrony promotional financing is there for qualifying buyers.</p>
+                  <div class="hx-actions">
+                    <a href="financing.html" class="hx-btn hx-btn--light">See financing options</a>
+                    <a href="contact.html" class="hx-btn hx-btn--ghost-light">Apply in the showroom</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="hx-controls-wrap">
+          <div class="container hx-controls-row">
+            <div class="hx-controls">
+              <button type="button" class="hero-nav-arrow prev" aria-label="Previous slide">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
               </button>
-              <div class="hero-carousel-dots" role="tablist" aria-label="Hero carousel pagination">
-                <button class="hero-dot active" role="tab" aria-selected="true" aria-label="Slide 1: In-Stock Deals" data-slide="0"></button>
-                <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 2: Cloud Sectionals" data-slide="1"></button>
-                <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 3: Financing" data-slide="2"></button>
-                <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 4: Mattresses" data-slide="3"></button>
+              <div class="hero-carousel-dots" role="tablist" aria-label="Choose slide">
+                <button class="hero-dot active" role="tab" aria-selected="true" aria-label="Slide 1: Showroom" data-slide="0"></button>
+                <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 2: Sectional recliner" data-slide="1"></button>
+                <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 3: Shop by room" data-slide="2"></button>
+                <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 4: Financing" data-slide="3"></button>
               </div>
-              <button type="button" class="hero-nav-arrow next" aria-label="Next Slide">
+              <button type="button" class="hero-nav-arrow next" aria-label="Next slide">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
               </button>
             </div>

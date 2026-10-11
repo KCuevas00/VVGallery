@@ -1,0 +1,370 @@
+/*
+  ==========================================================================
+  VV GALLERY: HERO (4 concept slides)
+  Load AFTER style.css:  <link rel="stylesheet" href="hero.css">
+  Replaces the old floating glass card hero. Everything is full-bleed,
+  one idea per slide, no nested boxes.
+  ==========================================================================
+*/
+
+.hx-hero {
+  --hx-h: clamp(540px, 76vh, 720px);
+  --hx-ink: #161513;
+  --hx-stone: #ebe7e1;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border-hairline);
+}
+
+.hx-hero .hero-carousel {
+  position: relative;
+}
+
+.hx-hero .hero-slides-track {
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Neutralise the old per-slide styles from style.css */
+.hx-hero .hero-slide {
+  position: relative;
+  flex: 0 0 100%;
+  min-width: 100%;
+  min-height: var(--hx-h);
+  padding: 0;
+  opacity: 1;
+  transform: none;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Copy fades in when its slide becomes active */
+.hx-hero .hx-copy {
+  transition: opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s;
+}
+
+.hx-hero .hero-slide:not(.active) .hx-copy {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* ---------- Shared type ---------- */
+.hx-title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(2.5rem, 5.2vw, 4.5rem);
+  line-height: 1.03;
+  letter-spacing: -0.015em;
+  margin: 0 0 18px;
+  text-wrap: balance;
+}
+
+.hx-title--sm {
+  font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+  margin: 0;
+}
+
+.hx-sub {
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  line-height: 1.65;
+  max-width: 34rem;
+  margin: 0 0 30px;
+}
+
+.hx-sub strong {
+  font-weight: 600;
+}
+
+.hx-copy {
+  max-width: 36rem;
+}
+
+/* ---------- Shared buttons ---------- */
+.hx-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hx-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.hx-btn--light { background: #fff; color: var(--hx-ink); }
+.hx-btn--light:hover { background: var(--color-gold-accent); color: #fff; }
+
+.hx-btn--dark { background: var(--hx-ink); color: #fff; }
+.hx-btn--dark:hover { background: var(--color-gold-accent); color: #fff; }
+
+.hx-btn--ghost-light { border-color: rgba(255, 255, 255, 0.7); color: #fff; }
+.hx-btn--ghost-light:hover { background: #fff; color: var(--hx-ink); border-color: #fff; }
+
+.hx-btn--ghost-dark { border-color: var(--hx-ink); color: var(--hx-ink); }
+.hx-btn--ghost-dark:hover { background: var(--hx-ink); color: #fff; }
+
+.hx-textlink {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--hx-ink);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 1px;
+}
+.hx-textlink:hover { color: var(--color-gold-accent); }
+
+.hx-btn:focus-visible,
+.hx-textlink:focus-visible,
+.hx-panel:focus-visible {
+  outline: 2px solid var(--color-gold-accent);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   Concept 1: full-bleed photo
+   ========================================================================== */
+.hx-s1 {
+  color: #fff;
+  background: var(--hx-ink);
+  justify-content: flex-end;
+}
+
+.hx-s1 .hx-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hx-s1 .hx-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+}
+
+.hx-s1 .hx-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(15, 13, 10, 0.78) 0%, rgba(15, 13, 10, 0.4) 38%, rgba(15, 13, 10, 0) 68%),
+    linear-gradient(to right, rgba(15, 13, 10, 0.4) 0%, rgba(15, 13, 10, 0) 55%);
+}
+
+/* One slow settle on the active photo */
+.hx-s1.active .hx-bg img {
+  animation: hxSettle 14s ease-out forwards;
+}
+
+@keyframes hxSettle {
+  from { transform: scale(1.06); }
+  to   { transform: scale(1); }
+}
+
+.hx-s1-inner {
+  position: relative;
+  z-index: 1;
+  padding-top: 80px;
+  padding-bottom: 96px;
+}
+
+.hx-s1 .hx-sub {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ==========================================================================
+   Concept 2: one product, split layout
+   ========================================================================== */
+.hx-s2 {
+  background: var(--hx-stone);
+  color: var(--hx-ink);
+  justify-content: center;
+}
+
+.hx-grid {
+  display: grid;
+  align-items: center;
+  gap: clamp(24px, 4vw, 72px);
+  padding-top: 48px;
+  padding-bottom: 92px;
+}
+
+.hx-s2 .hx-grid {
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+}
+
+.hx-s2 .hx-sub {
+  color: #4a4640;
+}
+
+.hx-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Soft disc behind the product so the sectional separates from the stone */
+.hx-stage::before {
+  content: "";
+  position: absolute;
+  width: 78%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52%);
+}
+
+.hx-stage img {
+  position: relative;
+  width: 100%;
+  max-height: calc(var(--hx-h) - 180px);
+  object-fit: contain;
+  filter: drop-shadow(0 24px 22px rgba(40, 30, 15, 0.22));
+}
+
+/* ==========================================================================
+   Concept 3: mirrored split (reuses slide 2 styles)
+   ========================================================================== */
+.hx-s3 {
+  background: #e2ddd5;
+}
+
+.hx-s3 .hx-grid {
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+}
+
+/* ==========================================================================
+   Concept 4: full-bleed photo (reuses slide 1 styles)
+   ========================================================================== */
+.hx-s4 .hx-bg img {
+  object-position: center 40%;
+}
+
+/* ==========================================================================
+   Controls (pill bottom right, readable on every slide)
+   ========================================================================== */
+.hx-controls-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.hx-controls-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hx-controls {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(22, 21, 19, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.hx-controls .hero-carousel-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 4px;
+}
+
+.hx-controls .hero-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: none;
+  transform: none;
+}
+
+.hx-controls .hero-dot:hover {
+  background: rgba(255, 255, 255, 0.75);
+  transform: none;
+}
+
+.hx-controls .hero-dot.active {
+  width: 22px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: none;
+}
+
+.hx-controls .hero-nav-arrow {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: transparent;
+  color: #fff;
+}
+
+.hx-controls .hero-nav-arrow:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  border: none;
+  transform: none;
+}
+
+.hx-controls .hero-dot:focus-visible,
+.hx-controls .hero-nav-arrow:focus-visible {
+  outline: 2px solid var(--color-gold-light);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 900px) {
+  .hx-hero {
+    --hx-h: 560px;
+  }
+
+  .hx-s2 .hx-grid,
+  .hx-s3 .hx-grid {
+    grid-template-columns: 1fr;
+    padding-top: 28px;
+    padding-bottom: 84px;
+    gap: 20px;
+  }
+
+  .hx-s2 .hx-stage {
+    order: -1;
+  }
+
+  .hx-s2 .hx-stage img {
+    max-height: 230px;
+  }
+
+  .hx-s1-inner {
+    padding-bottom: 84px;
+  }
+
+  .hx-actions .hx-btn {
+    flex: 1 1 200px;
+  }
+}
+
+@media (max-width: 700px) {
+  .hx-controls-wrap {
+    bottom: 16px;
+  }
+}
