@@ -340,6 +340,89 @@ body.drawer-open .site-header {
   width: 100%;
 }
 
+/* Desktop Dropdown Menu for Navigation */
+.nav-item-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-chevron {
+  transition: transform 0.25s ease;
+  opacity: 0.65;
+}
+
+.nav-item-dropdown:hover .nav-chevron,
+.nav-item-dropdown:focus-within .nav-chevron {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 210px;
+  background: #ffffff;
+  border: 1px solid var(--color-border-hairline, #e7e2d9);
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  padding: 8px 0;
+  margin-top: 6px;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1000;
+}
+
+.nav-item-dropdown:hover .nav-dropdown-menu,
+.nav-item-dropdown:focus-within .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-dropdown-menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 18px;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--color-text-main, #141312);
+  text-decoration: none;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+.nav-dropdown-menu a:hover,
+.nav-dropdown-menu a.active {
+  background-color: #faf8f5;
+  color: var(--color-gold-accent, #c5a059);
+}
+
+.nav-dropdown-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--color-gold-accent, #c5a059);
+  background: var(--color-gold-bg, #f7f3ec);
+  padding: 2px 7px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+
 /* 3. Utility Actions: Pinned to Right on Desktop */
 .nav-right {
   order: 3;
@@ -5265,6 +5348,145 @@ body.drawer-open .site-header {
     text-align: center;
   }
 }
+
+/* Mattress Sizing Tags on Cards */
+.product-size-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.size-pill {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text-main, #141312);
+  background: #f4efe6;
+  border: 1px solid #e7e0d3;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* In-Stock Mattress Feature Banner on Bedroom Page */
+.bedroom-mattress-banner-section {
+  padding: 40px 0 80px;
+}
+
+.bedroom-mattress-card {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  background: #ffffff;
+  border: 1px solid var(--color-border-hairline, #e7e2d9);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+}
+
+.bedroom-mattress-img-wrap {
+  position: relative;
+  background: #f7f5f0;
+  min-height: 320px;
+}
+
+.bedroom-mattress-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bedroom-mattress-badge {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: #141312;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.bedroom-mattress-content {
+  padding: 42px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bedroom-mattress-eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-gold-accent, #c5a059);
+  margin-bottom: 8px;
+}
+
+.bedroom-mattress-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.2vw, 2.3rem);
+  font-weight: 600;
+  color: var(--color-text-main, #141312);
+  line-height: 1.2;
+  margin: 0 0 14px;
+}
+
+.bedroom-mattress-desc {
+  font-family: var(--font-sans);
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: var(--color-text-muted, #55524e);
+  margin: 0 0 18px;
+}
+
+.bedroom-mattress-perks {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bedroom-mattress-perks li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--color-text-main, #141312);
+}
+
+.bedroom-mattress-perks li span {
+  color: var(--color-gold-accent, #c5a059);
+  font-weight: 700;
+}
+
+.bedroom-mattress-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 860px) {
+  .bedroom-mattress-card {
+    grid-template-columns: 1fr;
+  }
+  .bedroom-mattress-content {
+    padding: 30px 24px;
+  }
+  .bedroom-mattress-img-wrap {
+    min-height: 240px;
+  }
+}
+
 
 
 
