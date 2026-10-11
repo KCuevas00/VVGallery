@@ -1,0 +1,405 @@
+/*
+  ==========================================================================
+  VV GALLERY: ASHLEY CATALOG ORDERS PAGE
+  Load AFTER style.css:  <link rel="stylesheet" href="ashley.css">
+  Same visual family as the home hero: gold + black, serif headlines,
+  hairline dividers instead of cards.
+  ==========================================================================
+*/
+
+.as-page {
+  --as-ink: #161513;
+  --as-stone: #ebe7e1;
+  --as-orange: #f88d2a;
+  --as-orange-tint: rgba(248, 141, 42, 0.12);
+}
+
+/* ---------- Brand Lockup in Hero ---------- */
+.as-brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 22px;
+  padding: 8px 18px 8px 14px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  box-shadow: 0 4px 14px -2px rgba(0, 0, 0, 0.05);
+}
+
+.as-brand-logo {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.as-pill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--as-ink);
+  border-left: 1px solid var(--color-border-hairline);
+  padding-left: 14px;
+}
+
+.as-pill-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--as-orange);
+  box-shadow: 0 0 0 2px var(--as-orange-tint);
+}
+
+.as-hero-highlights {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(14px, 3vw, 28px);
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.as-highlight-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.as-highlight-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--as-orange-tint);
+  color: #d9531e;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* Dealer note in "How ordering works" */
+.as-dealer-note {
+  margin-top: 28px;
+  padding: 16px 20px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-left: 3px solid var(--as-orange);
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 4px 14px -3px rgba(0, 0, 0, 0.04);
+}
+
+.as-dealer-badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #d9531e;
+  margin-bottom: 6px;
+}
+
+.as-dealer-note p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Buttons ---------- */
+.as-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.as-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.as-btn--dark { background: var(--as-ink); color: #fff; }
+.as-btn--dark:hover { background: var(--color-gold-accent); color: #fff; }
+
+.as-btn--ghost { border-color: var(--as-ink); color: var(--as-ink); background: transparent; }
+.as-btn--ghost:hover { background: var(--as-ink); color: #fff; }
+
+.as-btn:focus-visible,
+.as-field input:focus-visible,
+.as-field textarea:focus-visible {
+  outline: 2px solid var(--color-gold-accent);
+  outline-offset: 2px;
+}
+
+/* ---------- Hero ---------- */
+.as-hero .page-hero-title {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.05;
+  max-width: 16ch;
+  margin-left: auto;
+  margin-right: auto;
+  text-wrap: balance;
+}
+
+.as-hero .page-hero-desc {
+  max-width: 560px;
+  margin-bottom: 28px;
+}
+
+.as-hero .as-actions {
+  justify-content: center;
+}
+
+.as-hero {
+  padding-bottom: 56px;
+}
+
+/* ---------- Shared section layout ---------- */
+.as-section {
+  padding: clamp(56px, 8vw, 96px) 0;
+}
+
+.as-wrap {
+  width: 92%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.as-split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(32px, 6vw, 88px);
+  align-items: start;
+}
+
+.as-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+  text-wrap: balance;
+}
+
+.as-lead {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 30rem;
+  margin: 0;
+}
+
+/* ---------- Steps (a real sequence, so numbered) ---------- */
+.as-steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+}
+
+.as-steps li {
+  counter-increment: step;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 8px 16px;
+  padding: 26px 0;
+  border-top: 1px solid var(--color-border-hairline);
+}
+
+.as-steps li:last-child {
+  border-bottom: 1px solid var(--color-border-hairline);
+}
+
+.as-steps li::before {
+  content: counter(step);
+  grid-row: 1 / span 2;
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  line-height: 1;
+  color: var(--color-gold-accent);
+}
+
+.as-step-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.as-steps p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-muted);
+  max-width: 34rem;
+}
+
+/* ---------- Request form ---------- */
+.as-request {
+  background: var(--as-stone);
+}
+
+.as-contact-lines {
+  margin-top: 28px;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--as-ink);
+}
+
+.as-contact-lines a {
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-gold-accent);
+}
+
+.as-contact-lines a:hover {
+  color: var(--color-gold-accent);
+}
+
+.as-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.as-field label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: var(--as-ink);
+}
+
+.as-field .as-hint {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.as-field input,
+.as-field select,
+.as-field textarea {
+  width: 100%;
+  padding: 13px 14px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--as-ink);
+  background: #fff;
+  border: 1px solid #cfc8bc;
+  border-radius: 2px;
+}
+
+.as-field select {
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23161513' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  appearance: none;
+  -webkit-appearance: none;
+  padding-right: 36px;
+}
+
+.as-field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.as-form-note {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ---------- Before you order ---------- */
+.as-facts {
+  margin: 0;
+  padding: 0;
+}
+
+.as-fact {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(16px, 4vw, 64px);
+  padding: 26px 0;
+  border-top: 1px solid var(--color-border-hairline);
+}
+
+.as-fact:last-child {
+  border-bottom: 1px solid var(--color-border-hairline);
+}
+
+.as-fact dt {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.as-fact dd {
+  margin: 0;
+  font-size: 0.97rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 38rem;
+}
+
+.as-fact dd a {
+  color: var(--as-ink);
+  font-weight: 500;
+  border-bottom: 1px solid var(--color-gold-accent);
+}
+
+.as-fact dd a:hover {
+  color: var(--color-gold-accent);
+}
+
+.as-note {
+  margin-top: 36px;
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .as-split,
+  .as-fact {
+    grid-template-columns: 1fr;
+  }
+
+  .as-fact {
+    gap: 8px;
+    padding: 22px 0;
+  }
+
+  .as-actions .as-btn {
+    flex: 1 1 200px;
+  }
+}
