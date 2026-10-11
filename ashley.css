@@ -15,27 +15,24 @@
   padding: clamp(36px, 6vw, 72px) 0 clamp(56px, 8vw, 96px);
 }
 
-/* ---------- Square ad ---------- */
+/* ---------- Ashley Card ---------- */
 .as-ad {
   display: flex;
   flex-direction: column;
-  aspect-ratio: 1 / 1;
   background: #fff;
   border: 1px solid #e3ded5;
   box-shadow: 0 14px 40px -12px rgba(0, 0, 0, 0.14);
-  overflow: hidden;
   color: var(--as-ink);
 }
 
 .as-ad-top {
-  flex: 1 1 58%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  gap: 14px;
-  padding: 7% 8% 4%;
+  gap: 16px;
+  padding: clamp(36px, 8vw, 56px) clamp(24px, 6vw, 44px);
 }
 
 .as-ad-logo {
@@ -59,138 +56,7 @@
   line-height: 1.45;
   color: #4a4640;
   margin: 0;
-  max-width: 30ch;
-}
-
-/* ---------- Split Visual Card (Two-Tone Card) ---------- */
-.as-split-card {
-  flex: 0 0 auto;
-  display: flex;
-  background: #141312;
-  border-top: 1px solid rgba(244, 129, 32, 0.22);
-  color: #fff;
-  min-height: 84px;
-}
-
-.as-split-brand-panel {
-  position: relative;
-  flex: 1 1 48%;
-  background: #100f0e;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.as-split-glow {
-  position: absolute;
-  top: 50%;
-  left: 30px;
-  width: 90px;
-  height: 90px;
-  transform: translate(-30%, -50%);
-  background: radial-gradient(circle, rgba(244, 129, 32, 0.45) 0%, rgba(244, 129, 32, 0.14) 50%, transparent 75%);
-  pointer-events: none;
-  filter: blur(8px);
-}
-
-.as-split-brand-content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 0;
-}
-
-.as-split-logo {
-  width: 44px;
-  height: 44px;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1.5px solid rgba(244, 129, 32, 0.75);
-  box-shadow: 0 0 16px rgba(244, 129, 32, 0.35);
-  flex-shrink: 0;
-}
-
-.as-split-brand-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
-}
-
-.as-split-brand-title {
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: #f7f5f0;
-  line-height: 1.1;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.as-split-brand-badge {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--as-orange);
-  letter-spacing: 0.02em;
-  line-height: 1.2;
-  white-space: nowrap;
-}
-
-.as-split-cta-panel {
-  flex: 1 1 52%;
-  background: #191816;
-  padding: 16px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-}
-
-.as-split-pitch {
-  margin: 0;
-  font-size: 0.82rem;
-  line-height: 1.35;
-  color: #d6d1c7;
-  font-weight: 500;
-  max-width: 22ch;
-}
-
-.as-split-btn {
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--as-orange);
-  color: #141312;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  padding: 10px 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  box-shadow: 0 2px 10px rgba(244, 129, 32, 0.3);
-  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  white-space: nowrap;
-}
-
-.as-split-btn:hover {
-  background: #ffa047;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(244, 129, 32, 0.45);
-}
-
-.as-split-arrow {
-  display: inline-block;
-  transition: transform 0.2s ease;
-}
-
-.as-split-btn:hover .as-split-arrow {
-  transform: translateX(3px);
+  max-width: 32ch;
 }
 
 /* ---------- Contact box ---------- */
@@ -313,40 +179,8 @@
 }
 
 @media (max-width: 520px) {
-  .as-ad {
-    aspect-ratio: auto;
-  }
-
   .as-ad-top {
-    padding: 24px 20px 18px;
-  }
-
-  .as-split-card {
-    flex-direction: column;
-  }
-
-  .as-split-brand-panel {
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 14px 18px;
-  }
-
-  .as-split-cta-panel {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 14px 18px 16px;
-  }
-
-  .as-split-pitch {
-    max-width: 100%;
-    font-size: 0.88rem;
-  }
-
-  .as-split-btn {
-    width: 100%;
-    justify-content: center;
-    padding: 11px 16px;
+    padding: 30px 20px 26px;
   }
 }
 
