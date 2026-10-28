@@ -4529,10 +4529,12 @@ body.drawer-open .site-header {
 
 .mockup-code-val {
   display: block;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #2e384d;
-  margin-top: 2px;
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  color: #006064;
+  margin-top: 3px;
+  font-family: var(--font-sans);
 }
 
 .mockup-footer-badge {
