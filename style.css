@@ -4192,62 +4192,111 @@ body.drawer-open .site-header {
 }
 
 /* ==========================================================================
-   KOALAFI SHOWCASE CARD (AUTHENTIC POSTER & FLYER DESIGN)
+   KOALAFI LEASE-PURCHASE CARD (MATCHING ACIMA FORMAT & BRANDING)
    ========================================================================== */
 .koalafi-showcase-card {
-  display: grid;
-  grid-template-columns: 1.2fr 0.9fr;
-  background: #006778;
-  background-image: linear-gradient(135deg, #026a7b 0%, #005563 100%);
-  border: 1px solid #004d59;
+  background: #ffffff;
+  border: 1px solid var(--color-border-hairline);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 50, 60, 0.15);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .koalafi-showcase-card:hover {
-  box-shadow: 0 16px 40px rgba(0, 50, 60, 0.25);
-  transform: translateY(-2px);
+  border-color: #009ca6;
+  box-shadow: 0 16px 40px rgba(0, 156, 166, 0.12);
 }
 
-.koalafi-content {
-  padding: clamp(32px, 5vw, 48px);
+.koalafi-banner-link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  background: #006778;
+  background-image: linear-gradient(135deg, #026a7b 0%, #004f5b 100%);
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.25s ease;
+}
+
+.koalafi-banner-link:hover {
+  opacity: 0.98;
+}
+
+.koalafi-banner-graphic {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 34px clamp(24px, 5vw, 44px);
+  position: relative;
+}
+
+.koalafi-banner-graphic::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.koalafi-banner-left {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  position: relative;
-  z-index: 2;
 }
 
-.koalafi-brand-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
-  flex-wrap: wrap;
-}
-
-.koalafi-brand-badge {
-  font-family: var(--font-sans);
-  font-size: 1.35rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: #ffffff;
+.koalafi-banner-logo {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
 }
 
-.koalafi-brand-badge .koalafi-dot {
+.koalafi-banner-logo strong {
   color: #ffd600;
 }
 
-.koalafi-pill-poster {
+.koalafi-banner-sub {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #e0f2f1;
+  margin-bottom: 2px;
+  letter-spacing: -0.01em;
+}
+
+.koalafi-banner-headline {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 3.8vw, 2.75rem);
+  font-weight: 900;
+  color: #ffd600;
+  margin: 0;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.koalafi-banner-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.koalafi-banner-badge {
   background: rgba(255, 255, 255, 0.16);
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -4256,81 +4305,74 @@ body.drawer-open .site-header {
   border-radius: 50px;
 }
 
-.koalafi-enjoy {
-  font-family: var(--font-sans);
-  font-size: clamp(1.1rem, 2vw, 1.35rem);
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 2px;
-  display: block;
-}
-
-.koalafi-pay-title {
-  font-family: var(--font-sans);
-  font-size: clamp(2.2rem, 4.2vw, 3.2rem);
-  font-weight: 900;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  color: #ffd600;
-  margin: 0 0 16px 0;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.koalafi-subtitle-poster {
-  font-size: 0.96rem;
-  line-height: 1.55;
-  color: #e2f4f6;
-  margin-bottom: 20px;
-  max-width: 520px;
-}
-
-.koalafi-subtitle-poster strong {
-  color: #ffffff;
-}
-
-.koalafi-poster-apply-bar {
-  background: rgba(0, 0, 0, 0.18);
-  border: 1px dashed rgba(255, 214, 0, 0.6);
-  border-radius: 6px;
+.koalafi-banner-text-tag {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1.5px dashed rgba(255, 214, 0, 0.75);
+  border-radius: 8px;
   padding: 10px 16px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 22px;
-  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 2px;
 }
 
-.koalafi-poster-apply-bar span {
-  font-size: 0.82rem;
-  color: #e2f4f6;
+.k-tag-label {
+  font-size: 0.74rem;
+  color: #b2dfdb;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
 }
 
-.koalafi-poster-apply-bar strong {
+.k-tag-action {
+  font-size: 1.05rem;
+  color: #ffffff;
+}
+
+.k-tag-action strong {
   color: #ffd600;
-  font-size: 0.98rem;
+  font-weight: 900;
   letter-spacing: 0.06em;
 }
 
-.koalafi-poster-apply-bar a {
-  color: #ffffff;
-  font-weight: 800;
-  text-decoration: underline;
-}
-
-.koalafi-cta-row {
+.koalafi-footer-bar {
   display: flex;
-  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 18px;
+  gap: 20px;
+  padding: 24px clamp(20px, 4vw, 40px);
+  background: #fafafa;
+  border-top: 1px solid var(--color-border-hairline);
 }
 
-.btn-koalafi-yellow {
-  background-color: #ffd600;
-  background-image: linear-gradient(135deg, #ffe135 0%, #ffd600 100%);
-  color: #004d59;
+.koalafi-perks-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 28px;
+  font-size: 0.92rem;
+  color: var(--color-text-main);
+}
+
+.koalafi-perk-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.koalafi-perk-item .perk-check {
+  color: #009ca6;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.btn-koalafi {
+  background-color: #009ca6;
+  background-image: linear-gradient(135deg, #00acc1 0%, #00838f 100%);
+  color: #ffffff;
   font-family: var(--font-sans);
-  font-size: 0.84rem;
-  font-weight: 800;
+  font-size: 0.82rem;
+  font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   padding: 13px 26px;
@@ -4340,102 +4382,43 @@ body.drawer-open .site-header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 12px rgba(0, 156, 166, 0.32);
 }
 
-.btn-koalafi-yellow:hover {
-  background-color: #ffffff;
-  background-image: none;
-  color: #004d59;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-.btn-koalafi-white-ghost {
-  background: transparent;
-  color: #ffffff;
-  border: 1.5px solid rgba(255, 255, 255, 0.75);
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 12px 22px;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: var(--transition-smooth);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn-koalafi-white-ghost:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: #ffffff;
+.btn-koalafi:hover {
+  background-color: #00838f;
+  background-image: linear-gradient(135deg, #009ca6 0%, #006970 100%);
   color: #ffffff;
   transform: translateY(-2px);
-}
-
-.koalafi-disclaimer-poster {
-  font-size: 0.72rem;
-  line-height: 1.45;
-  color: rgba(226, 244, 246, 0.75);
-  margin: 0;
-}
-
-.koalafi-disclaimer-poster a {
-  color: #ffd600;
-  text-decoration: underline;
-}
-
-.koalafi-media-poster {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 24px 20px 0;
-  min-height: 340px;
-  background: radial-gradient(circle at 60% 60%, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
-}
-
-.koala-poster-mascot {
-  max-width: 220px;
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 12px 24px rgba(0, 30, 40, 0.35));
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.koalafi-showcase-card:hover .koala-poster-mascot {
-  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 156, 166, 0.45);
 }
 
 @media (max-width: 900px) {
-  .koalafi-showcase-card {
-    grid-template-columns: 1fr;
-  }
-
-  .koalafi-media-poster {
-    min-height: 220px;
-    padding: 10px 20px 0;
-    order: -1;
-  }
-
-  .koala-poster-mascot {
-    max-width: 170px;
-  }
-
-  .koalafi-content {
-    padding: 24px 22px 32px;
-  }
-
-  .koalafi-cta-row {
+  .koalafi-banner-graphic {
     flex-direction: column;
-    gap: 10px;
+    align-items: flex-start;
+    padding: 28px 20px;
+    gap: 16px;
   }
 
-  .btn-koalafi-yellow,
-  .btn-koalafi-white-ghost {
+  .koalafi-banner-right {
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .koalafi-banner-text-tag {
+    text-align: left;
+    width: 100%;
+  }
+
+  .koalafi-footer-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    padding: 20px 18px;
+  }
+
+  .koalafi-action-row .btn-koalafi {
     width: 100%;
     text-align: center;
   }
