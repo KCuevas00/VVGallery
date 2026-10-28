@@ -383,21 +383,34 @@ body.drawer-open .site-header {
   list-style: none;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transform: translateY(6px);
   transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   z-index: 1000;
+}
+
+/* Invisible bridge so mouse hover doesn't break across the 6px gap */
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
 }
 
 .nav-item-dropdown:hover .nav-dropdown-menu,
 .nav-item-dropdown:focus-within .nav-dropdown-menu {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
   transform: translateY(0);
 }
 
 .nav-dropdown-menu li {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .nav-dropdown-menu a {
