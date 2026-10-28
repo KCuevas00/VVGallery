@@ -4404,12 +4404,38 @@ body.drawer-open .site-header {
   margin-bottom: 12px;
 }
 
+.flyer-code-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.koala-mascot-wrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.08));
+  transition: transform 0.3s ease;
+}
+
+.koala-mascot-wrap:hover {
+  transform: scale(1.1) rotate(-4deg);
+}
+
+.koala-mascot {
+  display: block;
+}
+
 .flyer-code-box {
+  flex: 1;
   background: #fffde7;
   border: 2px dashed #fbc02d;
   border-radius: 6px;
-  padding: 10px 14px;
-  margin-bottom: 14px;
+  padding: 8px 12px;
+  text-align: center;
 }
 
 .flyer-code-label {
