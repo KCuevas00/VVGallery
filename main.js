@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 3. Color Swatch Dot Switching (e.g. Bean Bag Sac Gray vs Cream)
+  // 3. Color Swatch Dot Switching (supports data-img-src for dynamic photo swap & data-color-index for view toggle)
   document.querySelectorAll('.color-swatch-dots').forEach(swatchContainer => {
     const dots = swatchContainer.querySelectorAll('.swatch-dot');
     const productCard = swatchContainer.closest('.product-item');
@@ -212,8 +212,24 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         e.stopPropagation();
 
-        const index = dot.getAttribute('data-color-index') || '0';
-        wrap.setAttribute('data-active-view', index);
+        const imgSrc = dot.getAttribute('data-img-src');
+        if (imgSrc) {
+          const mainImg = wrap.querySelector('.product-img.primary') || wrap.querySelector('.product-img');
+          if (mainImg) {
+            mainImg.src = imgSrc;
+            const colorName = dot.getAttribute('data-color-name') || dot.getAttribute('title');
+            if (colorName) {
+              const productName = productCard ? productCard.querySelector('.product-name') : null;
+              const name = productName ? productName.textContent.trim() : 'Furniture';
+              mainImg.alt = `${name} in ${colorName}`;
+            }
+          }
+        }
+
+        const index = dot.getAttribute('data-color-index');
+        if (index !== null) {
+          wrap.setAttribute('data-active-view', index);
+        }
 
         // Update active class on dots
         dots.forEach(d => d.classList.remove('active'));
