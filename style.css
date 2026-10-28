@@ -2072,6 +2072,16 @@ body.drawer-open .site-header {
   opacity: 1;
 }
 
+/* Full Item Display: Letterbox wide photos with sleek black framing bars */
+.product-media-wrap.fit-contain {
+  background-color: #000000;
+}
+
+.product-media-wrap.fit-contain .product-img,
+.product-media-wrap.fit-contain.has-secondary .product-img.secondary {
+  object-fit: contain;
+}
+
 /* Fallback hover for non-swatch cards (like fridge) */
 .product-media-wrap.has-secondary:not([data-active-view]):hover .product-img.primary {
   opacity: 0;
