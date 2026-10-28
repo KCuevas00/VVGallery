@@ -4191,6 +4191,390 @@ body.drawer-open .site-header {
   }
 }
 
+/* ==========================================================================
+   KOALAFI LEASE-TO-OWN SHOWCASE CARD
+   ========================================================================== */
+.koalafi-showcase-card {
+  display: grid;
+  grid-template-columns: 1.25fr 0.85fr;
+  background: #ffffff;
+  border: 1px solid var(--color-border-hairline);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.koalafi-showcase-card:hover {
+  border-color: #009ca6;
+  box-shadow: 0 16px 40px rgba(0, 156, 166, 0.12);
+}
+
+.koalafi-content {
+  padding: clamp(32px, 5vw, 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.koalafi-brand-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.koalafi-logo-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.koalafi-wordmark {
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0f3e46;
+}
+
+.koalafi-dot {
+  color: #009ca6;
+}
+
+.koalafi-pill {
+  background: #e0f7f8;
+  color: #006970;
+  border: 1px solid #b2ebed;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+.koalafi-rating-pill {
+  background: #fff9e6;
+  color: #946800;
+  border: 1px solid #ffe899;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 50px;
+}
+
+.koalafi-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  color: var(--color-text-main);
+  margin-bottom: 14px;
+}
+
+.koalafi-subtitle {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-bottom: 24px;
+}
+
+.koalafi-perks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 20px;
+  margin-bottom: 28px;
+}
+
+.koalafi-perk {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.koalafi-perk-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #e0f7f8;
+  color: #009ca6;
+  font-weight: 800;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.koalafi-perk strong {
+  display: block;
+  font-size: 0.88rem;
+  color: var(--color-text-main);
+  margin-bottom: 2px;
+}
+
+.koalafi-perk p {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.koalafi-apply-box {
+  background: linear-gradient(135deg, #f0fdfc 0%, #f7fefc 100%);
+  border: 1px solid #ccefed;
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.koalafi-apply-text {
+  flex: 1;
+  min-width: 220px;
+}
+
+.koalafi-phone-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #00838f;
+  margin-bottom: 4px;
+}
+
+.koalafi-apply-instruction {
+  font-size: 0.88rem;
+  color: #1f2937;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.btn-koalafi {
+  background-color: #009ca6;
+  background-image: linear-gradient(135deg, #00acc1 0%, #00838f 100%);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 11px 22px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 12px rgba(0, 156, 166, 0.28);
+}
+
+.btn-koalafi:hover {
+  background-color: #00838f;
+  background-image: linear-gradient(135deg, #009ca6 0%, #006970 100%);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 156, 166, 0.4);
+}
+
+.btn-koalafi-outline {
+  background: #ffffff;
+  color: #00838f;
+  border: 1px solid #009ca6;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-koalafi-outline:hover {
+  background: #e0f7f8;
+  color: #006970;
+  border-color: #00838f;
+  transform: translateY(-2px);
+}
+
+.koalafi-cta-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.koalafi-disclaimer {
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+.koalafi-disclaimer a {
+  color: #009ca6;
+  text-decoration: underline;
+}
+
+.koalafi-side-visual {
+  background: linear-gradient(145deg, #00838f 0%, #004d54 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 36px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.koalafi-side-visual::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.koalafi-phone-mockup {
+  width: 100%;
+  max-width: 250px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  position: relative;
+  border: 3px solid #e0f2f1;
+}
+
+.mockup-top-pill {
+  width: 44px;
+  height: 4px;
+  background: #cfd8dc;
+  border-radius: 10px;
+  margin: 0 auto 14px;
+}
+
+.mockup-header-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #009ca6;
+  text-transform: uppercase;
+}
+
+.mockup-phone-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.mockup-bubble-icon {
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mockup-phone-sub {
+  font-size: 0.76rem;
+  color: #718096;
+  margin-bottom: 4px;
+}
+
+.mockup-phone-number {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #009ca6;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.mockup-code-box {
+  background: #fffde7;
+  border: 2px dashed #fbc02d;
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 14px;
+}
+
+.mockup-code-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #946800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.mockup-code-val {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #2e384d;
+  margin-top: 2px;
+}
+
+.mockup-footer-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #00838f;
+  background: #e0f7f8;
+  padding: 5px 10px;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+@media (max-width: 900px) {
+  .koalafi-showcase-card {
+    grid-template-columns: 1fr;
+  }
+
+  .koalafi-side-visual {
+    padding: 32px 20px;
+  }
+
+  .koalafi-perks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .koalafi-apply-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .koalafi-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-koalafi,
+  .btn-koalafi-outline {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .policy-callout-box {
   background: var(--color-bg-subtle);
   border: 1px solid var(--color-border-hairline);
@@ -5424,11 +5808,13 @@ body.drawer-open .site-header {
 }
 
 /* In-Stock Mattress Feature Banner on Bedroom Page */
-.bedroom-mattress-banner-section {
+.bedroom-mattress-banner-section,
+.category-feature-banner-section {
   padding: 40px 0 80px;
 }
 
-.bedroom-mattress-card {
+.bedroom-mattress-card,
+.category-feature-card {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
   background: #ffffff;
@@ -5438,20 +5824,23 @@ body.drawer-open .site-header {
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
 }
 
-.bedroom-mattress-img-wrap {
+.bedroom-mattress-img-wrap,
+.category-feature-img-wrap {
   position: relative;
   background: #f7f5f0;
   min-height: 320px;
 }
 
-.bedroom-mattress-img {
+.bedroom-mattress-img,
+.category-feature-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.bedroom-mattress-badge {
+.bedroom-mattress-badge,
+.category-feature-badge {
   position: absolute;
   top: 18px;
   left: 18px;
@@ -5466,14 +5855,16 @@ body.drawer-open .site-header {
   border-radius: 4px;
 }
 
-.bedroom-mattress-content {
+.bedroom-mattress-content,
+.category-feature-content {
   padding: 42px 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.bedroom-mattress-eyebrow {
+.bedroom-mattress-eyebrow,
+.category-feature-eyebrow {
   display: block;
   font-family: var(--font-sans);
   font-size: 0.75rem;
@@ -5484,7 +5875,8 @@ body.drawer-open .site-header {
   margin-bottom: 8px;
 }
 
-.bedroom-mattress-title {
+.bedroom-mattress-title,
+.category-feature-title {
   font-family: var(--font-serif);
   font-size: clamp(1.8rem, 3.2vw, 2.3rem);
   font-weight: 600;
@@ -5493,7 +5885,8 @@ body.drawer-open .site-header {
   margin: 0 0 14px;
 }
 
-.bedroom-mattress-desc {
+.bedroom-mattress-desc,
+.category-feature-desc {
   font-family: var(--font-sans);
   font-size: 0.96rem;
   line-height: 1.6;
@@ -5501,7 +5894,8 @@ body.drawer-open .site-header {
   margin: 0 0 18px;
 }
 
-.bedroom-mattress-perks {
+.bedroom-mattress-perks,
+.category-feature-perks {
   list-style: none;
   padding: 0;
   margin: 0 0 24px;
@@ -5510,7 +5904,8 @@ body.drawer-open .site-header {
   gap: 8px;
 }
 
-.bedroom-mattress-perks li {
+.bedroom-mattress-perks li,
+.category-feature-perks li {
   display: flex;
   align-items: flex-start;
   gap: 10px;
@@ -5521,38 +5916,46 @@ body.drawer-open .site-header {
 }
 
 .bedroom-mattress-perks li .perk-check,
-.bedroom-mattress-perks li > span:first-child {
+.bedroom-mattress-perks li > span:first-child,
+.category-feature-perks li .perk-check,
+.category-feature-perks li > span:first-child {
   color: var(--color-gold-accent, #c5a059);
   font-weight: 700;
   flex-shrink: 0;
   margin-top: 2px;
 }
 
-.bedroom-mattress-perks li .perk-text {
+.bedroom-mattress-perks li .perk-text,
+.category-feature-perks li .perk-text {
   flex: 1;
   color: var(--color-text-main, #141312);
   font-weight: 400;
 }
 
-.bedroom-mattress-perks li .perk-text strong {
+.bedroom-mattress-perks li .perk-text strong,
+.category-feature-perks li .perk-text strong {
   font-weight: 600;
   color: var(--color-text-main, #141312);
 }
 
-.bedroom-mattress-actions {
+.bedroom-mattress-actions,
+.category-feature-actions {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
 }
 
 @media (max-width: 860px) {
-  .bedroom-mattress-card {
+  .bedroom-mattress-card,
+  .category-feature-card {
     grid-template-columns: 1fr;
   }
-  .bedroom-mattress-content {
+  .bedroom-mattress-content,
+  .category-feature-content {
     padding: 30px 24px;
   }
-  .bedroom-mattress-img-wrap {
+  .bedroom-mattress-img-wrap,
+  .category-feature-img-wrap {
     min-height: 240px;
   }
 }
