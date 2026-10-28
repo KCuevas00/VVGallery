@@ -12,7 +12,7 @@
   
   <link rel="icon" type="image/png" href="photos/favicon.png">
   <link rel="shortcut icon" href="photos/favicon.ico">
-  <link rel="stylesheet" href="style.css?v=3.1">
+  <link rel="stylesheet" href="style.css?v=3.2">
 </head>
 <body>
 
@@ -34,7 +34,16 @@
         </button>
         <nav class="nav-desktop" aria-label="Primary Navigation">
           <ul class="nav-list">
-            <li><a href="living.html" class="nav-link">Living</a></li>
+            <li class="nav-item-dropdown">
+              <a href="living.html" class="nav-link nav-dropdown-trigger">
+                Living
+                <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="living.html">Sectionals &amp; Sofas</a></li>
+                <li><a href="recliners.html">Power Recliners</a></li>
+              </ul>
+            </li>
             <li class="nav-item-dropdown">
               <a href="bedroom.html" class="nav-link nav-dropdown-trigger">
                 Bedroom
@@ -46,7 +55,6 @@
               </ul>
             </li>
             <li><a href="dining.html" class="nav-link">Dining</a></li>
-            <li><a href="vanities.html" class="nav-link">Vanities</a></li>
             <li><a href="financing.html" class="nav-link active">Financing</a></li>
             <li><a href="story.html" class="nav-link">About Us</a></li>
           </ul>
@@ -91,11 +99,12 @@
         <div class="drawer-group">
           <p class="drawer-group-title">Shop Catalog</p>
           <ul>
-            <li><a href="living.html">Living &amp; Sectionals</a></li>
+            <li><a href="living.html">Sectionals &amp; Sofas</a></li>
+            <li><a href="recliners.html">Power Recliners</a></li>
             <li><a href="bedroom.html">Bedroom Sets &amp; Suites</a></li>
             <li><a href="mattresses.html">Mattresses &amp; Foundations</a></li>
             <li><a href="dining.html">Dining Room Sets</a></li>
-            <li><a href="vanities.html">Makeup Vanities</a></li>
+            <li><a href="ashley.html">Ashley Furniture Orders</a></li>
           </ul>
         </div>
         <div class="drawer-group">
@@ -198,87 +207,32 @@
             </div>
           </article>
 
-          <!-- PARTNER 3: Koalafi Lease-to-Own Showcase Card -->
+          <!-- PARTNER 3: Koalafi Lease-to-Own Showcase Card (Streamlined) -->
           <article class="koalafi-showcase-card">
             <div class="koalafi-content">
               <div class="koalafi-brand-header">
-                <div class="koalafi-logo-lockup" aria-label="Koalafi">
-                  <svg class="koalafi-logo-icon" width="28" height="28" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-                    <path d="M50 48C42 32 20 28 14 38C8 48 18 64 36 60C44 58 48 52 50 48Z" fill="#009ca6"/>
-                    <path d="M50 52C40 64 22 76 16 66C10 56 22 46 38 48C44 49 48 51 50 52Z" fill="#29b6f6" opacity="0.9"/>
-                    <path d="M50 48C58 32 80 28 86 38C92 48 82 64 64 60C56 58 52 52 50 48Z" fill="#00838f"/>
-                    <path d="M50 52C60 64 78 76 84 66C90 56 78 46 62 48C56 49 52 51 50 52Z" fill="#00acc1" opacity="0.9"/>
-                  </svg>
-                  <span class="koalafi-wordmark">Koalafi<span class="koalafi-dot">.</span></span>
-                </div>
-                <span class="financing-partner-pill koalafi-pill">No Credit Needed &bull; Lease-to-Own</span>
-                <span class="koalafi-rating-pill">&#9733; 4.6 Stars on Google</span>
+                <span class="koalafi-brand-badge">koalafi<span class="koalafi-dot">.</span></span>
+                <span class="financing-partner-pill">Lease-to-Own</span>
               </div>
               <h2 class="koalafi-title">ENJOY IT NOW.<br>PAY OVER TIME.</h2>
-              <p class="koalafi-subtitle"><strong>No credit? Koalafi is the perfect place to start.</strong> Koalafi looks beyond traditional credit scores, offering crystal-clear terms, flexible early payoff options to save on fees, and credit bureau reporting so on-time payments help you build credit.*</p>
-              
-              <div class="koalafi-perks-grid">
-                <div class="koalafi-perk">
-                  <span class="koalafi-perk-icon">&#10003;</span>
-                  <div>
-                    <strong>No Credit Needed</strong>
-                    <p>Approvals look at more than just a credit score.</p>
-                  </div>
-                </div>
-                <div class="koalafi-perk">
-                  <span class="koalafi-perk-icon">&#10003;</span>
-                  <div>
-                    <strong>Credit Reporting</strong>
-                    <p>On-time payments may give you an opportunity to build credit.</p>
-                  </div>
-                </div>
-                <div class="koalafi-perk">
-                  <span class="koalafi-perk-icon">&#10003;</span>
-                  <div>
-                    <strong>Flexible Purchase Options</strong>
-                    <p>Options to pay off your lease early and save.</p>
-                  </div>
-                </div>
-                <div class="koalafi-perk">
-                  <span class="koalafi-perk-icon">&#10003;</span>
-                  <div>
-                    <strong>No Surprises, No Gotchas</strong>
-                    <p>Total cost, scheduled payments, and fees stated up front.</p>
-                  </div>
-                </div>
+              <p class="koalafi-subtitle">No credit? Koalafi looks beyond your credit score with simple lease-to-own terms, early buyout savings, and on-time credit reporting to help build your score.*</p>
+              <div class="koalafi-cta-row">
+                <a href="sms:8442238937?&body=NPLKQQ" class="btn-koalafi" aria-label="Text NPLKQQ to 844.223.8937 to Apply with Koalafi">TEXT NPLKQQ TO 844.223.8937 &rarr;</a>
+                <a href="https://www.koalafi.com/for-customers" target="_blank" rel="noopener noreferrer" class="btn-koalafi-ghost" aria-label="Learn More About Koalafi">HOW IT WORKS</a>
               </div>
-
-              <div class="koalafi-apply-box">
-                <div class="koalafi-apply-text">
-                  <div class="koalafi-phone-badge">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                    <span>Text to Apply</span>
-                  </div>
-                  <p class="koalafi-apply-instruction">Text <strong>NPLKQQ</strong> to <strong>844.223.8937</strong> to apply directly from your smartphone, or apply with our showroom team in DeKalb in under 5 minutes!</p>
-                </div>
-                <div class="koalafi-cta-buttons">
-                  <a href="sms:8442238937?&body=NPLKQQ" class="btn-koalafi" aria-label="Text NPLKQQ to 844.223.8937 to Apply with Koalafi">TEXT NPLKQQ TO APPLY &rarr;</a>
-                  <a href="contact.html" class="btn-koalafi-outline" aria-label="Visit Showroom to Apply with Koalafi">APPLY IN SHOWROOM</a>
-                </div>
-              </div>
-
-              <p class="koalafi-disclaimer">*Lease-to-own transaction. &ldquo;No credit needed&rdquo; does not imply no credit check. For qualifying customers only. You will not own the leased merchandise unless you make all scheduled payments or prepay. Koalafi customer support: <a href="tel:8449378275">844.937.8275</a>.</p>
+              <p class="koalafi-disclaimer">*Lease-to-own transaction. &ldquo;No credit needed&rdquo; does not imply no credit check. For qualifying customers only. Customer support: <a href="tel:8449378275">844.937.8275</a>.</p>
             </div>
-            <div class="koalafi-side-visual">
-              <div class="koalafi-phone-mockup">
-                <div class="mockup-top-pill"></div>
-                <div class="mockup-header-tag">Koalafi</div>
-                <div class="mockup-phone-title">Text to Apply</div>
-                <div class="mockup-bubble-icon">
-                  <svg width="34" height="34" viewBox="0 0 24 24" fill="#009ca6"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+            <div class="koalafi-media">
+              <div class="koalafi-flyer-card">
+                <div class="flyer-brand">koalafi<span class="flyer-dot">.</span></div>
+                <div class="flyer-tagline">Text to Apply</div>
+                <div class="flyer-number-label">Text the code below to:</div>
+                <a href="sms:8442238937?&body=NPLKQQ" class="flyer-number">844.223.8937</a>
+                <div class="flyer-code-box">
+                  <span class="flyer-code-label">Store Application Code</span>
+                  <span class="flyer-code">NPLKQQ</span>
                 </div>
-                <p class="mockup-phone-sub">Text code below to apply:</p>
-                <div class="mockup-phone-number">844.223.8937</div>
-                <div class="mockup-code-box">
-                  <span class="mockup-code-label">Store Application Code</span>
-                  <span class="mockup-code-val">NPLKQQ</span>
-                </div>
-                <div class="mockup-footer-badge">Lease-to-own payment option</div>
+                <span class="flyer-footer">Lease-to-own payment option*</span>
               </div>
             </div>
           </article>
@@ -324,7 +278,7 @@
             <img src="photos/logo.jpg" alt="VV Gallery" class="footer-logo-img">
             <span class="footer-logo">VV GALLERY</span>
           </div>
-          <p class="footer-tagline">Your friendly local furniture store. Affordable living room sectionals, lovesacs, makeup vanities, and mattresses.</p>
+          <p class="footer-tagline">Your friendly local furniture store. Affordable living room sectionals, power recliners, and mattresses.</p>
                     <div class="footer-gold-accent"></div>
           <div class="footer-social-row" aria-label="VV Gallery Social Media">
             <a href="https://www.facebook.com/profile.php?id=61573859170150" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="VV Gallery on Facebook" title="Facebook">
@@ -342,10 +296,10 @@
         <div class="footer-col">
           <h4 class="footer-col-title">Departments</h4>
           <ul class="footer-links">
-            <li><a href="living.html">Living &amp; Lovesacs</a></li>
+            <li><a href="living.html">Sectionals &amp; Sofas</a></li>
+            <li><a href="recliners.html">Power Recliners</a></li>
             <li><a href="bedroom.html">Bedroom Sets &amp; Suites</a></li>
             <li><a href="mattresses.html">Mattresses &amp; Foundations</a></li>
-            <li><a href="vanities.html">Makeup Vanities</a></li>
             <li><a href="dining.html">Dining Room Sets</a></li>
           </ul>
         </div>

@@ -4192,11 +4192,11 @@ body.drawer-open .site-header {
 }
 
 /* ==========================================================================
-   KOALAFI LEASE-TO-OWN SHOWCASE CARD
+   KOALAFI LEASE-TO-OWN SHOWCASE CARD (STREAMLINED)
    ========================================================================== */
 .koalafi-showcase-card {
   display: grid;
-  grid-template-columns: 1.25fr 0.85fr;
+  grid-template-columns: 1.15fr 1fr;
   background: #ffffff;
   border: 1px solid var(--color-border-hairline);
   border-radius: 8px;
@@ -4207,11 +4207,11 @@ body.drawer-open .site-header {
 
 .koalafi-showcase-card:hover {
   border-color: #009ca6;
-  box-shadow: 0 16px 40px rgba(0, 156, 166, 0.12);
+  box-shadow: 0 16px 40px rgba(0, 156, 166, 0.1);
 }
 
 .koalafi-content {
-  padding: clamp(32px, 5vw, 48px);
+  padding: clamp(32px, 5vw, 56px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4225,21 +4225,18 @@ body.drawer-open .site-header {
   flex-wrap: wrap;
 }
 
-.koalafi-logo-lockup {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.koalafi-wordmark {
+.koalafi-brand-badge {
   font-family: var(--font-sans);
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: #0f3e46;
+  color: #00838f;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.koalafi-dot {
+.koalafi-brand-badge .koalafi-dot {
   color: #009ca6;
 }
 
@@ -4255,110 +4252,32 @@ body.drawer-open .site-header {
   border-radius: 50px;
 }
 
-.koalafi-rating-pill {
-  background: #fff9e6;
-  color: #946800;
-  border: 1px solid #ffe899;
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 50px;
-}
-
 .koalafi-title {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.15;
   color: var(--color-text-main);
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .koalafi-subtitle {
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   line-height: 1.6;
   color: #4a5568;
-  margin-bottom: 24px;
-}
-
-.koalafi-perks-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px 20px;
   margin-bottom: 28px;
 }
 
-.koalafi-perk {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-.koalafi-perk-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: #e0f7f8;
-  color: #009ca6;
-  font-weight: 800;
-  font-size: 0.85rem;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.koalafi-perk strong {
-  display: block;
-  font-size: 0.88rem;
+.koalafi-subtitle strong {
   color: var(--color-text-main);
-  margin-bottom: 2px;
 }
 
-.koalafi-perk p {
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
-  line-height: 1.4;
-  margin: 0;
-}
-
-.koalafi-apply-box {
-  background: linear-gradient(135deg, #f0fdfc 0%, #f7fefc 100%);
-  border: 1px solid #ccefed;
-  border-radius: 8px;
-  padding: 18px 20px;
-  margin-bottom: 20px;
+.koalafi-cta-row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  gap: 14px;
   flex-wrap: wrap;
-  gap: 16px;
-}
-
-.koalafi-apply-text {
-  flex: 1;
-  min-width: 220px;
-}
-
-.koalafi-phone-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #00838f;
-  margin-bottom: 4px;
-}
-
-.koalafi-apply-instruction {
-  font-size: 0.88rem;
-  color: #1f2937;
-  margin: 0;
-  line-height: 1.45;
+  margin-bottom: 24px;
 }
 
 .btn-koalafi {
@@ -4370,7 +4289,7 @@ body.drawer-open .site-header {
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 11px 22px;
+  padding: 13px 26px;
   border-radius: 4px;
   text-decoration: none;
   transition: var(--transition-smooth);
@@ -4382,22 +4301,21 @@ body.drawer-open .site-header {
 
 .btn-koalafi:hover {
   background-color: #00838f;
-  background-image: linear-gradient(135deg, #009ca6 0%, #006970 100%);
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(0, 156, 166, 0.4);
 }
 
-.btn-koalafi-outline {
-  background: #ffffff;
+.btn-koalafi-ghost {
+  background: transparent;
   color: #00838f;
   border: 1px solid #009ca6;
   font-family: var(--font-sans);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
-  padding: 10px 18px;
+  padding: 12px 24px;
   border-radius: 4px;
   text-decoration: none;
   transition: var(--transition-smooth);
@@ -4406,23 +4324,15 @@ body.drawer-open .site-header {
   justify-content: center;
 }
 
-.btn-koalafi-outline:hover {
+.btn-koalafi-ghost:hover {
   background: #e0f7f8;
-  color: #006970;
-  border-color: #00838f;
+  color: #006064;
   transform: translateY(-2px);
 }
 
-.koalafi-cta-buttons {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
 .koalafi-disclaimer {
-  font-size: 0.72rem;
-  line-height: 1.45;
+  font-size: 0.76rem;
+  line-height: 1.5;
   color: #8c8c8c;
   margin: 0;
 }
@@ -4432,117 +4342,100 @@ body.drawer-open .site-header {
   text-decoration: underline;
 }
 
-.koalafi-side-visual {
-  background: linear-gradient(145deg, #00838f 0%, #004d54 100%);
+.koalafi-media {
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  background: linear-gradient(135deg, #f0fdfc 0%, #e6f7f7 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 36px 24px;
-  position: relative;
-  overflow: hidden;
+  padding: 32px 24px;
+  border-left: 1px solid var(--color-border-hairline);
 }
 
-.koalafi-side-visual::before {
-  content: '';
-  position: absolute;
-  top: -40px;
-  right: -40px;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.koalafi-phone-mockup {
+.koalafi-flyer-card {
   width: 100%;
-  max-width: 250px;
+  max-width: 280px;
   background: #ffffff;
-  border-radius: 24px;
-  padding: 24px 18px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  border: 1px solid #ccefed;
+  border-radius: 12px;
+  padding: 26px 22px;
   text-align: center;
-  position: relative;
-  border: 3px solid #e0f2f1;
+  box-shadow: 0 10px 24px rgba(0, 156, 166, 0.08);
 }
 
-.mockup-top-pill {
-  width: 44px;
-  height: 4px;
-  background: #cfd8dc;
-  border-radius: 10px;
-  margin: 0 auto 14px;
-}
-
-.mockup-header-tag {
-  font-size: 0.75rem;
+.flyer-brand {
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  color: #009ca6;
-  text-transform: uppercase;
+  color: #00838f;
+  margin-bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
 
-.mockup-phone-title {
+.flyer-brand .flyer-dot {
+  color: #009ca6;
+}
+
+.flyer-tagline {
   font-size: 1.15rem;
   font-weight: 800;
   color: #1a202c;
-  margin-top: 4px;
-  margin-bottom: 10px;
-}
-
-.mockup-bubble-icon {
-  margin: 0 auto 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mockup-phone-sub {
-  font-size: 0.76rem;
-  color: #718096;
   margin-bottom: 4px;
 }
 
-.mockup-phone-number {
+.flyer-number-label {
+  font-size: 0.78rem;
+  color: #718096;
+  margin-bottom: 2px;
+}
+
+.flyer-number {
   font-size: 1.35rem;
   font-weight: 800;
   color: #009ca6;
+  text-decoration: none;
+  display: block;
   letter-spacing: 0.02em;
   margin-bottom: 12px;
 }
 
-.mockup-code-box {
+.flyer-code-box {
   background: #fffde7;
   border: 2px dashed #fbc02d;
-  border-radius: 8px;
-  padding: 8px 10px;
+  border-radius: 6px;
+  padding: 10px 14px;
   margin-bottom: 14px;
 }
 
-.mockup-code-label {
+.flyer-code-label {
   display: block;
   font-size: 0.65rem;
   font-weight: 700;
   color: #946800;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.mockup-code-val {
+.flyer-code {
   display: block;
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   font-weight: 900;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.15em;
   color: #006064;
-  margin-top: 3px;
-  font-family: var(--font-sans);
+  margin-top: 2px;
 }
 
-.mockup-footer-badge {
-  font-size: 0.68rem;
+.flyer-footer {
+  font-size: 0.72rem;
   font-weight: 600;
   color: #00838f;
   background: #e0f7f8;
-  padding: 5px 10px;
+  padding: 5px 12px;
   border-radius: 50px;
   display: inline-block;
 }
@@ -4552,26 +4445,24 @@ body.drawer-open .site-header {
     grid-template-columns: 1fr;
   }
 
-  .koalafi-side-visual {
-    padding: 32px 20px;
+  .koalafi-media {
+    border-left: none;
+    border-top: 1px solid var(--color-border-hairline);
+    min-height: 240px;
+    padding: 24px 18px;
   }
 
-  .koalafi-perks-grid {
-    grid-template-columns: 1fr;
+  .koalafi-content {
+    padding: 28px 22px;
   }
 
-  .koalafi-apply-box {
+  .koalafi-cta-row {
     flex-direction: column;
-    align-items: stretch;
-  }
-
-  .koalafi-cta-buttons {
-    flex-direction: column;
-    width: 100%;
+    gap: 10px;
   }
 
   .btn-koalafi,
-  .btn-koalafi-outline {
+  .btn-koalafi-ghost {
     width: 100%;
     text-align: center;
   }

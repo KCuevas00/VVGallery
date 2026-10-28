@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VV Gallery — Local Furniture &amp; Mattresses</title>
   <meta name="description"
-    content="VV Gallery is your friendly local furniture store. Honest prices on modular lovesacs, makeup vanities, living room sectionals, and comfortable mattresses.">
+    content="VV Gallery is your friendly local furniture store. Honest prices on modular power recliners, living room sectionals, and comfortable mattresses.">
 
   <!-- Google Fonts: Cormorant Garamond & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
   <link rel="shortcut icon" href="photos/favicon.ico">
   <link rel="apple-touch-icon" href="photos/favicon.png">
 
-  <link rel="stylesheet" href="style.css?v=3.1">
+  <link rel="stylesheet" href="style.css?v=3.2">
   <link rel="stylesheet" href="hero.css">
 
   <!-- Canonical & Open Graph Metadata for AI & Search Engines -->
@@ -35,7 +35,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="VV Gallery">
   <meta property="og:title" content="VV Gallery — Furniture &amp; Mattresses in DeKalb, IL">
-  <meta property="og:description" content="Friendly local furniture and mattress store in DeKalb, IL. Modular sectionals, plush cloud sacs, makeup vanities, bedroom sets, and Ashley Furniture catalog orders.">
+  <meta property="og:description" content="Friendly local furniture and mattress store in DeKalb, IL. Modular sectionals, plush cloud sacs, power recliners, bedroom sets, and Ashley Furniture catalog orders.">
   <meta property="og:url" content="https://vanevgallery.com/">
   <meta property="og:image" content="https://vanevgallery.com/photos/story-showroom-full.jpg">
   <meta property="og:image:width" content="1200">
@@ -57,7 +57,7 @@
     "@id": "https://vanevgallery.com/#store",
     "name": "VV Gallery",
     "alternateName": ["Vane Vintage Gallery", "VV Gallery Furniture & Mattresses"],
-    "description": "Local family-owned furniture and mattress showroom in DeKalb, IL specializing in sectionals, lovesacs, bedroom furniture, makeup vanities, and authorized Ashley Furniture orders.",
+    "description": "Local family-owned furniture and mattress showroom in DeKalb, IL specializing in sectionals, lovesacs, bedroom furniture, power recliners, and authorized Ashley Furniture orders.",
     "url": "https://vanevgallery.com/",
     "logo": "https://vanevgallery.com/photos/logo.jpg",
     "image": [
@@ -134,7 +134,16 @@
         </button>
         <nav class="nav-desktop" aria-label="Primary Navigation">
           <ul class="nav-list">
-            <li><a href="living.html" class="nav-link">Living</a></li>
+            <li class="nav-item-dropdown">
+              <a href="living.html" class="nav-link nav-dropdown-trigger">
+                Living
+                <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="living.html">Sectionals &amp; Sofas</a></li>
+                <li><a href="recliners.html">Power Recliners</a></li>
+              </ul>
+            </li>
             <li class="nav-item-dropdown">
               <a href="bedroom.html" class="nav-link nav-dropdown-trigger">
                 Bedroom
@@ -146,7 +155,6 @@
               </ul>
             </li>
             <li><a href="dining.html" class="nav-link">Dining</a></li>
-            <li><a href="vanities.html" class="nav-link">Vanities</a></li>
             <li><a href="financing.html" class="nav-link">Financing</a></li>
             <li><a href="story.html" class="nav-link">About Us</a></li>
           </ul>
@@ -194,11 +202,11 @@
         <div class="drawer-group">
           <p class="drawer-group-title">Shop Catalog</p>
           <ul>
-            <li><a href="living.html">Living &amp; Sectionals</a></li>
+            <li><a href="living.html">Sectionals &amp; Sofas</a></li>
+            <li><a href="recliners.html">Power Recliners</a></li>
             <li><a href="bedroom.html">Bedroom Sets &amp; Suites</a></li>
             <li><a href="mattresses.html">Mattresses &amp; Foundations</a></li>
             <li><a href="dining.html">Dining Room Sets</a></li>
-            <li><a href="vanities.html">Makeup Vanities</a></li>
             <li><a href="ashley.html">Ashley Furniture Orders</a></li>
           </ul>
         </div>
@@ -656,11 +664,11 @@
             <p>Browse our complete in-store catalog across all departments with immediate local delivery.</p>
           </div>
           <div class="catalog-explore-links">
-            <a href="living.html" class="catalog-pill-btn"><span>All Living &amp; Recliners</span> <span>&rarr;</span></a>
+            <a href="living.html" class="catalog-pill-btn"><span>Sectionals &amp; Sofas</span> <span>&rarr;</span></a>
+            <a href="recliners.html" class="catalog-pill-btn"><span>Power Recliners</span> <span>&rarr;</span></a>
             <a href="bedroom.html" class="catalog-pill-btn"><span>All Bedroom Sets</span> <span>&rarr;</span></a>
             <a href="mattresses.html" class="catalog-pill-btn"><span>All Mattresses</span> <span>&rarr;</span></a>
             <a href="dining.html" class="catalog-pill-btn"><span>All Dining Sets</span> <span>&rarr;</span></a>
-            <a href="vanities.html" class="catalog-pill-btn"><span>All Makeup Vanities</span> <span>&rarr;</span></a>
           </div>
         </div>
       </div>
@@ -910,7 +918,7 @@
           <div class="showroom-text-col">
             <span class="section-num">Visit Us</span>
             <h2 id="showroom-title" class="showroom-heading">Visit Our Showroom</h2>
-            <p class="showroom-desc">Stop by to test-sit sectionals, feel our mattresses, and see our lighted vanities
+            <p class="showroom-desc">Stop by to test-sit sectionals, feel our mattresses, and see our power recliners
               in person. Our friendly team is ready to help you find the right pieces for your home.</p>
 
             <div class="showroom-details-grid">
@@ -963,8 +971,7 @@
             <img src="photos/logo.jpg" alt="VV Gallery" class="footer-logo-img">
             <span class="footer-logo">VV GALLERY</span>
           </div>
-          <p class="footer-tagline">Your friendly local furniture store. Affordable living room sectionals, lovesacs,
-            makeup vanities, and mattresses.</p>
+          <p class="footer-tagline">Your friendly local furniture store. Affordable living room sectionals, power recliners, and mattresses.</p>
                     <div class="footer-gold-accent"></div>
           <div class="footer-social-row" aria-label="VV Gallery Social Media">
             <a href="https://www.facebook.com/profile.php?id=61573859170150" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="VV Gallery on Facebook" title="Facebook">
@@ -982,12 +989,11 @@
         <div class="footer-col">
           <h4 class="footer-col-title">Departments</h4>
           <ul class="footer-links">
-            <li><a href="living.html">Living &amp; Lovesacs</a></li>
+            <li><a href="living.html">Sectionals &amp; Sofas</a></li>
+            <li><a href="recliners.html">Power Recliners</a></li>
             <li><a href="bedroom.html">Bedroom Sets &amp; Suites</a></li>
             <li><a href="mattresses.html">Mattresses &amp; Foundations</a></li>
-            <li><a href="vanities.html">Makeup Vanities</a></li>
             <li><a href="dining.html">Dining Room Sets</a></li>
-            <li><a href="ashley.html">Ashley Furniture Orders</a></li>
           </ul>
         </div>
 
