@@ -3578,10 +3578,6 @@ body.drawer-open .site-header {
     max-width: 100%;
   }
 
-  .reviews-grid > .review-card:nth-child(n+4) {
-    display: none;
-  }
-
   .review-card {
     max-width: 100%;
     word-break: break-word;
