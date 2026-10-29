@@ -90,46 +90,301 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('pageshow', updateNavbarScroll);
   }
 
-  // Story Photo Lightbox
-  const storyLightbox = document.getElementById('storyLightbox');
-  const lightboxImg = document.getElementById('lightboxImg');
-  const lightboxCaption = document.getElementById('lightboxCaption');
-  const lightboxClose = document.getElementById('lightboxClose');
+  // ==========================================================================
+  // UNIVERSAL IMAGE LIGHTBOX ZOOM
+  // Supports data-lightbox-src, product-media-wrap photos, and story photos
+  // ==========================================================================
+  let lightbox = document.getElementById('storyLightbox') || document.getElementById('imageLightbox');
+  let lightboxImg = document.getElementById('lightboxImg');
+  let lightboxCaption = document.getElementById('lightboxCaption');
+  let lightboxClose = document.getElementById('lightboxClose');
 
-  if (storyLightbox && lightboxImg && lightboxClose) {
-    const openLightbox = (src, title) => {
-      lightboxImg.src = src;
+  // Auto-inject lightbox modal if not already present in the DOM
+  if (!lightbox) {
+    lightbox = document.createElement('div');
+    lightbox.id = 'imageLightbox';
+    lightbox.className = 'image-lightbox';
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightbox.setAttribute('role', 'dialog');
+    lightbox.setAttribute('aria-label', 'Image zoom preview');
+    lightbox.innerHTML = `
+      <div class="image-lightbox-inner">
+        <button class="image-lightbox-close" id="lightboxClose" aria-label="Close image zoom">&times;</button>
+        <img src="" alt="Enlarged furniture preview" class="image-lightbox-img" id="lightboxImg">
+        <p class="image-lightbox-caption" id="lightboxCaption"></p>
+      </div>
+    `;
+    document.body.appendChild(lightbox);
+    lightboxImg = lightbox.querySelector('#lightboxImg');
+    lightboxCaption = lightbox.querySelector('#lightboxCaption');
+    lightboxClose = lightbox.querySelector('#lightboxClose');
+  }
+
+  const openLightbox = (src, title) => {
+    if (!src || !lightbox || !lightboxImg) return;
+    lightboxImg.src = src;
+    if (lightboxCaption) {
       lightboxCaption.textContent = title || '';
-      storyLightbox.classList.add('active');
-      storyLightbox.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+    }
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeLightbox = () => {
+    if (!lightbox || !lightboxImg) return;
+    lightbox.classList.remove('active');
+    lightbox.setAttribute('aria-hidden', 'true');
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+  };
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+  }
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target.classList.contains('image-lightbox-inner') || e.target.classList.contains('story-lightbox-inner')) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+
+  // 1. Explicit data-lightbox-src elements
+  document.querySelectorAll('[data-lightbox-src]').forEach(item => {
+    item.style.cursor = 'zoom-in';
+    item.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const src = item.getAttribute('data-lightbox-src');
+      const title = item.getAttribute('data-lightbox-title') || item.getAttribute('alt') || '';
+      if (src) openLightbox(src, title);
+    });
+  });
+
+  // 2. Click-to-zoom on all product card media containers (.product-media-wrap)
+  document.querySelectorAll('.product-media-wrap').forEach(wrap => {
+    wrap.addEventListener('click', (e) => {
+      // If user clicked a direct link, swatch dot, or side toggle arrow, don't trigger lightbox zoom
+      if (e.target.closest('a') || e.target.closest('.color-swatch-dots') || e.target.closest('.side-toggle-arrow')) return;
+
+      // Find the visible active image inside the wrap (primary or secondary)
+      const imgs = wrap.querySelectorAll('img');
+      if (!imgs.length) return;
+
+      let chosenImg = imgs[0];
+      const activeView = wrap.getAttribute('data-active-view');
+      if (activeView === '1' && imgs.length > 1) {
+        chosenImg = imgs[1];
+      } else if (imgs.length > 1) {
+        const secondary = wrap.querySelector('.product-img.secondary');
+        if (secondary && window.getComputedStyle(secondary).opacity === '1') {
+          chosenImg = secondary;
+        }
+      }
+
+      const src = chosenImg.currentSrc || chosenImg.src;
+      // Get title from parent product card or image alt
+      const productCard = wrap.closest('.product-item');
+      const productName = productCard ? productCard.querySelector('.product-name') : null;
+      const title = productName ? productName.textContent.trim() : (chosenImg.alt || 'VV Gallery Furniture');
+
+      if (src) {
+        e.preventDefault();
+        openLightbox(src, title);
+      }
+    });
+  });
+
+  // 3. Color Swatch Dot Switching (supports data-img-src for dynamic photo swap & data-color-index for view toggle)
+  document.querySelectorAll('.color-swatch-dots').forEach(swatchContainer => {
+    const dots = swatchContainer.querySelectorAll('.swatch-dot');
+    const productCard = swatchContainer.closest('.product-item');
+    const wrap = productCard ? productCard.querySelector('.product-media-wrap') : swatchContainer.closest('.product-media-wrap');
+    if (!wrap) return;
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const imgSrc = dot.getAttribute('data-img-src');
+        if (imgSrc) {
+          const mainImg = wrap.querySelector('.product-img.primary') || wrap.querySelector('.product-img');
+          if (mainImg) {
+            mainImg.src = imgSrc;
+            const colorName = dot.getAttribute('data-color-name') || dot.getAttribute('title');
+            if (colorName) {
+              const productName = productCard ? productCard.querySelector('.product-name') : null;
+              const name = productName ? productName.textContent.trim() : 'Furniture';
+              mainImg.alt = `${name} in ${colorName}`;
+            }
+          }
+        }
+
+        const index = dot.getAttribute('data-color-index');
+        if (index !== null) {
+          wrap.setAttribute('data-active-view', index);
+        }
+
+        // Update active class on dots
+        dots.forEach(d => d.classList.remove('active'));
+        dot.classList.add('active');
+      });
+    });
+  });
+
+  // 4. Right Side Toggle Arrow (e.g. Fridge View on Two-Tone Bedroom Set)
+  document.querySelectorAll('.side-toggle-arrow').forEach(arrow => {
+    const wrap = arrow.closest('.product-media-wrap');
+    if (!wrap) return;
+
+    const toggleView = () => {
+      const current = wrap.getAttribute('data-active-view') || '0';
+      const nextView = current === '1' ? '0' : '1';
+      wrap.setAttribute('data-active-view', nextView);
+      // Flip arrow direction when viewing fridge detail
+      arrow.innerHTML = nextView === '1' ? '&#10094;' : '&#10095;';
+      arrow.setAttribute('title', nextView === '1' ? 'Back to Full Set' : 'View Mini Fridge Detail');
+      arrow.setAttribute('aria-label', nextView === '1' ? 'Back to Full Set' : 'View Mini Fridge Detail');
     };
 
-    const closeLightbox = () => {
-      storyLightbox.classList.remove('active');
-      storyLightbox.setAttribute('aria-hidden', 'true');
-      lightboxImg.src = '';
-      document.body.style.overflow = '';
+    arrow.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleView();
+    });
+
+    // Touch Swipe Support on mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    wrap.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    wrap.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) > 40) {
+        toggleView();
+      }
+    }, { passive: true });
+  });
+
+  // ==========================================================================
+  // HERO SPECIALS 4-SLIDE AUTO-CAROUSEL (SMOOTH HORIZONTAL SLIDE TRACK)
+  // ==========================================================================
+  const heroCarousel = document.getElementById('heroCarousel');
+  if (heroCarousel) {
+    const track = document.getElementById('heroTrack');
+    const slides = heroCarousel.querySelectorAll('.hero-slide');
+    const dots = heroCarousel.querySelectorAll('.hero-dot');
+    const prevBtn = heroCarousel.querySelector('.hero-nav-arrow.prev');
+    const nextBtn = heroCarousel.querySelector('.hero-nav-arrow.next');
+    let currentIndex = 0;
+    let autoInterval = null;
+    const slideDuration = 5000; // 5 seconds per slide
+
+    const goToSlide = (index) => {
+      currentIndex = (index + slides.length) % slides.length;
+      if (track) {
+        track.style.transform = `translate3d(-${currentIndex * 100}%, 0, 0)`;
+      }
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === currentIndex);
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+        dot.setAttribute('aria-selected', i === currentIndex ? 'true' : 'false');
+      });
     };
 
-    document.querySelectorAll('[data-lightbox-src]').forEach(item => {
-      item.addEventListener('click', () => {
-        const src = item.getAttribute('data-lightbox-src');
-        const title = item.getAttribute('data-lightbox-title');
-        if (src) openLightbox(src, title);
+    const nextSlide = () => {
+      goToSlide(currentIndex + 1);
+    };
+
+    const prevSlide = () => {
+      goToSlide(currentIndex - 1);
+    };
+
+    const startAutoPlay = () => {
+      stopAutoPlay();
+      autoInterval = setInterval(nextSlide, slideDuration);
+    };
+
+    const stopAutoPlay = () => {
+      if (autoInterval) {
+        clearInterval(autoInterval);
+        autoInterval = null;
+      }
+    };
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        goToSlide(index);
+        startAutoPlay();
       });
     });
 
-    lightboxClose.addEventListener('click', closeLightbox);
-    storyLightbox.addEventListener('click', (e) => {
-      if (e.target === storyLightbox) closeLightbox();
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        prevSlide();
+        startAutoPlay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        nextSlide();
+        startAutoPlay();
+      });
+    }
+
+    // Pause only when hovering over actionable controls/links, so viewing/reading doesn't freeze autoplay
+    const pauseElements = heroCarousel.querySelectorAll('.hero-cta-group, .hero-nav-controls, a, button');
+    pauseElements.forEach(el => {
+      el.addEventListener('mouseenter', stopAutoPlay);
+      el.addEventListener('mouseleave', startAutoPlay);
+      el.addEventListener('focusin', stopAutoPlay);
+      el.addEventListener('focusout', startAutoPlay);
     });
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && storyLightbox.classList.contains('active')) {
-        closeLightbox();
+    // Touch swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    heroCarousel.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stopAutoPlay();
+    }, { passive: true });
+
+    heroCarousel.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchEndX - touchStartX;
+      if (Math.abs(diff) > 40) {
+        if (diff < 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
       }
-    });
+      startAutoPlay();
+    }, { passive: true });
+
+    // Initialize position & launch auto play immediately
+    goToSlide(0);
+    startAutoPlay();
   }
+
 });
+
+
 

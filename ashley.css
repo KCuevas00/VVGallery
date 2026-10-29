@@ -1,0 +1,187 @@
+/*
+  VV GALLERY: ASHLEY ORDERS PAGE (v3)
+  Load AFTER style.css. Just three things: a square ad, a contact box, an FAQ.
+*/
+.as-page {
+  --as-ink: #161513;
+  --as-orange: #F48120;
+  --as-orange-deep: #C9560A;
+}
+
+.as-main {
+  width: 92%;
+  max-width: 560px;
+  margin: 0 auto;
+  padding: clamp(36px, 6vw, 72px) 0 clamp(56px, 8vw, 96px);
+}
+
+/* ---------- Ashley Card ---------- */
+.as-ad {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e3ded5;
+  box-shadow: 0 14px 40px -12px rgba(0, 0, 0, 0.14);
+  color: var(--as-ink);
+}
+
+.as-ad-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 16px;
+  padding: clamp(36px, 8vw, 56px) clamp(24px, 6vw, 44px);
+}
+
+.as-ad-logo {
+  width: min(190px, 46%);
+  height: auto;
+  display: block;
+}
+
+.as-ad h1 {
+  font-family: var(--font-sans);
+  font-size: clamp(1.45rem, 5.4vw, 2.15rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.as-ad-sub {
+  font-size: clamp(0.82rem, 2.6vw, 0.98rem);
+  line-height: 1.45;
+  color: #4a4640;
+  margin: 0;
+  max-width: 32ch;
+}
+
+/* ---------- Contact box ---------- */
+.as-contact {
+  margin-top: 28px;
+  padding: 26px 28px;
+  border: 1px solid var(--color-border-hairline);
+  background: var(--color-bg-subtle);
+}
+
+.as-contact h2,
+.as-faq-title {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 6px;
+}
+
+.as-contact p {
+  margin: 0 0 18px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+.as-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.as-btn {
+  flex: 1 1 180px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid var(--as-ink);
+  border-radius: 2px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.as-btn--solid { background: var(--as-ink); color: #fff; }
+.as-btn--solid:hover { background: var(--as-orange); border-color: var(--as-orange); color: var(--as-ink); }
+.as-btn--line { background: transparent; color: var(--as-ink); }
+.as-btn--line:hover { background: var(--as-ink); color: #fff; }
+
+.as-btn:focus-visible,
+.as-faq summary:focus-visible,
+.as-ad-cta:focus-visible {
+  outline: 2px solid var(--as-orange);
+  outline-offset: 3px;
+}
+
+.as-contact small {
+  display: block;
+  margin-top: 16px;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+/* ---------- FAQ ---------- */
+.as-faq {
+  margin-top: 56px;
+}
+
+.as-faq-title {
+  margin-bottom: 14px;
+}
+
+.as-faq details {
+  border-top: 1px solid var(--color-border-hairline);
+}
+
+.as-faq details:last-child {
+  border-bottom: 1px solid var(--color-border-hairline);
+}
+
+.as-faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.as-faq summary::-webkit-details-marker { display: none; }
+
+.as-faq summary::after {
+  content: "+";
+  flex-shrink: 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--as-orange-deep);
+}
+
+.as-faq details[open] summary::after { content: "\2212"; }
+
+.as-faq details p {
+  margin: 0;
+  padding: 0 0 20px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+.as-faq details a {
+  color: var(--as-ink);
+  font-weight: 500;
+  border-bottom: 1px solid var(--as-orange);
+}
+
+@media (max-width: 520px) {
+  .as-ad-top {
+    padding: 30px 20px 26px;
+  }
+}
+
+

@@ -13,7 +13,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VV Gallery — Local Furniture &amp; Mattresses</title>
   <meta name="description"
-    content="VV Gallery is your friendly local furniture store. Honest prices on modular lovesacs, makeup vanities, living room sectionals, and comfortable mattresses.">
+    content="VV Gallery is your friendly local furniture store. Honest prices on modular power recliners, living room sectionals, and comfortable mattresses.">
 
   <!-- Google Fonts: Cormorant Garamond & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,90 @@
   <link rel="shortcut icon" href="photos/favicon.ico">
   <link rel="apple-touch-icon" href="photos/favicon.png">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3.5">
+  <link rel="stylesheet" href="hero.css">
+
+  <!-- Canonical & Open Graph Metadata for AI & Search Engines -->
+  <link rel="canonical" href="https://vanevgallery.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VV Gallery">
+  <meta property="og:title" content="VV Gallery — Furniture &amp; Mattresses in DeKalb, IL">
+  <meta property="og:description" content="Friendly local furniture and mattress store in DeKalb, IL. Modular sectionals, plush cloud sacs, power recliners, bedroom sets, and Ashley Furniture catalog orders.">
+  <meta property="og:url" content="https://vanevgallery.com/">
+  <meta property="og:image" content="https://vanevgallery.com/photos/story-showroom-full.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:image:alt" content="VV Gallery Furniture and Mattress Showroom in DeKalb IL">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VV Gallery — Furniture &amp; Mattresses in DeKalb, IL">
+  <meta name="twitter:description" content="Friendly local furniture and mattress store in DeKalb, IL. In-stock sectionals, mattresses, and custom Ashley catalog orders.">
+  <meta name="twitter:image" content="https://vanevgallery.com/photos/story-showroom-full.jpg">
+
+  <!-- Schema.org JSON-LD Structured Data for Local Business / Furniture Store -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FurnitureStore",
+    "@id": "https://vanevgallery.com/#store",
+    "name": "VV Gallery",
+    "alternateName": ["Vane Vintage Gallery", "VV Gallery Furniture & Mattresses"],
+    "description": "Local family-owned furniture and mattress showroom in DeKalb, IL specializing in sectionals, lovesacs, bedroom furniture, power recliners, and authorized Ashley Furniture orders.",
+    "url": "https://vanevgallery.com/",
+    "logo": "https://vanevgallery.com/photos/logo.jpg",
+    "image": [
+      "https://vanevgallery.com/photos/story-showroom-full.jpg",
+      "https://vanevgallery.com/photos/story-showroom-logo.jpg",
+      "https://vanevgallery.com/photos/logo.jpg"
+    ],
+    "telephone": "+1-847-306-0959",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1586 Barber Greene Rd",
+      "addressLocality": "DeKalb",
+      "addressRegion": "IL",
+      "postalCode": "60115",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.9482,
+      "longitude": -88.7505
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "10:00",
+        "closes": "18:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "10:00",
+        "closes": "17:00"
+      }
+    ],
+    "paymentAccepted": "Cash, Credit Card, Acima Lease-to-Own, Synchrony Financial",
+    "currenciesAccepted": "USD",
+    "areaServed": [
+      "DeKalb, IL",
+      "Sycamore, IL",
+      "Rochelle, IL",
+      "Cortland, IL",
+      "Genoa, IL"
+    ],
+    "hasMap": "https://maps.google.com/?q=1586+Barber+Greene+Rd,+DeKalb,+IL+60115",
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61573859170150",
+      "https://www.instagram.com/vanevintagegallery",
+      "https://share.google/8glchlT7H6oo3atPb"
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -35,7 +118,8 @@
   <!-- Global Announcement Bar -->
   <aside class="announcement-bar" role="region" aria-label="Store Announcement">
     <div class="container announcement-inner">
-      <span class="announcement-text"><span class="announcement-desktop">In-Stock Furniture &amp; Mattresses &bull; Fast Local Delivery &bull; </span>1586 Barber Greene Rd, DeKalb</span>
+      <span class="announcement-text"><span class="announcement-desktop">In-Stock Furniture &amp; Mattresses &bull; Fast
+          Local Delivery &bull; </span>1586 Barber Greene Rd, DeKalb</span>
       <a href="contact.html" class="announcement-link">Showroom &rarr;</a>
     </div>
   </aside>
@@ -50,11 +134,29 @@
         </button>
         <nav class="nav-desktop" aria-label="Primary Navigation">
           <ul class="nav-list">
-            <li><a href="living.html" class="nav-link">Living</a></li>
-            <li><a href="mattresses.html" class="nav-link">Bedroom</a></li>
+            <li class="nav-item-dropdown">
+              <a href="living.html" class="nav-link nav-dropdown-trigger">
+                Living
+                <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="living.html">Sectionals &amp; Sofas</a></li>
+                <li><a href="recliners.html">Power Recliners</a></li>
+              </ul>
+            </li>
+            <li class="nav-item-dropdown">
+              <a href="bedroom.html" class="nav-link nav-dropdown-trigger">
+                Bedroom
+                <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="bedroom.html">Bedroom Sets</a></li>
+                <li><a href="mattresses.html">Mattresses</a></li>
+              </ul>
+            </li>
             <li><a href="dining.html" class="nav-link">Dining</a></li>
-            <li><a href="vanities.html" class="nav-link">Vanities</a></li>
-            <li><a href="story.html" class="nav-link">Our Story</a></li>
+            <li><a href="financing.html" class="nav-link">Financing</a></li>
+            <li><a href="story.html" class="nav-link">About Us</a></li>
           </ul>
         </nav>
       </div>
@@ -72,9 +174,10 @@
 
       <!-- Right Utility Actions -->
       <div class="nav-right">
-        <a href="contact.html" class="nav-action-link">Showroom</a>
+        <a href="contact.html" class="nav-action-link">Contact Us</a>
         <div class="nav-cart-status" aria-label="Online Cart Coming Soon" title="Online shopping coming soon">
-          <svg class="cart-status-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="cart-status-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="9" cy="21" r="1"></circle>
             <circle cx="20" cy="21" r="1"></circle>
             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
@@ -89,24 +192,44 @@
   <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
     <div class="drawer-content">
       <div class="drawer-top-row">
-        <div class="drawer-brand-lockup">
+        <a href="index.html" class="drawer-brand-lockup" aria-label="VV Gallery Home">
           <img src="photos/logo.jpg" alt="VV Gallery" class="drawer-logo-img">
           <span class="drawer-brand-text">VV GALLERY</span>
-        </div>
+        </a>
         <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
       </div>
       <nav class="drawer-nav">
-        <ul>
-          <li><a href="living.html">Living</a></li>
-          <li><a href="mattresses.html">Bedroom</a></li>
-          <li><a href="dining.html">Dining</a></li>
-          <li><a href="vanities.html">Vanities</a></li>
-          <li><a href="story.html">Our Story</a></li>
-          <li><a href="contact.html">Showroom &amp; Directions</a></li>
-        </ul>
+        <div class="drawer-group">
+          <p class="drawer-group-title">Shop Catalog</p>
+          <ul>
+            <li><a href="living.html">Sectionals &amp; Sofas</a></li>
+            <li><a href="recliners.html">Power Recliners</a></li>
+            <li><a href="bedroom.html">Bedroom Sets &amp; Suites</a></li>
+            <li><a href="mattresses.html">Mattresses &amp; Foundations</a></li>
+            <li><a href="dining.html">Dining Room Sets</a></li>
+            <li><a href="ashley.html">Ashley Furniture Orders</a></li>
+          </ul>
+        </div>
+        <div class="drawer-group">
+          <p class="drawer-group-title">Customer Care</p>
+          <ul>
+            <li><a href="financing.html">Financing</a></li>
+            <li><a href="story.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Showroom &amp; Directions</a></li>
+          </ul>
+        </div>
+        <div class="drawer-group">
+          <p class="drawer-group-title">Policies</p>
+          <ul>
+            <li><a href="refund-policy.html">Refund Policy</a></li>
+            <li><a href="shipping-policy.html">Shipping &amp; Delivery</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
       </nav>
       <div class="drawer-footer">
-        <p class="drawer-hours"><strong>Showroom Hours:</strong><br>Mon&ndash;Fri 9:30am&ndash;6pm | Sat 10am&ndash;5pm
+        <p class="drawer-hours"><strong>Showroom Hours:</strong><br>Mon&ndash;Fri 10am&ndash;6:30pm | Sat 10am&ndash;5pm
           | Sun Closed</p>
         <p class="drawer-contact">1586 Barber Greene Rd, DeKalb, IL 60115<br><a href="tel:8473060959">(847) 306-0959</a>
         </p>
@@ -116,21 +239,159 @@
 
   <main id="main-content">
 
-    <!-- HERO SECTION: Clean & Punchy -->
-    <section class="hero-editorial" aria-labelledby="hero-title">
-      <div class="hero-media-wrapper">
-        <img src="photos/furniture/hero-living.jpg" alt="Quality home furniture at VV Gallery" class="hero-img">
-        <div class="media-overlay"></div>
+    <!-- HERO: 4 concept slides (full-bleed photo / product split / shop by room / financing).
+         Keep the ids and classes heroCarousel, heroTrack, hero-slide, hero-dot, hero-nav-arrow:
+         main.js drives the carousel through them. Styles live in hero.css. -->
+    <section class="hx-hero" aria-labelledby="hero-title">
+      <div class="hero-carousel" id="heroCarousel" aria-roledescription="carousel" aria-label="Featured at VV Gallery">
+        <div class="hero-slides-wrapper">
+          <div class="hero-slides-track" id="heroTrack">
+
+            <!-- Concept 1: Full-bleed room photo (Arhaus / RH style) -->
+            <div class="hero-slide hx-s1 active" role="group" aria-roledescription="slide" aria-label="1 of 4">
+              <div class="hx-bg">
+                <img src="photos/furniture/hero-living.jpg" alt="A styled living room with furniture from VV Gallery">
+              </div>
+              <div class="container hx-s1-inner">
+                <div class="hx-copy">
+                  <h1 id="hero-title" class="hx-title">Quality furniture for real homes.</h1>
+                  <p class="hx-sub">In-stock sofas, bedroom sets and dining tables at honest prices. Family owned, on Barber Greene Rd in DeKalb.</p>
+                  <div class="hx-actions">
+                    <a href="#collection-grid" class="hx-btn hx-btn--light">Shop in-stock furniture</a>
+                    <a href="contact.html" class="hx-btn hx-btn--ghost-light">Visit the showroom</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Concept 2: One hero product, split layout (Power Recliner Suites) -->
+            <div class="hero-slide hx-s2" role="group" aria-roledescription="slide" aria-label="2 of 4">
+              <div class="container hx-grid">
+                <div class="hx-copy">
+                  <h2 class="hx-title">Luxury power recliners with LED &amp; audio.</h2>
+                  <p class="hx-sub">Motorized power reclining seats, center storage console with cup holders, and ambient LED lighting. In stock now in DeKalb.</p>
+                  <div class="hx-actions">
+                    <a href="recliners.html" class="hx-btn hx-btn--dark">See power recliners</a>
+                    <a href="contact.html" class="hx-btn hx-btn--ghost-dark">Come try them out</a>
+                  </div>
+                </div>
+                <div class="hx-stage">
+                  <img src="photos/furniture/living-power-recliner-diamond-led-white.jpg" alt="Luxury diamond white power recliner sofa and loveseat with LED and speakers">
+                </div>
+              </div>
+            </div>
+
+            <!-- Concept 3: bedroom set, mirrored split (same family as slide 2) -->
+            <div class="hero-slide hx-s2 hx-s3" role="group" aria-roledescription="slide" aria-label="3 of 4">
+              <div class="container hx-grid">
+                <div class="hx-stage">
+                  <img src="photos/furniture/bedroom-set-two-tone-led-fridge.png" alt="Two-tone LED queen bedroom set with a mini fridge nightstand">
+                </div>
+                <div class="hx-copy">
+                  <h2 class="hx-title">The bedroom set with a mini fridge.</h2>
+                  <p class="hx-sub">Queen bed with under-bed LED lighting, dresser, mirror, and a nightstand with a built-in mini fridge and speaker. Complete 4-piece set for <strong>$998</strong>.</p>
+                  <div class="hx-actions">
+                    <a href="bedroom.html" class="hx-btn hx-btn--dark">See bedroom sets</a>
+                    <a href="contact.html" class="hx-btn hx-btn--ghost-dark">Come see it</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Concept 4: financing over a full-bleed photo (same family as slide 1) -->
+            <div class="hero-slide hx-s1 hx-s4" role="group" aria-roledescription="slide" aria-label="4 of 4">
+              <div class="hx-bg">
+                <img src="photos/financing/synchrony-lifestyle.jpg" alt="Relaxing at home with new furniture from VV Gallery">
+              </div>
+              <div class="container hx-s1-inner">
+                <div class="hx-copy">
+                  <h2 class="hx-title">Take it home today for $49 down.</h2>
+                  <p class="hx-sub">Acima and Koalafi lease-to-own need no credit, just steady income and a checking account. Synchrony promotional financing is there for qualifying buyers.</p>
+                  <div class="hx-actions">
+                    <a href="financing.html" class="hx-btn hx-btn--light">See financing options</a>
+                    <a href="contact.html" class="hx-btn hx-btn--ghost-light">Apply in the showroom</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="hx-controls-wrap">
+          <div class="container hx-controls-row">
+            <div class="hx-controls">
+              <button type="button" class="hero-nav-arrow prev" aria-label="Previous slide">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+              <div class="hero-carousel-dots" role="tablist" aria-label="Choose slide">
+                <button class="hero-dot active" role="tab" aria-selected="true" aria-label="Slide 1: Showroom" data-slide="0"></button>
+                <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 2: Sectional recliner" data-slide="1"></button>
+                <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 3: Shop by room" data-slide="2"></button>
+                <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 4: Financing" data-slide="3"></button>
+              </div>
+              <button type="button" class="hero-nav-arrow next" aria-label="Next slide">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="container hero-content-container">
-        <div class="hero-text-box">
-          <p class="eyebrow">Local Furniture &amp; Mattresses</p>
-          <h1 id="hero-title" class="hero-title">Quality Furniture for Real Homes</h1>
-          <p class="hero-description">Honest prices on modular lovesacs, lighted vanities, sectionals, and comfortable
-            mattresses.</p>
-          <div class="hero-cta-group">
-            <a href="#collection-grid" class="btn-primary">View In-Stock Deals</a>
-            <a href="contact.html" class="btn-hairline">Visit Showroom</a>
+    </section>
+
+    <!-- VALUE & SERVICE GUARANTEES -->
+    <section class="trust-features-section" aria-label="Customer Guarantees and Financing">
+      <div class="container">
+        <div class="trust-features-grid">
+          <!-- Guarantee 1: Low Price Guarantee -->
+          <div class="trust-feature-col">
+            <div class="trust-icon-wrap" aria-hidden="true">
+              <svg class="trust-icon-svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z" />
+                <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" />
+                <path d="M12 18V6" />
+              </svg>
+            </div>
+            <h3 class="trust-feature-title">Low Price Guarantee</h3>
+            <p class="trust-feature-text">Shop with confidence knowing you&rsquo;re getting showroom-quality furniture
+              and mattresses at the absolute best value in the area.</p>
+          </div>
+
+          <!-- Guarantee 2: Design Assistance -->
+          <div class="trust-feature-col">
+            <div class="trust-icon-wrap" aria-hidden="true">
+              <svg class="trust-icon-svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+                <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+                <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+                <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+                <path
+                  d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2Z" />
+              </svg>
+            </div>
+            <h3 class="trust-feature-title">Design Assistance</h3>
+            <p class="trust-feature-text">Need help styling your space? Our friendly team offers complimentary in-store
+              guidance to help you find the perfect pieces for your style and budget.</p>
+          </div>
+
+          <!-- Guarantee 3: Buy Now, Pay Over Time -->
+          <div class="trust-feature-col">
+            <div class="trust-icon-wrap" aria-hidden="true">
+              <svg class="trust-icon-svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="13" x="2" y="6" rx="2" />
+                <path d="M6 3h12a2 2 0 0 1 2 2v10" />
+                <line x1="2" x2="20" y1="11" y2="11" />
+              </svg>
+            </div>
+            <h3 class="trust-feature-title">Buy Now, Pay Over Time</h3>
+            <p class="trust-feature-text">Flexible lease and financing options via Synchrony, Acima, and Koalafi. Enjoy comfortable
+              payments tailored to your budget. <a href="financing.html" class="trust-read-more">Read More &gt;</a>
+            </p>
           </div>
         </div>
       </div>
@@ -141,7 +402,6 @@
       <div class="container">
         <div class="section-header-editorial">
           <div class="section-title-wrap">
-            <span class="section-num">01 / Departments</span>
             <h2 id="rooms-heading" class="section-heading">Shop by Category</h2>
           </div>
           <p class="section-lead">Explore our most popular departments with transparent prices and immediate
@@ -153,13 +413,14 @@
           <article class="room-card">
             <div class="room-media-box">
               <a href="living.html">
-                <img src="photos/furniture/living-sectional-recliner-caramel.png" alt="Living Room Sectionals and Recliner Suites" class="room-img" loading="lazy">
+                <img src="photos/furniture/living-deep-seat-sofa-cream.jpg"
+                  alt="Cream Deep-Seat Modular Sofa and Living Room Sectionals" class="room-img" loading="lazy">
               </a>
-              <span class="category-deal-badge special-price">From $998</span>
+              <span class="category-deal-badge special-price">From $1,499</span>
             </div>
             <div class="room-info">
               <h3 class="room-title">Living &amp; Sectionals</h3>
-              <p class="room-meta">Power recliner suites with LED &amp; sound, Italian leather sectionals.</p>
+              <p class="room-meta">Deep-seat modular sofas, Italian leather sectionals.</p>
               <a href="living.html" class="room-link">Shop Living &rarr;</a>
             </div>
           </article>
@@ -168,7 +429,8 @@
           <article class="room-card">
             <div class="room-media-box">
               <a href="living.html">
-                <img src="photos/furniture/bean-bag-sac-grey.jpg" alt="Luxury Plush Bean Bag Sac Loungers" class="room-img" loading="lazy">
+                <img src="photos/furniture/bean-bag-sac-grey.jpg" alt="Luxury Plush Bean Bag Sac Loungers"
+                  class="room-img" loading="lazy">
               </a>
               <span class="category-deal-badge special-price">From $398</span>
             </div>
@@ -179,18 +441,19 @@
             </div>
           </article>
 
-          <!-- Room Card 3: Bedroom & Mattresses -->
+          <!-- Room Card 3: Bedroom Sets & Suites -->
           <article class="room-card">
             <div class="room-media-box">
-              <a href="mattresses.html">
-                <img src="photos/furniture/bedroom-set-two-tone-led-fridge.png" alt="Bedroom Sets and Mattresses" class="room-img" loading="lazy">
+              <a href="bedroom.html">
+                <img src="photos/furniture/bedroom-set-two-tone-led-fridge.png" alt="Bedroom Sets and Suites"
+                  class="room-img" loading="lazy">
               </a>
               <span class="category-deal-badge special-price">From $998</span>
             </div>
             <div class="room-info">
-              <h3 class="room-title">Bedroom &amp; Mattresses</h3>
+              <h3 class="room-title">Bedroom Sets &amp; Suites</h3>
               <p class="room-meta">Complete 4-piece Queen suites starting at $998.</p>
-              <a href="mattresses.html" class="room-link">Shop Bedroom &rarr;</a>
+              <a href="bedroom.html" class="room-link">Shop Bedroom Sets &rarr;</a>
             </div>
           </article>
 
@@ -198,7 +461,8 @@
           <article class="room-card">
             <div class="room-media-box">
               <a href="dining.html">
-                <img src="photos/furniture/dining-set-espresso-counter-storage.jpg" alt="Dining Room Sets with 4 Chairs" class="room-img" loading="lazy">
+                <img src="photos/furniture/dining-set-espresso-counter-storage.jpg" alt="Dining Room Sets with 4 Chairs"
+                  class="room-img" loading="lazy">
               </a>
               <span class="category-deal-badge special-price">From $645</span>
             </div>
@@ -219,17 +483,19 @@
           <div class="spotlight-media-col">
             <div class="spotlight-media-wrapper">
               <img src="photos/furniture/living-power-recliner-diamond-led-white.jpg"
-                alt="Diamond-Quilted White Power Recliner Sofa &amp; Loveseat Suite" class="spotlight-img" loading="lazy">
+                alt="Diamond-Quilted White Power Recliner Sofa &amp; Loveseat Suite" class="spotlight-img"
+                loading="lazy">
             </div>
           </div>
           <div class="spotlight-content-col">
             <div class="spotlight-inner-text">
               <div class="spotlight-badge-row">
-                <span class="spotlight-badge">Smart Comfort</span>
                 <img src="photos/logo.jpg" alt="VV Gallery Emblem" class="spotlight-seal-img">
               </div>
               <h2 id="spotlight-title" class="spotlight-heading">Power Reclining Suites with LED &amp; Audio</h2>
-              <p class="spotlight-story">Experience theater-grade relaxation at home. Features power-adjustable headrests &amp; footrests, built-in Bluetooth speaker consoles, cup holders, and ambient LED underglow.</p>
+              <p class="spotlight-story">Experience theater-grade relaxation at home. Features power-adjustable
+                headrests &amp; footrests, built-in Bluetooth speaker consoles, cup holders, and ambient LED underglow.
+              </p>
 
 
               <div class="spotlight-actions">
@@ -247,45 +513,65 @@
       <div class="container">
         <div class="matrix-header">
           <div>
-            <span class="section-num">02 / Curated Showroom Highlights</span>
             <h2 id="collection-heading" class="section-heading">Featured In-Store Deals</h2>
-            <p class="section-subtext">A handpicked preview of our best-selling living, bedroom, and dining sets in stock today at 1586 Barber Greene Rd.</p>
+            <p class="section-subtext">A handpicked preview of our best-selling living, bedroom, and dining sets in
+              stock today at 1586 Barber Greene Rd.</p>
           </div>
         </div>
 
         <div class="matrix-grid">
           <!-- Featured 1: Luxury Plush Bean Bag Sac (Living) -->
           <article class="product-item" data-category="living">
-            <div class="product-media-wrap has-secondary">
-              <img src="photos/furniture/bean-bag-sac-grey.jpg" alt="Luxury Oversized Plush Bean Bag Sac in Gray" class="product-img primary" loading="lazy">
-              <img src="photos/furniture/bean-bag-sac-cream.jpg" alt="Luxury Oversized Plush Bean Bag Sac in Cream" class="product-img secondary" loading="lazy">
-              <span class="product-thumb-indicator">Hover: Cream View ✨</span>
+            <div class="product-media-wrap has-secondary" data-active-view="0">
+              <img src="photos/furniture/bean-bag-sac-grey.jpg" alt="Luxury Oversized Plush Bean Bag Sac in Gray"
+                class="product-img primary" loading="lazy">
+              <img src="photos/furniture/bean-bag-sac-cream.jpg" alt="Luxury Oversized Plush Bean Bag Sac in Cream"
+                class="product-img secondary" loading="lazy">
             </div>
             <div class="product-details">
-              <span class="product-category-tag">Living Room &bull; Lounge</span>
+              <div class="product-swatch-row">
+                <span class="product-category-tag">Living Room &bull; Lounge</span>
+                <div class="color-swatch-dots" aria-label="Select color">
+                  <button type="button" class="swatch-dot active" data-color-index="0" data-color-name="Gray"
+                    style="--swatch-color: #8c8985;" aria-label="Gray" title="Gray"></button>
+                  <button type="button" class="swatch-dot" data-color-index="1" data-color-name="Cream"
+                    style="--swatch-color: #f3ece0;" aria-label="Cream" title="Cream"></button>
+                </div>
+              </div>
               <div class="product-top-row">
                 <h3 class="product-name">Luxury Plush Bean Bag Sac</h3>
                 <span class="product-price">$398</span>
               </div>
-              <p class="product-sub">Ultra-soft textured shag cover with supportive high-density shredded foam fill. Available in Gray, Brown &amp; Cream.</p>
+              <p class="product-sub">Ultra-soft textured shag cover with supportive high-density shredded foam fill.
+                Available in Gray, Brown &amp; Cream.</p>
               <div class="product-actions">
                 <a href="living.html" class="btn-subtle-add">View Living Details &rarr;</a>
               </div>
             </div>
           </article>
 
-          <!-- Featured 2: Caramel Sectional Recliner (Living) -->
+          <!-- Featured 2: Modular Deep-Seat Sofa (Living) -->
           <article class="product-item" data-category="living">
             <div class="product-media-wrap">
-              <img src="photos/furniture/living-sectional-recliner-caramel.png" alt="Caramel Sectional Recliner with Console and Ottoman" class="product-img" loading="lazy">
+              <img src="photos/furniture/living-deep-seat-sofa-cream.jpg"
+                alt="Modular Deep-Seat Sofa in Tonal Chantilly Luxe Chenille — 3 Seats, 5 Sides" class="product-img" loading="lazy">
+              <span class="product-status-tag highlight-tag">$1,499 &bull; 3 Seats + 5 Sides</span>
             </div>
             <div class="product-details">
-              <span class="product-category-tag">Sectional Recliner</span>
-              <div class="product-top-row">
-                <h3 class="product-name">Caramel Sectional Recliner</h3>
-                <span class="product-price">$998</span>
+              <div class="product-swatch-row">
+                <span class="product-category-tag">Living Room &bull; 4 Colors</span>
+                <div class="color-swatch-dots" aria-label="Available fabric colors">
+                  <button type="button" class="swatch-dot active" style="--swatch-color: #f5ede3;" data-img-src="photos/furniture/living-deep-seat-sofa-cream.jpg" data-color-name="Tonal Chantilly Luxe Chenille" aria-label="Tonal Chantilly Luxe Chenille" title="Tonal Chantilly Luxe Chenille"></button>
+                  <button type="button" class="swatch-dot" style="--swatch-color: #3a3d40;" data-img-src="photos/furniture/living-deep-seat-sofa-charcoal.jpg" data-color-name="Charcoal Grey Corded Velvet" aria-label="Charcoal Grey Corded Velvet" title="Charcoal Grey Corded Velvet"></button>
+                  <button type="button" class="swatch-dot" style="--swatch-color: #9aa2a8;" data-img-src="photos/furniture/living-deep-seat-sofa-skygrey.jpg" data-color-name="Sky Grey Corded Velvet" aria-label="Sky Grey Corded Velvet" title="Sky Grey Corded Velvet"></button>
+                  <button type="button" class="swatch-dot" style="--swatch-color: #858079;" data-img-src="photos/furniture/living-deep-seat-sofa-flagstone.jpg" data-color-name="Flagstone Brushed Weave" aria-label="Flagstone Brushed Weave" title="Flagstone Brushed Weave"></button>
+                </div>
               </div>
-              <p class="product-sub">Smooth reclining seats, center storage console with stainless cup holders, and pull-out storage chaise ottoman.</p>
+              <div class="product-top-row">
+                <h3 class="product-name">Modular Deep-Seat Sofa</h3>
+                <span class="product-price">$1,499</span>
+              </div>
+              <p class="product-sub"><strong>3 Seats + 5 Sides Setup.</strong> Available in 4 colors: Tonal Chantilly Luxe Chenille, Charcoal Grey Corded Velvet, Sky Grey Corded Velvet, and Flagstone Brushed Weave.</p>
               <div class="product-actions">
                 <a href="living.html" class="btn-subtle-add">View Living Details &rarr;</a>
               </div>
@@ -294,10 +580,15 @@
 
           <!-- Featured 3: Two-Tone LED Bedroom Set (Bedroom) -->
           <article class="product-item" data-category="bedroom">
-            <div class="product-media-wrap has-secondary">
-              <img src="photos/furniture/bedroom-set-two-tone-led-fridge.png" alt="Modern Two-Tone LED Bedroom Set with Mini Fridge Nightstand" class="product-img primary" loading="lazy">
-              <img src="photos/furniture/bedroom-set-two-tone-fridge-detail.png" alt="Smart Nightstand with Built-In Mini Refrigerator Detail" class="product-img secondary" loading="lazy">
-              <span class="product-thumb-indicator">Hover: Fridge View ❄️</span>
+            <div class="product-media-wrap has-secondary" data-active-view="0">
+              <img src="photos/furniture/bedroom-set-two-tone-led-fridge.png"
+                alt="Modern Two-Tone LED Bedroom Set with Mini Fridge Nightstand" class="product-img primary"
+                loading="lazy">
+              <img src="photos/furniture/bedroom-set-two-tone-fridge-detail.png"
+                alt="Smart Nightstand with Built-In Mini Refrigerator Detail" class="product-img secondary"
+                loading="lazy">
+              <button type="button" class="side-toggle-arrow" aria-label="Toggle photo view"
+                title="Toggle photo view">&#10095;</button>
             </div>
             <div class="product-details">
               <span class="product-category-tag">Smart Bedroom Suite</span>
@@ -305,9 +596,10 @@
                 <h3 class="product-name">Two-Tone LED Bedroom Set</h3>
                 <span class="product-price">$998</span>
               </div>
-              <p class="product-sub">Complete 4-piece Queen set featuring smart mini-fridge nightstand, headboard halo lighting, dresser, and mirror.</p>
+              <p class="product-sub">Complete 4-piece Queen set featuring smart mini-fridge nightstand, headboard halo
+                lighting, dresser, and mirror.</p>
               <div class="product-actions">
-                <a href="mattresses.html" class="btn-subtle-add">View Set Details &rarr;</a>
+                <a href="bedroom.html" class="btn-subtle-add">View Set Details &rarr;</a>
               </div>
             </div>
           </article>
@@ -315,7 +607,8 @@
           <!-- Featured 4: Pure White LED Bedroom Set (Bedroom) -->
           <article class="product-item" data-category="bedroom">
             <div class="product-media-wrap">
-              <img src="photos/furniture/bedroom-set-white-led.png" alt="Pure White LED 4-Piece Bedroom Set" class="product-img" loading="lazy">
+              <img src="photos/furniture/bedroom-set-white-led.png" alt="Pure White LED 4-Piece Bedroom Set"
+                class="product-img" loading="lazy">
             </div>
             <div class="product-details">
               <span class="product-category-tag">Queen Bedroom Suite</span>
@@ -323,9 +616,10 @@
                 <h3 class="product-name">Pure White LED Bedroom Set</h3>
                 <span class="product-price">$998</span>
               </div>
-              <p class="product-sub">Complete 4-piece Queen set with lighted upholstered headboard, spacious 6-drawer dresser, mirror, and nightstand.</p>
+              <p class="product-sub">Complete 4-piece Queen set with lighted upholstered headboard, spacious 6-drawer
+                dresser, mirror, and nightstand.</p>
               <div class="product-actions">
-                <a href="mattresses.html" class="btn-subtle-add">View Set Details &rarr;</a>
+                <a href="bedroom.html" class="btn-subtle-add">View Set Details &rarr;</a>
               </div>
             </div>
           </article>
@@ -333,7 +627,8 @@
           <!-- Featured 5: Counter-Height Storage Dining Set (Dining) -->
           <article class="product-item" data-category="dining">
             <div class="product-media-wrap">
-              <img src="photos/furniture/dining-set-espresso-counter-storage.jpg" alt="Counter-Height Storage Dining Set with 4 Chairs" class="product-img" loading="lazy">
+              <img src="photos/furniture/dining-set-espresso-counter-storage.jpg"
+                alt="Counter-Height Storage Dining Set with 4 Chairs" class="product-img" loading="lazy">
             </div>
             <div class="product-details">
               <span class="product-category-tag">Counter-Height Dining</span>
@@ -341,7 +636,8 @@
                 <h3 class="product-name">Counter-Height Storage Dining Set</h3>
                 <span class="product-price">$645</span>
               </div>
-              <p class="product-sub">Rich espresso finish table with built-in stemware rack and storage shelves, includes 4 upholstered comfort stools.</p>
+              <p class="product-sub">Rich espresso finish table with built-in stemware rack and storage shelves,
+                includes 4 upholstered comfort stools.</p>
               <div class="product-actions">
                 <a href="dining.html" class="btn-subtle-add">View Dining Details &rarr;</a>
               </div>
@@ -351,7 +647,8 @@
           <!-- Featured 6: Cream & Gold Veined Marble Dining Set (Dining) -->
           <article class="product-item" data-category="dining">
             <div class="product-media-wrap">
-              <img src="photos/furniture/dining-set-cream-gold-marble.png" alt="Glam Cream and Gold Veined Marble Dining Set with 4 Chairs" class="product-img" loading="lazy">
+              <img src="photos/furniture/dining-set-cream-gold-marble.png"
+                alt="Glam Cream and Gold Veined Marble Dining Set with 4 Chairs" class="product-img" loading="lazy">
             </div>
             <div class="product-details">
               <span class="product-category-tag">Marble Dining Suite</span>
@@ -359,7 +656,8 @@
                 <h3 class="product-name">Cream &amp; Gold Marble Dining Set</h3>
                 <span class="product-price">$1,398</span>
               </div>
-              <p class="product-sub">Veined marble dining table with brushed gold trim, complete with 4 plush cream ribbed velvet comfort chairs.</p>
+              <p class="product-sub">Veined marble dining table with brushed gold trim, complete with 4 plush cream
+                ribbed velvet comfort chairs.</p>
               <div class="product-actions">
                 <a href="dining.html" class="btn-subtle-add">View Dining Details &rarr;</a>
               </div>
@@ -374,10 +672,55 @@
             <p>Browse our complete in-store catalog across all departments with immediate local delivery.</p>
           </div>
           <div class="catalog-explore-links">
-            <a href="living.html" class="catalog-pill-btn">All Living &amp; Recliners &rarr;</a>
-            <a href="mattresses.html" class="catalog-pill-btn">All Bedroom &amp; Mattresses &rarr;</a>
-            <a href="dining.html" class="catalog-pill-btn">All Dining Sets &rarr;</a>
-            <a href="vanities.html" class="catalog-pill-btn">All Makeup Vanities &rarr;</a>
+            <a href="living.html" class="catalog-pill-btn"><span>Sectionals &amp; Sofas</span> <span>&rarr;</span></a>
+            <a href="recliners.html" class="catalog-pill-btn"><span>Power Recliners</span> <span>&rarr;</span></a>
+            <a href="bedroom.html" class="catalog-pill-btn"><span>All Bedroom Sets</span> <span>&rarr;</span></a>
+            <a href="mattresses.html" class="catalog-pill-btn"><span>All Mattresses</span> <span>&rarr;</span></a>
+            <a href="dining.html" class="catalog-pill-btn"><span>All Dining Sets</span> <span>&rarr;</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONDENSED ASHLEY FURNITURE PARTNERSHIP SPOTLIGHT -->
+    <section class="section ashley-spotlight-section" id="ashley-catalog" aria-labelledby="ashley-spotlight-heading">
+      <div class="container">
+        <div class="ashley-spotlight-card">
+          <!-- Left: Logo & Authorized Dealer Pill -->
+          <div class="ashley-spotlight-brand">
+            <div class="ashley-logo-frame">
+              <img src="photos/brands/ashley-furniture-logo.png" alt="Ashley Furniture Official Logo" class="ashley-logo-img" width="220" height="110" loading="lazy">
+            </div>
+            <span class="ashley-pill-tag">Authorized Regional Dealer</span>
+          </div>
+
+          <!-- Center: Core Message & Stats -->
+          <div class="ashley-spotlight-main">
+            <h2 id="ashley-spotlight-heading" class="ashley-spotlight-title">Order Any Ashley Furniture Piece Directly Through Us</h2>
+            <p class="ashley-spotlight-sub">Full manufacturer warranty &amp; direct freight access for DeKalb, Sycamore &amp; surrounding areas.</p>
+            
+            <div class="ashley-badge-specs">
+              <div class="spec-col">
+                <span class="spec-number">10,000+</span>
+                <span class="spec-label">Catalog Styles</span>
+              </div>
+              <div class="spec-divider" aria-hidden="true"></div>
+              <div class="spec-col">
+                <span class="spec-number">0 min</span>
+                <span class="spec-label">Highway Drive</span>
+              </div>
+              <div class="spec-divider" aria-hidden="true"></div>
+              <div class="spec-col">
+                <span class="spec-number">100%</span>
+                <span class="spec-label">Local Support</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Action Buttons -->
+          <div class="ashley-spotlight-actions">
+            <a href="ashley.html" class="btn-ashley">Inquire About an Ashley Order &rarr;</a>
+            <a href="tel:8473060959" class="btn-hairline">Call Showroom: (847) 306-0959</a>
           </div>
         </div>
       </div>
@@ -389,8 +732,18 @@
         <div class="community-teaser-content">
           <p class="eyebrow">A 35-Year Family Legacy</p>
           <h3>Our Story</h3>
-          <p>We are a family-owned company continuing a journey that began over 35 years ago when Efraín Vázquez devoted his life to the furniture industry. Today, his daughter Vanessa carries that legacy forward with faith, warmth, and genuine care&mdash;offering high-quality furniture, beautiful designs, and the best prices for your home.</p>
+          <p>We are a family-owned company continuing a journey that began over 35 years ago when Efraín Vázquez devoted
+            his life to the furniture industry. Today, his daughter Vanessa carries that legacy forward with faith,
+            warmth, and genuine care&mdash;offering high-quality furniture, beautiful designs, and the best prices for
+            your home.</p>
           <a href="story.html" class="btn-primary">Read Our Full Story &rarr;</a>
+        </div>
+        <div class="community-teaser-img-wrap">
+          <img src="photos/story-efrain-vanessa.jpg" alt="Efraín and Vanessa Vázquez — A 35-Year Furniture Legacy" class="community-teaser-img" width="440" height="330" loading="lazy">
+          <div class="community-teaser-badge">
+            <span class="badge-names">Efraín &amp; Vanessa Vázquez</span>
+            <span class="badge-role">Founders &bull; 35-Year Heritage</span>
+          </div>
         </div>
       </div>
     </section>
@@ -400,7 +753,7 @@
       <div class="container">
         <div class="section-header-editorial">
           <div class="section-title-wrap">
-            <span class="section-num">03 / Customer Feedback</span>
+            <span class="section-num">Customer Feedback</span>
             <h2 id="reviews-heading" class="section-heading">Loved by Our Customers</h2>
           </div>
           <div class="google-rating-summary">
@@ -409,8 +762,16 @@
               <span class="stars">★★★★★</span>
             </div>
             <div class="rating-meta">
-              <span class="rating-count">5-Star Rated on Google</span>
-              <a href="https://www.google.com/search?q=vv+gallery+dekalb" target="_blank" rel="noopener noreferrer"
+              <span class="rating-count" style="display: inline-flex; align-items: center; gap: 6px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                  <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                  <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.03 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                  <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                </svg>
+                5.0 Stars on Google
+              </span>
+              <a href="https://share.google/8glchlT7H6oo3atPb" target="_blank" rel="noopener noreferrer"
                 class="google-review-link">Read all reviews on Google &rarr;</a>
             </div>
           </div>
@@ -423,51 +784,66 @@
               <div class="review-stars">★★★★★</div>
               <span class="review-badge">Verified Customer</span>
             </div>
-            <p class="review-text">&ldquo;If you're looking for high-quality furniture at amazing prices, this is the
-              place to go! My family and I purchased a dining room set, a recliner, and a couch, and we couldn't be
-              happier with our experience.&rdquo;</p>
+            <p class="review-text">&ldquo;If you're looking for high-quality furniture at amazing prices, this is the place to go! My family and I purchased a dining room set, a recliner, and a couch, and we couldn't be happier with our experience.&rdquo;</p>
             <div class="review-author-row">
               <div class="author-info">
                 <h3 class="author-name">Esperanza</h3>
-                <span class="author-purchase">Purchased Dining Set, Recliner &amp; Couch</span>
+                <span class="author-purchase">Dining Set, Recliner &amp; Couch</span>
               </div>
-              <span class="google-pill">Google Review</span>
+              <div class="google-badge" title="Verified Review on Google" aria-label="Verified Google Review">
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                  <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                  <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.03 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                  <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                </svg>
+              </div>
             </div>
           </article>
 
-          <!-- Review 2: Ty Loiseau -->
+          <!-- Review 2: John Jack -->
+          <article class="review-card">
+            <div class="review-card-top">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-badge">Local Guide</span>
+            </div>
+            <p class="review-text">&ldquo;Hands down best place to find your furniture in DeKalb. Don't sleep on their personalized assistance to ensure your purchase is exactly what works for your family. Really great prices, no pressure, and support a community business!&rdquo;</p>
+            <div class="review-author-row">
+              <div class="author-info">
+                <h3 class="author-name">John Jack</h3>
+                <span class="author-purchase">Local Guide &bull; DeKalb, IL</span>
+              </div>
+              <div class="google-badge" title="Verified Review on Google" aria-label="Verified Google Review">
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                  <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                  <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.03 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                  <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                </svg>
+              </div>
+            </div>
+          </article>
+
+          <!-- Review 3: Ashley Ropinski -->
           <article class="review-card">
             <div class="review-card-top">
               <div class="review-stars">★★★★★</div>
               <span class="review-badge">Verified Customer</span>
             </div>
-            <p class="review-text">&ldquo;Bought new couches recently from VV Gallery and couldn’t have been more happy
-              with the experience. Great prices and service. Highly recommend working with them on your next furniture
-              needs!&rdquo;</p>
+            <p class="review-text">&ldquo;VV furniture is a great place to shop. If there isn’t anything you see in store, they have plenty of catalogs! Friendly owners, and A+ on the delivery crew too—friendly and professional. Would 100% purchase from here again!&rdquo;</p>
             <div class="review-author-row">
               <div class="author-info">
-                <h3 class="author-name">Ty Loiseau</h3>
-                <span class="author-purchase">Purchased Custom Couches</span>
+                <h3 class="author-name">Ashley Ropinski</h3>
+                <span class="author-purchase">Catalog Order &amp; Delivery</span>
               </div>
-              <span class="google-pill">Google Review</span>
-            </div>
-          </article>
-
-          <!-- Review 3: Erika Sanchez -->
-          <article class="review-card">
-            <div class="review-card-top">
-              <div class="review-stars">★★★★★</div>
-              <span class="review-badge">Verified Customer</span>
-            </div>
-            <p class="review-text">&ldquo;I'm so happy with this furniture!! And the service was excellent! I never
-              imagined having such support throughout the entire process!! My family and I bought a dining set, a
-              massage chair, and a sofa.&rdquo;</p>
-            <div class="review-author-row">
-              <div class="author-info">
-                <h3 class="author-name">Erika Sanchez</h3>
-                <span class="author-purchase">Purchased Dining Set &amp; Sofa</span>
+              <div class="google-badge" title="Verified Review on Google" aria-label="Verified Google Review">
+                <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                  <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                  <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.03 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                  <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                </svg>
               </div>
-              <span class="google-pill">Google Review</span>
             </div>
           </article>
         </div>
@@ -479,9 +855,9 @@
       <div class="container">
         <div class="showroom-banner">
           <div class="showroom-text-col">
-            <span class="section-num">04 / Visit Us</span>
+            <span class="section-num">Visit Us</span>
             <h2 id="showroom-title" class="showroom-heading">Visit Our Showroom</h2>
-            <p class="showroom-desc">Stop by to test-sit sectionals, feel our mattresses, and see our lighted vanities
+            <p class="showroom-desc">Stop by to test-sit sectionals, feel our mattresses, and see our power recliners
               in person. Our friendly team is ready to help you find the right pieces for your home.</p>
 
             <div class="showroom-details-grid">
@@ -494,7 +870,7 @@
               </div>
               <div class="info-block">
                 <h4>Store Hours</h4>
-                <p>Monday &ndash; Friday: 9:30 AM &ndash; 6:00 PM<br>Saturday: 10:00 AM &ndash; 5:00 PM<br>Sunday:
+                <p>Monday &ndash; Friday: 10:00 AM &ndash; 6:30 PM<br>Saturday: 10:00 AM &ndash; 5:00 PM<br>Sunday:
                   Closed</p>
               </div>
               <div class="info-block">
@@ -534,17 +910,28 @@
             <img src="photos/logo.jpg" alt="VV Gallery" class="footer-logo-img">
             <span class="footer-logo">VV GALLERY</span>
           </div>
-          <p class="footer-tagline">Your friendly local furniture store. Affordable living room sectionals, lovesacs,
-            makeup vanities, and mattresses.</p>
-          <div class="footer-gold-accent"></div>
+          <p class="footer-tagline">Your friendly local furniture store. Affordable living room sectionals, power recliners, and mattresses.</p>
+                    <div class="footer-gold-accent"></div>
+          <div class="footer-social-row" aria-label="VV Gallery Social Media">
+            <a href="https://www.facebook.com/profile.php?id=61573859170150" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="VV Gallery on Facebook" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/vanevintagegallery" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="VV Gallery on Instagram" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://share.google/8glchlT7H6oo3atPb" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="VV Gallery on Google" title="Google Reviews &amp; Directions">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+            </a>
+          </div>
         </div>
 
         <div class="footer-col">
           <h4 class="footer-col-title">Departments</h4>
           <ul class="footer-links">
-            <li><a href="living.html">Living &amp; Lovesacs</a></li>
-            <li><a href="mattresses.html">Bedroom &amp; Mattresses</a></li>
-            <li><a href="vanities.html">Makeup Vanities</a></li>
+            <li><a href="living.html">Sectionals &amp; Sofas</a></li>
+            <li><a href="recliners.html">Power Recliners</a></li>
+            <li><a href="bedroom.html">Bedroom Sets &amp; Suites</a></li>
+            <li><a href="mattresses.html">Mattresses &amp; Foundations</a></li>
             <li><a href="dining.html">Dining Room Sets</a></li>
           </ul>
         </div>
@@ -552,36 +939,43 @@
         <div class="footer-col">
           <h4 class="footer-col-title">Customer Care</h4>
           <ul class="footer-links">
-            <li><a href="story.html">Our Story &amp; Community</a></li>
+            <li><a href="financing.html">Financing Options</a></li>
+            <li><a href="story.html">About Us</a></li>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
             <li><a href="contact.html">Showroom Hours &amp; Directions</a></li>
-            <li><a href="contact.html">Delivery &amp; Setup</a></li>
             <li><a href="tel:8473060959">Call: (847) 306-0959</a></li>
           </ul>
         </div>
 
-        <div class="footer-col newsletter-col">
-          <h4 class="footer-col-title">Weekly Specials</h4>
-          <p class="newsletter-sub">Get notified about new mattress arrivals, truckload sales, and local specials.</p>
-          <form class="newsletter-form"
-            onsubmit="event.preventDefault(); alert('Thank you for subscribing to VV Gallery deals!');">
-            <label for="email-input" class="sr-only">Email Address</label>
-            <input type="email" id="email-input" placeholder="Enter your email or phone" required
-              class="newsletter-input">
-            <button type="submit" class="newsletter-submit" aria-label="Subscribe">&rarr;</button>
-          </form>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Store Policies</h4>
+          <ul class="footer-links">
+            <li><a href="refund-policy.html">Refund &amp; Return Policy</a></li>
+            <li><a href="shipping-policy.html">Shipping &amp; Delivery Policy</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
         </div>
       </div>
 
       <div class="footer-bottom-row">
         <p class="copyright">&copy; 2026 VV Gallery (Vane Vintage Gallery). 1586 Barber Greene Rd, DeKalb, IL 60115.</p>
         <div class="footer-legal-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="refund-policy.html">Refund Policy</a>
+          <a href="shipping-policy.html">Shipping Policy</a>
           <a href="contact.html">Directions</a>
         </div>
       </div>
     </div>
   </footer>
+
+    <!-- Floating Contact Bubble -->
+  <a href="contact.html" class="floating-contact-bubble" aria-label="Contact VV Gallery Showroom">
+    <svg class="bubble-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+    <span class="bubble-text">Contact Us</span>
+  </a>
 
   <script src="main.js"></script>
 </body>

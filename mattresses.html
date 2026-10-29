@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bedroom &amp; Mattresses — VV Gallery</title>
-  <meta name="description" content="Complete 4-piece Queen bedroom suites starting at $1,098 in stock at VV Gallery. Quality furniture, fast delivery, and honest local prices in DeKalb, IL.">
+  <title>Mattresses &amp; Foundations — VV Gallery</title>
+  <meta name="description" content="Mattresses arriving soon at VV Gallery in DeKalb, IL. Twin, Full, Queen, and King comfort options and heavy-duty foundations.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,14 @@
   
   <link rel="icon" type="image/png" href="photos/favicon.png">
   <link rel="shortcut icon" href="photos/favicon.ico">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3.5">
+  <link rel="canonical" href="https://vanevgallery.com/mattresses.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VV Gallery">
+  <meta property="og:title" content="Mattresses Arriving Soon — VV Gallery DeKalb">
+  <meta property="og:description" content="New mattress arrivals coming soon to VV Gallery in DeKalb, IL. Contact us to check incoming shipments and pre-order availability.">
+  <meta property="og:url" content="https://vanevgallery.com/mattresses.html">
+  <meta property="og:image" content="https://vanevgallery.com/photos/furniture/pillowtop-mattress.jpg">
 </head>
 <body>
 
@@ -20,7 +27,7 @@
   <aside class="announcement-bar" role="region" aria-label="Store Announcement">
     <div class="container announcement-inner">
       <span class="announcement-text"><span class="announcement-desktop">In-Stock Furniture &amp; Mattresses &bull; Fast Local Delivery &bull; </span>1586 Barber Greene Rd, DeKalb</span>
-      <a href="contact.html" class="announcement-link">Showroom &rarr;</a>
+      <a href="tel:8473060959" class="announcement-link">Call Store &rarr;</a>
     </div>
   </aside>
 
@@ -34,11 +41,29 @@
         </button>
         <nav class="nav-desktop" aria-label="Primary Navigation">
           <ul class="nav-list">
-            <li><a href="living.html" class="nav-link">Living</a></li>
-            <li><a href="mattresses.html" class="nav-link active">Bedroom</a></li>
+            <li class="nav-item-dropdown">
+              <a href="living.html" class="nav-link nav-dropdown-trigger">
+                Living
+                <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="living.html">Sectionals &amp; Sofas</a></li>
+                <li><a href="recliners.html">Power Recliners</a></li>
+              </ul>
+            </li>
+            <li class="nav-item-dropdown">
+              <a href="bedroom.html" class="nav-link nav-dropdown-trigger active">
+                Bedroom
+                <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="bedroom.html">Bedroom Sets</a></li>
+                <li><a href="mattresses.html" class="active">Mattresses</a></li>
+              </ul>
+            </li>
             <li><a href="dining.html" class="nav-link">Dining</a></li>
-            <li><a href="vanities.html" class="nav-link">Vanities</a></li>
-            <li><a href="story.html" class="nav-link">Our Story</a></li>
+            <li><a href="financing.html" class="nav-link">Financing</a></li>
+            <li><a href="story.html" class="nav-link">About Us</a></li>
           </ul>
         </nav>
       </div>
@@ -54,7 +79,7 @@
       </div>
 
       <div class="nav-right">
-        <a href="contact.html" class="nav-action-link">Showroom</a>
+        <a href="contact.html" class="nav-action-link">Contact Us</a>
         <div class="nav-cart-status" aria-label="Online Cart Coming Soon" title="Online shopping coming soon">
           <svg class="cart-status-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="9" cy="21" r="1"></circle>
@@ -71,25 +96,59 @@
   <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
     <div class="drawer-content">
       <div class="drawer-top-row">
-        <div class="drawer-brand-lockup">
+        <a href="index.html" class="drawer-brand-lockup" aria-label="VV Gallery Home">
           <img src="photos/logo.jpg" alt="VV Gallery" class="drawer-logo-img">
           <span class="drawer-brand-text">VV GALLERY</span>
-        </div>
+        </a>
         <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
       </div>
       <nav class="drawer-nav">
-        <ul>
-          <li><a href="living.html">Living</a></li>
-          <li><a href="mattresses.html">Bedroom</a></li>
-          <li><a href="dining.html">Dining</a></li>
-          <li><a href="vanities.html">Vanities</a></li>
-          <li><a href="story.html">Our Story</a></li>
-          <li><a href="contact.html">Showroom &amp; Directions</a></li>
-        </ul>
+        <div class="drawer-group">
+          <p class="drawer-group-title">Shop Catalog</p>
+          <ul>
+            <li><a href="living.html">Sectionals &amp; Sofas</a></li>
+            <li><a href="recliners.html">Power Recliners</a></li>
+            <li><a href="bedroom.html">Bedroom Sets &amp; Suites</a></li>
+            <li><a href="mattresses.html">Mattresses &amp; Foundations</a></li>
+            <li><a href="dining.html">Dining Room Sets</a></li>
+            <li><a href="ashley.html">Ashley Furniture Orders</a></li>
+          </ul>
+        </div>
+        <div class="drawer-group">
+          <p class="drawer-group-title">Customer Care</p>
+          <ul>
+            <li><a href="financing.html">Financing</a></li>
+            <li><a href="story.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Showroom &amp; Directions</a></li>
+          </ul>
+        </div>
+        <div class="drawer-group">
+          <p class="drawer-group-title">Policies</p>
+          <ul>
+            <li><a href="refund-policy.html">Refund Policy</a></li>
+            <li><a href="shipping-policy.html">Shipping &amp; Delivery</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
       </nav>
       <div class="drawer-footer">
-        <p class="drawer-hours"><strong>Showroom Hours:</strong><br>Mon&ndash;Fri 9:30am&ndash;6pm | Sat 10am&ndash;5pm | Sun Closed</p>
+        <p class="drawer-hours"><strong>Showroom Hours:</strong><br>Mon&ndash;Fri 10am&ndash;6:30pm | Sat 10am&ndash;5pm | Sun Closed</p>
         <p class="drawer-contact">1586 Barber Greene Rd, DeKalb, IL 60115<br><a href="tel:8473060959">(847) 306-0959</a></p>
+        <div class="drawer-social-row" aria-label="Follow VV Gallery">
+          <a href="https://www.facebook.com/profile.php?id=61573859170150" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Facebook">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <span>Facebook</span>
+          </a>
+          <a href="https://www.instagram.com/vanevintagegallery" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://share.google/8glchlT7H6oo3atPb" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Google">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+            <span>Google</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -99,168 +158,55 @@
     <!-- Page Hero -->
     <section class="page-hero">
       <div class="container">
-        <p class="eyebrow">Complete Bedroom Furniture</p>
-        <h1 class="page-hero-title">Bedroom &amp; Mattresses</h1>
-        <p class="page-hero-desc">Complete 4-piece Queen bedroom suites starting at $998. In stock for immediate pickup or fast local delivery and setup.</p>
+        <p class="eyebrow">Sleep In Total Comfort</p>
+        <h1 class="page-hero-title">Mattresses &amp; Foundations</h1>
+        <p class="page-hero-desc">Quality sleep solutions designed for your comfort and budget. Arriving soon to our DeKalb showroom.</p>
       </div>
     </section>
 
-    <!-- Complete Bedroom Suites Section (Actual In-Stock Products Only) -->
-    <section class="section collection-matrix" style="padding-top: 40px;">
+    <!-- Mattress Department Showcase (Coming Soon State) -->
+    <section class="bedroom-mattress-banner-section" style="padding: 40px 0 60px;">
       <div class="container">
-        <div class="section-header-editorial">
-          <div class="section-title-wrap">
-            <span class="section-num">In-Stock Suites</span>
-            <h2 class="section-heading">Featured 4-Piece Bedroom Sets</h2>
+        <div class="bedroom-mattress-card">
+          <div class="bedroom-mattress-img-wrap">
+            <img src="photos/furniture/pillowtop-mattress.jpg" alt="Mattress Collection Arriving Soon at VV Gallery" class="bedroom-mattress-img" loading="lazy">
+            <span class="bedroom-mattress-badge">Arriving Soon</span>
           </div>
-          <p class="section-lead">Complete matching sets including Bed, Dresser, Mirror, and Nightstand. Visit our showroom to see finishes and features in person.</p>
-        </div>
-
-        <div class="matrix-grid">
-          <!-- Bedroom Set 1: Modern Two-Tone LED Set with Mini Fridge Nightstand (2 Images) -->
-          <article class="product-item">
-            <div class="product-media-wrap has-secondary">
-              <img src="photos/furniture/bedroom-set-two-tone-led-fridge.png" alt="Modern Two-Tone LED Bedroom Set with Mini Fridge Nightstand" class="product-img primary" loading="lazy">
-              <img src="photos/furniture/bedroom-set-two-tone-fridge-detail.png" alt="Smart Nightstand with Built-In Mini Refrigerator Detail" class="product-img secondary" loading="lazy">
-              <span class="product-status-tag highlight-tag">$998 &bull; 4 pc LED Queen Set</span>
-              <span class="product-thumb-indicator">Hover: Fridge View ❄️</span>
+          <div class="bedroom-mattress-content">
+            <span class="bedroom-mattress-eyebrow">Showroom Update</span>
+            <h2 class="bedroom-mattress-title">New Mattress Collection Arriving Soon</h2>
+            <p class="bedroom-mattress-desc">We're updating our showroom floor with new mattress shipments and heavy-duty foundations. Contact us or visit 1586 Barber Greene Rd in DeKalb to check incoming shipments and floor model arrival dates!</p>
+            <ul class="bedroom-mattress-perks">
+              <li>
+                <span class="perk-check">&#10003;</span>
+                <span class="perk-text"><strong>100% Made in the USA:</strong> All mattresses proudly manufactured in the United States</span>
+              </li>
+              <li>
+                <span class="perk-check">&#10003;</span>
+                <span class="perk-text"><strong>Twin, Full, Queen &amp; King</strong> sizes arriving</span>
+              </li>
+              <li>
+                <span class="perk-check">&#10003;</span>
+                <span class="perk-text"><strong>Plush Pillow Top, Hybrid &amp; Cooling Gel</strong> options</span>
+              </li>
+              <li>
+                <span class="perk-check">&#10003;</span>
+                <span class="perk-text"><strong>Honest direct pricing</strong> with options for every budget and room size</span>
+              </li>
+              <li>
+                <span class="perk-check">&#10003;</span>
+                <span class="perk-text"><strong>Inquire &amp; Pre-order</strong> in showroom or by phone</span>
+              </li>
+            </ul>
+            <div class="bedroom-mattress-actions">
+              <a href="contact.html" class="btn-primary">Contact Showroom</a>
+              <a href="tel:8473060959" class="btn-hairline">Call (847) 306-0959</a>
             </div>
-            <div class="product-details">
-              <div class="product-top-row">
-                <h3 class="product-name">Two-Tone LED Bedroom Set (Fridge Nightstand)</h3>
-                <span class="product-price">$998</span>
-              </div>
-              <p class="product-sub"><strong>4 pc LED Queen Set:</strong> Includes Queen Bed with Under-Bed LED Lighting, Upholstered Headboard, <strong>Nightstand with Built-in Mini Fridge &amp; Speaker</strong>, 6-Drawer Dresser, and Mirror. (Chest available).</p>
-              <div class="product-actions">
-                <a href="contact.html" class="btn-subtle-add">Inquire / View in Showroom</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Bedroom Set 2: Modern Pure White LED -->
-          <article class="product-item">
-            <div class="product-media-wrap">
-              <img src="photos/furniture/bedroom-set-white-led.png" alt="Modern Pure White LED 4-Piece Bedroom Set" class="product-img" loading="lazy">
-              <span class="product-status-tag highlight-tag">$998 &bull; 4 pc LED Queen Set</span>
-            </div>
-            <div class="product-details">
-              <div class="product-top-row">
-                <h3 class="product-name">Pure White LED Bedroom Set</h3>
-                <span class="product-price">$998</span>
-              </div>
-              <p class="product-sub"><strong>4 pc LED Queen Set:</strong> Includes Queen Bed with Soft-Lit Upholstered Channel Headboard, 6-Drawer Dresser, Matching Mirror, and 2-Drawer Nightstand. (Matching 5-Drawer Chest available).</p>
-              <div class="product-actions">
-                <a href="contact.html" class="btn-subtle-add">Inquire / View in Showroom</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Bedroom Set 3: Rustic Chevron LED -->
-          <article class="product-item">
-            <div class="product-media-wrap">
-              <img src="photos/furniture/bedroom-set-rustic-chevron-led.png" alt="Rustic Chevron LED 4-Piece Bedroom Set" class="product-img" loading="lazy">
-              <span class="product-status-tag highlight-tag">$1,098 &bull; 4 pc Queen Set</span>
-            </div>
-            <div class="product-details">
-              <div class="product-top-row">
-                <h3 class="product-name">Rustic Chevron LED Bedroom Set</h3>
-                <span class="product-price">$1,098</span>
-              </div>
-              <p class="product-sub"><strong>4 pc Queen Set:</strong> Includes Queen Bed with Geometric Chevron Accent Headboard &amp; Ambient LED Lighting, 6-Drawer Dresser, Mirror, and Nightstand. (Chest available).</p>
-              <div class="product-actions">
-                <a href="contact.html" class="btn-subtle-add">Inquire / View in Showroom</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Bedroom Set 4: Weathered Grey Silver Accent -->
-          <article class="product-item">
-            <div class="product-media-wrap">
-              <img src="photos/furniture/bedroom-set-weathered-grey-silver.png" alt="Weathered Grey and Silver Accent 4-Piece Bedroom Set" class="product-img" loading="lazy">
-              <span class="product-status-tag highlight-tag">$1,098 &bull; 4 pc Queen Set</span>
-            </div>
-            <div class="product-details">
-              <div class="product-top-row">
-                <h3 class="product-name">Weathered Grey &amp; Silver Inlay Bedroom Set</h3>
-                <span class="product-price">$1,098</span>
-              </div>
-              <p class="product-sub"><strong>4 pc Queen Set:</strong> Includes Queen Storage Footboard Bed with Sparkling Silver Trim, 6-Drawer Dresser, Mirror, and Nightstand. (5-Drawer Chest available).</p>
-              <div class="product-actions">
-                <a href="contact.html" class="btn-subtle-add">Inquire / View in Showroom</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Bedroom Set 5: Charcoal Bookcase Storage -->
-          <article class="product-item">
-            <div class="product-media-wrap">
-              <img src="photos/furniture/bedroom-set-charcoal-storage.png" alt="Charcoal Storage Bookcase 4-Piece Bedroom Set" class="product-img" loading="lazy">
-              <span class="product-status-tag highlight-tag">$1,698 &bull; 4 pc Queen Set</span>
-            </div>
-            <div class="product-details">
-              <div class="product-top-row">
-                <h3 class="product-name">Charcoal Bookcase Storage Bedroom Set</h3>
-                <span class="product-price">$1,698</span>
-              </div>
-              <p class="product-sub"><strong>4 pc Queen Set:</strong> Includes Queen Storage Bed with Bookcase Headboard &amp; Built-In Lighting, 6-Drawer Dresser, Matching Mirror, and 2-Drawer Nightstand.</p>
-              <div class="product-actions">
-                <a href="contact.html" class="btn-subtle-add">Inquire / View in Showroom</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Bedroom Set 6: Modern Black LED -->
-          <article class="product-item">
-            <div class="product-media-wrap">
-              <img src="photos/furniture/bedroom-set-black-led.png" alt="Modern Black LED 4-Piece Bedroom Set" class="product-img" loading="lazy">
-              <span class="product-status-tag highlight-tag">$998 &bull; 4 pc LED Queen Set</span>
-            </div>
-            <div class="product-details">
-              <div class="product-top-row">
-                <h3 class="product-name">Modern Black LED Bedroom Set</h3>
-                <span class="product-price">$998</span>
-              </div>
-              <p class="product-sub"><strong>4 pc LED Queen Set:</strong> Includes Queen Bed with Built-In LED Halo Headboard &amp; Grey Woodgrain Accent, 6-Drawer Dresser, Mirror, and Nightstand. (Chest available).</p>
-              <div class="product-actions">
-                <a href="contact.html" class="btn-subtle-add">Inquire / View in Showroom</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Buy From Us Info Strip -->
-    <section class="section" style="background: var(--color-bg-subtle); border-top: 1px solid var(--color-border-hairline);">
-      <div class="container">
-        <div class="section-header-editorial">
-          <div class="section-title-wrap">
-            <span class="section-num">The VV Gallery Promise</span>
-            <h2 class="section-heading">Why Buy From VV Gallery?</h2>
           </div>
         </div>
 
-        <div class="rooms-grid" style="margin-top: 24px;">
-          <div class="pillar-box" style="padding: 24px;">
-            <div class="pillar-icon">💰</div>
-            <h4>Transparent Local Pricing</h4>
-            <p>Direct supplier pricing means you get complete, brand-new matching bedroom suites without high retail markups.</p>
-          </div>
-          <div class="pillar-box" style="padding: 24px;">
-            <div class="pillar-icon">🛏️</div>
-            <h4>Inspect Before You Buy</h4>
-            <p>Visit our DeKalb showroom to see construction quality, smooth drawer glides, and beautiful finishes in person.</p>
-          </div>
-          <div class="pillar-box" style="padding: 24px;">
-            <div class="pillar-icon">🚚</div>
-            <h4>Fast Delivery &amp; Setup</h4>
-            <p>We deliver right to your room of choice with setup available so your new bedroom is ready right away.</p>
-          </div>
-          <div class="pillar-box" style="padding: 24px;">
-            <div class="pillar-icon">💳</div>
-            <h4>Flexible Financing Available</h4>
-            <p>Convenient payment options and financing plans available to help you take home your furniture today.</p>
-          </div>
+        <!-- Empty Grid Template kept for styling & quick inventory injection -->
+        <div class="matrix-grid" id="mattresses-grid" style="display: none;">
         </div>
       </div>
     </section>
@@ -276,16 +222,28 @@
             <img src="photos/logo.jpg" alt="VV Gallery" class="footer-logo-img">
             <span class="footer-logo">VV GALLERY</span>
           </div>
-          <p class="footer-tagline">Your friendly local furniture store. Affordable living room sectionals, lovesacs, makeup vanities, and mattresses.</p>
+          <p class="footer-tagline">Your friendly local furniture store. Affordable living room sectionals, power recliners, and mattresses.</p>
           <div class="footer-gold-accent"></div>
+          <div class="footer-social-row" aria-label="VV Gallery Social Media">
+            <a href="https://www.facebook.com/profile.php?id=61573859170150" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="VV Gallery on Facebook" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/vanevintagegallery" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="VV Gallery on Instagram" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://share.google/8glchlT7H6oo3atPb" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="VV Gallery on Google" title="Google Reviews &amp; Directions">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+            </a>
+          </div>
         </div>
 
         <div class="footer-col">
           <h4 class="footer-col-title">Departments</h4>
           <ul class="footer-links">
-            <li><a href="living.html">Living &amp; Lovesacs</a></li>
-            <li><a href="mattresses.html">Bedroom &amp; Mattresses</a></li>
-            <li><a href="vanities.html">Makeup Vanities</a></li>
+            <li><a href="living.html">Sectionals &amp; Sofas</a></li>
+            <li><a href="recliners.html">Power Recliners</a></li>
+            <li><a href="bedroom.html">Bedroom Sets &amp; Suites</a></li>
+            <li><a href="mattresses.html">Mattresses &amp; Foundations</a></li>
             <li><a href="dining.html">Dining Room Sets</a></li>
           </ul>
         </div>
@@ -293,36 +251,44 @@
         <div class="footer-col">
           <h4 class="footer-col-title">Customer Care</h4>
           <ul class="footer-links">
-            <li><a href="story.html">Our Story &amp; Community</a></li>
+            <li><a href="financing.html">Financing Options</a></li>
+            <li><a href="story.html">About Us</a></li>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
             <li><a href="contact.html">Showroom Hours &amp; Directions</a></li>
-            <li><a href="contact.html">Delivery &amp; Setup</a></li>
             <li><a href="tel:8473060959">Call: (847) 306-0959</a></li>
           </ul>
         </div>
 
-        <div class="footer-col newsletter-col">
-          <h4 class="footer-col-title">Weekly Specials</h4>
-          <p class="newsletter-sub">Get notified about new mattress arrivals, truckload sales, and local specials.</p>
-          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to VV Gallery deals!');">
-            <label for="email-input" class="sr-only">Email Address</label>
-            <input type="email" id="email-input" placeholder="Enter your email or phone" required class="newsletter-input">
-            <button type="submit" class="newsletter-submit" aria-label="Subscribe">&rarr;</button>
-          </form>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Store Policies</h4>
+          <ul class="footer-links">
+            <li><a href="refund-policy.html">Refund &amp; Return Policy</a></li>
+            <li><a href="shipping-policy.html">Shipping &amp; Delivery Policy</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
         </div>
       </div>
 
       <div class="footer-bottom-row">
         <p class="copyright">&copy; 2026 VV Gallery (Vane Vintage Gallery). 1586 Barber Greene Rd, DeKalb, IL 60115.</p>
         <div class="footer-legal-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="refund-policy.html">Refund Policy</a>
+          <a href="shipping-policy.html">Shipping Policy</a>
           <a href="contact.html">Directions</a>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Floating Contact Bubble -->
+  <a href="contact.html" class="floating-contact-bubble" aria-label="Contact VV Gallery Showroom">
+    <svg class="bubble-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+    <span class="bubble-text">Contact Us</span>
+  </a>
+
   <script src="main.js"></script>
 </body>
 </html>
-

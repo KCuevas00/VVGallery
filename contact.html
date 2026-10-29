@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Showroom Hours &amp; Directions — VV Gallery</title>
-  <meta name="description" content="Visit VV Gallery at 1586 Barber Greene Rd. Test sit our sectionals, try mattresses starting at $198, and see makeup vanities in person.">
+  <meta name="description" content="Visit VV Gallery at 1586 Barber Greene Rd. Test sit our sectionals, explore our mattress collection, and see power recliners in person.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +12,14 @@
   
   <link rel="icon" type="image/png" href="photos/favicon.png">
   <link rel="shortcut icon" href="photos/favicon.ico">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=3.5">
+  <link rel="canonical" href="https://vanevgallery.com/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VV Gallery">
+  <meta property="og:title" content="Showroom Hours & Directions — VV Gallery DeKalb">
+  <meta property="og:description" content="Visit VV Gallery at 1586 Barber Greene Rd, DeKalb, IL. Test sit our sectionals, explore our mattress collection, and see power recliners in person.">
+  <meta property="og:url" content="https://vanevgallery.com/contact.html">
+  <meta property="og:image" content="https://vanevgallery.com/photos/story-showroom-logo.jpg">
 </head>
 <body>
 
@@ -34,11 +41,29 @@
         </button>
         <nav class="nav-desktop" aria-label="Primary Navigation">
           <ul class="nav-list">
-            <li><a href="living.html" class="nav-link">Living</a></li>
-            <li><a href="mattresses.html" class="nav-link">Bedroom</a></li>
+            <li class="nav-item-dropdown">
+              <a href="living.html" class="nav-link nav-dropdown-trigger">
+                Living
+                <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="living.html">Sectionals &amp; Sofas</a></li>
+                <li><a href="recliners.html">Power Recliners</a></li>
+              </ul>
+            </li>
+            <li class="nav-item-dropdown">
+              <a href="bedroom.html" class="nav-link nav-dropdown-trigger">
+                Bedroom
+                <svg class="nav-chevron" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="bedroom.html">Bedroom Sets</a></li>
+                <li><a href="mattresses.html">Mattresses</a></li>
+              </ul>
+            </li>
             <li><a href="dining.html" class="nav-link">Dining</a></li>
-            <li><a href="vanities.html" class="nav-link">Vanities</a></li>
-            <li><a href="story.html" class="nav-link">Our Story</a></li>
+            <li><a href="financing.html" class="nav-link">Financing</a></li>
+            <li><a href="story.html" class="nav-link">About Us</a></li>
           </ul>
         </nav>
       </div>
@@ -54,7 +79,7 @@
       </div>
 
       <div class="nav-right">
-        <a href="contact.html" class="nav-action-link active">Showroom</a>
+        <a href="contact.html" class="nav-action-link active">Contact Us</a>
         <div class="nav-cart-status" aria-label="Online Cart Coming Soon" title="Online shopping coming soon">
           <svg class="cart-status-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="9" cy="21" r="1"></circle>
@@ -71,25 +96,59 @@
   <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
     <div class="drawer-content">
       <div class="drawer-top-row">
-        <div class="drawer-brand-lockup">
+        <a href="index.html" class="drawer-brand-lockup" aria-label="VV Gallery Home">
           <img src="photos/logo.jpg" alt="VV Gallery" class="drawer-logo-img">
           <span class="drawer-brand-text">VV GALLERY</span>
-        </div>
+        </a>
         <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
       </div>
       <nav class="drawer-nav">
-        <ul>
-          <li><a href="living.html">Living</a></li>
-          <li><a href="mattresses.html">Bedroom</a></li>
-          <li><a href="dining.html">Dining</a></li>
-          <li><a href="vanities.html">Vanities</a></li>
-          <li><a href="story.html">Our Story</a></li>
-          <li><a href="contact.html">Showroom &amp; Directions</a></li>
-        </ul>
+        <div class="drawer-group">
+          <p class="drawer-group-title">Shop Catalog</p>
+          <ul>
+            <li><a href="living.html">Sectionals &amp; Sofas</a></li>
+            <li><a href="recliners.html">Power Recliners</a></li>
+            <li><a href="bedroom.html">Bedroom Sets &amp; Suites</a></li>
+            <li><a href="mattresses.html">Mattresses &amp; Foundations</a></li>
+            <li><a href="dining.html">Dining Room Sets</a></li>
+            <li><a href="ashley.html">Ashley Furniture Orders</a></li>
+          </ul>
+        </div>
+        <div class="drawer-group">
+          <p class="drawer-group-title">Customer Care</p>
+          <ul>
+            <li><a href="financing.html">Financing</a></li>
+            <li><a href="story.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html" class="active">Showroom &amp; Directions</a></li>
+          </ul>
+        </div>
+        <div class="drawer-group">
+          <p class="drawer-group-title">Policies</p>
+          <ul>
+            <li><a href="refund-policy.html">Refund Policy</a></li>
+            <li><a href="shipping-policy.html">Shipping &amp; Delivery</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
       </nav>
       <div class="drawer-footer">
-        <p class="drawer-hours"><strong>Showroom Hours:</strong><br>Mon&ndash;Fri 9:30am&ndash;6pm | Sat 10am&ndash;5pm | Sun Closed</p>
+        <p class="drawer-hours"><strong>Showroom Hours:</strong><br>Mon&ndash;Fri 10am&ndash;6:30pm | Sat 10am&ndash;5pm | Sun Closed</p>
         <p class="drawer-contact">1586 Barber Greene Rd, DeKalb, IL 60115<br><a href="tel:8473060959">(847) 306-0959</a></p>
+              <div class="drawer-social-row" aria-label="Follow VV Gallery">
+          <a href="https://www.facebook.com/profile.php?id=61573859170150" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Facebook">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <span>Facebook</span>
+          </a>
+          <a href="https://www.instagram.com/vanevintagegallery" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://share.google/8glchlT7H6oo3atPb" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Google">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+            <span>Google</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -100,104 +159,222 @@
     <section class="page-hero">
       <div class="container">
         <p class="eyebrow">Find Us &bull; Get In Touch</p>
-        <h1 class="page-hero-title">Visit Our Showroom</h1>
-        <p class="page-hero-desc">Come test out our mattresses, sink into our modular cloud sectionals, and explore our lighted vanities in person.</p>
+        <h1 class="page-hero-title">Contact Us</h1>
+        <p class="page-hero-desc">Come test out our mattresses, sink into our modular cloud sectionals, and explore our motorized power recliners in person.</p>
       </div>
     </section>
 
-    <!-- Showroom Details Section -->
-    <section class="section showroom-strip" style="padding-top: 40px;">
+    <!-- Spacious Contact & Showroom Section -->
+    <section class="contact-page-section">
       <div class="container">
-        <div class="showroom-banner">
-          <div class="showroom-text-col">
-            <span class="section-num">Location &amp; Hours</span>
-            <h2 class="showroom-heading">Stop In &amp; Say Hello</h2>
-            <p class="showroom-desc">We're located on Barber Greene Rd with easy parking. No high-pressure sales reps &mdash; just honest folks ready to help you find comfortable furniture for your home.</p>
+
+        <div class="contact-layout-grid">
+          
+          <!-- Left Column: Detailed Info Cards -->
+          <div class="contact-info-column">
             
-            <div class="showroom-details-grid">
-              <div class="info-block">
-                <h4>Showroom Address</h4>
-                <address>1586 Barber Greene Rd<br>DeKalb, IL 60115<br><a href="https://www.google.com/maps/dir/?api=1&destination=1586+Barber+Greene+Rd+DeKalb+IL+60115" target="_blank" rel="noopener noreferrer" class="directions-sublink">Get Driving Directions &rarr;</a></address>
+            <!-- Hours of Operation Card -->
+            <div class="contact-feature-card">
+              <div class="contact-card-header">
+                <div class="contact-icon-circle" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-card-eyebrow">Open 6 Days a Week</span>
+                  <h3 class="contact-card-title">Hours of Operation</h3>
+                </div>
               </div>
-              <div class="info-block">
-                <h4>Hours of Operation</h4>
-                <p>Monday &ndash; Friday: 9:30 AM &ndash; 6:00 PM<br>Saturday: 10:00 AM &ndash; 5:00 PM<br>Sunday: Closed</p>
+              <ul class="contact-hours-list">
+                <li><span>Monday &ndash; Friday:</span> <strong>10:00 AM &ndash; 6:30 PM</strong></li>
+                <li><span>Saturday:</span> <strong>10:00 AM &ndash; 5:00 PM</strong></li>
+                <li><span>Sunday:</span> <span class="hours-closed">Closed</span></li>
+              </ul>
+            </div>
+
+            <!-- Call or Text Card -->
+            <div class="contact-feature-card">
+              <div class="contact-card-header">
+                <div class="contact-icon-circle" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-card-eyebrow">Fast Inventory Check</span>
+                  <h3 class="contact-card-title">Call or Text</h3>
+                </div>
               </div>
-              <div class="info-block">
-                <h4>Call or Text</h4>
-                <p>Phone: <a href="tel:8473060959" class="phone-link">(847) 306-0959</a><br>Feel free to call or text anytime with inventory questions.</p>
-              </div>
-              <div class="info-block">
-                <h4>Delivery Area</h4>
-                <p>Fast delivery &amp; assembly across DeKalb, Sycamore, Rochelle, Cortland, and surrounding Kane County areas.</p>
+              <p class="contact-card-body">
+                Feel free to reach out to our showroom floor anytime with questions about in-stock pieces, fabrics, or dimensions:
+              </p>
+              <div class="contact-btn-row">
+                <a href="tel:8473060959" class="btn-primary">Call / Text: (847) 306-0959</a>
               </div>
             </div>
 
-            <div class="showroom-cta-row">
-              <a href="tel:8473060959" class="btn-primary">Call (847) 306-0959</a>
-              <a href="https://www.google.com/maps/dir/?api=1&destination=1586+Barber+Greene+Rd+DeKalb+IL+60115" target="_blank" rel="noopener noreferrer" class="btn-hairline">Open in Google Maps &rarr;</a>
+            <!-- Delivery & Service Area Card -->
+            <div class="contact-feature-card">
+              <div class="contact-card-header">
+                <div class="contact-icon-circle" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="1" y="3" width="15" height="13"></rect>
+                    <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                    <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                    <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-card-eyebrow">Local Freight &amp; Delivery</span>
+                  <h3 class="contact-card-title">Delivery Area</h3>
+                </div>
+              </div>
+              <p class="contact-card-body">
+                Fast delivery &amp; assembly across DeKalb, Sycamore, Rochelle, Cortland, and surrounding Kane County areas. Free customer pickup is also available at our showroom.
+              </p>
+              <a href="shipping-policy.html" class="contact-link-action">View Full Delivery Policy &rarr;</a>
             </div>
+
           </div>
 
-          <div class="showroom-map-col">
-            <div class="map-frame" role="region" aria-label="VV Gallery Location Map">
-              <iframe 
-                src="https://maps.google.com/maps?q=1586+Barber+Greene+Rd,+DeKalb,+IL+60115&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                width="100%" 
-                height="100%" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade"
-                title="VV Gallery Showroom Map">
-              </iframe>
+          <!-- Right Column: Massive High-End Interactive Map + Connect & Follow -->
+          <div class="contact-map-column">
+            
+            <div class="contact-map-card">
+              <div class="map-card-top-bar">
+                <span class="map-status-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block; vertical-align: -2px; margin-right: 4px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  Showroom Location
+                </span>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=1586+Barber+Greene+Rd+DeKalb+IL+60115" target="_blank" rel="noopener noreferrer" class="map-open-link">Open in Google Maps &rarr;</a>
+              </div>
+              <div class="contact-map-frame">
+                <iframe 
+                  src="https://maps.google.com/maps?q=1586+Barber+Greene+Rd,+DeKalb,+IL+60115&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                  width="100%" 
+                  height="100%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="VV Gallery Showroom Map">
+                </iframe>
+              </div>
+              <div class="map-card-bottom-bar">
+                <div class="map-address-snippet">
+                  <strong>VV Gallery Furniture &amp; Mattresses</strong>
+                  <span>1586 Barber Greene Rd, DeKalb, IL 60115</span>
+                </div>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=1586+Barber+Greene+Rd+DeKalb+IL+60115" target="_blank" rel="noopener noreferrer" class="btn-primary" style="padding: 10px 20px; font-size: 0.85rem;">Get Directions &rarr;</a>
+              </div>
             </div>
+
+            <!-- Connect & Social Media Card (Right Grid Below Map) -->
+            <div class="contact-feature-card contact-social-card">
+              <div class="contact-card-header">
+                <div class="contact-icon-circle" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                    <circle cx="12" cy="13" r="4"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-card-eyebrow">Stay In Touch</span>
+                  <h3 class="contact-card-title">Connect &amp; Follow</h3>
+                </div>
+              </div>
+              <p class="contact-card-body">
+                See new inventory arrivals &amp; video walkthroughs:
+              </p>
+              <div class="contact-social-grid">
+                
+                <a href="https://www.facebook.com/profile.php?id=61573859170150" target="_blank" rel="noopener noreferrer" class="social-brand-card">
+                  <div class="social-brand-icon fb-brand-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                  </div>
+                  <div class="social-brand-info">
+                    <span class="social-brand-name">Facebook</span>
+                    <span class="social-brand-sub">@vanevintagegallery</span>
+                  </div>
+                  <span class="social-brand-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+
+                <a href="https://www.instagram.com/vanevintagegallery" target="_blank" rel="noopener noreferrer" class="social-brand-card">
+                  <div class="social-brand-icon ig-brand-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                  </div>
+                  <div class="social-brand-info">
+                    <span class="social-brand-name">Instagram</span>
+                    <span class="social-brand-sub">@vanevintagegallery</span>
+                  </div>
+                  <span class="social-brand-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+
+                <a href="https://share.google/8glchlT7H6oo3atPb" target="_blank" rel="noopener noreferrer" class="social-brand-card">
+                  <div class="social-brand-icon google-brand-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                      <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"/>
+                      <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                      <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.03 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                      <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                    </svg>
+                  </div>
+                  <div class="social-brand-info">
+                    <span class="social-brand-name">Google Listing</span>
+                    <span class="social-brand-sub">5.0 Star Reviews &amp; Directions</span>
+                  </div>
+                  <span class="social-brand-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Simple Message Form Below Everything -->
+        <div class="contact-form-section">
+          <div class="contact-form-card">
+            <div class="contact-form-header">
+              <span class="contact-form-eyebrow">Have a Question?</span>
+              <h2 class="contact-form-title">Send Us a Message</h2>
+              <p class="contact-form-desc">Ask about in-stock pieces, custom fabrics, or delivery timelines. We'll get back to you shortly.</p>
+            </div>
+
+            <form class="simple-contact-form" onsubmit="event.preventDefault(); alert('Thank you! We received your message and will reach out to you shortly.'); this.reset();">
+              <div class="form-row-2col">
+                <div class="form-field">
+                  <label for="contact-name" class="form-label">Your Name</label>
+                  <input type="text" id="contact-name" name="name" required placeholder="John Doe" class="form-input">
+                </div>
+                <div class="form-field">
+                  <label for="contact-phone" class="form-label">Phone or Email</label>
+                  <input type="text" id="contact-phone" name="contact" required placeholder="(847) 000-0000 or email" class="form-input">
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="contact-message" class="form-label">How can we help?</label>
+                <textarea id="contact-message" name="message" rows="4" required placeholder="Tell us what you're looking for or ask any questions..." class="form-textarea"></textarea>
+              </div>
+
+              <div class="form-submit-row">
+                <button type="submit" class="btn-primary" style="padding: 13px 32px;">Send Message &rarr;</button>
+                <span class="form-submit-note">We typically respond within 1&ndash;2 business hours.</span>
+              </div>
+            </form>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Quick Message / Inquiry Form -->
-    <section class="section" style="background: var(--color-bg-subtle); border-top: 1px solid var(--color-border-hairline);">
-      <div class="container" style="max-width: 720px;">
-        <div class="section-title-wrap" style="text-align: center; margin-bottom: 28px;">
-          <span class="section-num">Quick Inquiry</span>
-          <h2 class="section-heading">Have a Question About an Item?</h2>
-          <p class="section-subtext">Send us a quick message and we'll get back to you with current pricing, color options, and delivery times.</p>
-        </div>
-
-        <form onsubmit="event.preventDefault(); alert('Thank you! We received your message and will contact you shortly.');" style="display: flex; flex-direction: column; gap: 16px;">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-            <div>
-              <label for="contact-name" style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Your Name</label>
-              <input type="text" id="contact-name" required placeholder="John Doe" style="width: 100%; padding: 12px; border: 1px solid var(--color-border-hairline); border-radius: 3px; font-family: inherit; font-size: 0.95rem;">
-            </div>
-            <div>
-              <label for="contact-phone" style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Phone Number</label>
-              <input type="tel" id="contact-phone" required placeholder="(847) 000-0000" style="width: 100%; padding: 12px; border: 1px solid var(--color-border-hairline); border-radius: 3px; font-family: inherit; font-size: 0.95rem;">
-            </div>
-          </div>
-
-          <div>
-            <label for="contact-category" style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Interested In</label>
-            <select id="contact-category" style="width: 100%; padding: 12px; border: 1px solid var(--color-border-hairline); border-radius: 3px; font-family: inherit; font-size: 0.95rem; background: #ffffff;">
-              <option value="mattresses">Mattresses (From $198)</option>
-              <option value="vanities">Makeup Vanities</option>
-              <option value="lovesacs">Modular Lovesacs &amp; Cloud Sectionals</option>
-              <option value="living">Living Room Couches &amp; Recliners</option>
-              <option value="dining">Dining Room Sets</option>
-              <option value="financing">Financing / Payment Plans</option>
-              <option value="other">Other Inquiry</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="contact-message" style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.06em;">Message or Dimensions</label>
-            <textarea id="contact-message" rows="4" placeholder="Tell us what you're looking for or ask about in-stock colors..." style="width: 100%; padding: 12px; border: 1px solid var(--color-border-hairline); border-radius: 3px; font-family: inherit; font-size: 0.95rem;"></textarea>
-          </div>
-
-          <button type="submit" class="btn-primary" style="align-self: flex-start; padding: 14px 36px;">Send Message &rarr;</button>
-        </form>
       </div>
     </section>
 
@@ -212,16 +389,28 @@
             <img src="photos/logo.jpg" alt="VV Gallery" class="footer-logo-img">
             <span class="footer-logo">VV GALLERY</span>
           </div>
-          <p class="footer-tagline">Your friendly local furniture store. Affordable living room sectionals, lovesacs, makeup vanities, and mattresses.</p>
-          <div class="footer-gold-accent"></div>
+          <p class="footer-tagline">Your friendly local furniture store. Affordable living room sectionals, power recliners, and mattresses.</p>
+                    <div class="footer-gold-accent"></div>
+          <div class="footer-social-row" aria-label="VV Gallery Social Media">
+            <a href="https://www.facebook.com/profile.php?id=61573859170150" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="VV Gallery on Facebook" title="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/vanevintagegallery" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="VV Gallery on Instagram" title="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://share.google/8glchlT7H6oo3atPb" target="_blank" rel="noopener noreferrer" class="social-link-btn" aria-label="VV Gallery on Google" title="Google Reviews &amp; Directions">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
+            </a>
+          </div>
         </div>
 
         <div class="footer-col">
           <h4 class="footer-col-title">Departments</h4>
           <ul class="footer-links">
-            <li><a href="living.html">Living &amp; Lovesacs</a></li>
-            <li><a href="mattresses.html">Bedroom &amp; Mattresses</a></li>
-            <li><a href="vanities.html">Makeup Vanities</a></li>
+            <li><a href="living.html">Sectionals &amp; Sofas</a></li>
+            <li><a href="recliners.html">Power Recliners</a></li>
+            <li><a href="bedroom.html">Bedroom Sets &amp; Suites</a></li>
+            <li><a href="mattresses.html">Mattresses &amp; Foundations</a></li>
             <li><a href="dining.html">Dining Room Sets</a></li>
           </ul>
         </div>
@@ -229,34 +418,43 @@
         <div class="footer-col">
           <h4 class="footer-col-title">Customer Care</h4>
           <ul class="footer-links">
-            <li><a href="story.html">Our Story &amp; Community</a></li>
+            <li><a href="financing.html">Financing Options</a></li>
+            <li><a href="story.html">About Us</a></li>
+            <li><a href="faq.html">Frequently Asked Questions</a></li>
             <li><a href="contact.html">Showroom Hours &amp; Directions</a></li>
-            <li><a href="contact.html">Delivery &amp; Setup</a></li>
             <li><a href="tel:8473060959">Call: (847) 306-0959</a></li>
           </ul>
         </div>
 
-        <div class="footer-col newsletter-col">
-          <h4 class="footer-col-title">Weekly Specials</h4>
-          <p class="newsletter-sub">Get notified about new mattress arrivals, truckload sales, and local specials.</p>
-          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to VV Gallery deals!');">
-            <label for="email-input" class="sr-only">Email Address</label>
-            <input type="email" id="email-input" placeholder="Enter your email or phone" required class="newsletter-input">
-            <button type="submit" class="newsletter-submit" aria-label="Subscribe">&rarr;</button>
-          </form>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Store Policies</h4>
+          <ul class="footer-links">
+            <li><a href="refund-policy.html">Refund &amp; Return Policy</a></li>
+            <li><a href="shipping-policy.html">Shipping &amp; Delivery Policy</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
         </div>
       </div>
 
       <div class="footer-bottom-row">
         <p class="copyright">&copy; 2026 VV Gallery (Vane Vintage Gallery). 1586 Barber Greene Rd, DeKalb, IL 60115.</p>
         <div class="footer-legal-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="refund-policy.html">Refund Policy</a>
+          <a href="shipping-policy.html">Shipping Policy</a>
           <a href="contact.html">Directions</a>
         </div>
       </div>
     </div>
   </footer>
+
+    <!-- Floating Contact Bubble -->
+  <a href="contact.html" class="floating-contact-bubble" aria-label="Contact VV Gallery Showroom">
+    <svg class="bubble-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+    <span class="bubble-text">Contact Us</span>
+  </a>
 
   <script src="main.js"></script>
 </body>
