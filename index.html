@@ -29,6 +29,9 @@
 
   <link rel="stylesheet" href="style.css?v=3.6">
   <link rel="stylesheet" href="hero.css">
+  <!-- BEGIN TEMP: BLACK FRIDAY 2026 -->
+  <link rel="stylesheet" href="black-friday.css">
+  <!-- END TEMP: BLACK FRIDAY 2026 -->
 
   <!-- Canonical & Open Graph Metadata for AI & Search Engines -->
   <link rel="canonical" href="https://vanevgallery.com/">
@@ -115,8 +118,17 @@
 
 <body>
 
+  <!-- BEGIN TEMP: BLACK FRIDAY 2026 -->
+  <aside class="announcement-bar bf-announcement" role="region" aria-label="Black Friday Sale Announcement" data-bf-temp>
+    <div class="container announcement-inner">
+      <span class="announcement-text"><span class="bf-announcement-badge">BLACK FRIDAY</span><strong>20% Off Storewide</strong> <span class="announcement-desktop">&bull; Lovesac 60% Off ($1,498) &bull; Free &amp; Immediate Delivery &bull; Nov. 23&ndash;28</span></span>
+      <a href="#black-friday" class="announcement-link">View Deals &rarr;</a>
+    </div>
+  </aside>
+  <!-- END TEMP: BLACK FRIDAY 2026 -->
+
   <!-- Global Announcement Bar -->
-  <aside class="announcement-bar" role="region" aria-label="Store Announcement">
+  <aside class="announcement-bar" role="region" aria-label="Store Announcement" data-bf-fallback hidden>
     <div class="container announcement-inner">
       <span class="announcement-text"><span class="announcement-desktop">In-Stock Furniture &amp; Mattresses &bull; Fast
           Local Delivery &bull; </span>1586 Barber Greene Rd, DeKalb</span>
@@ -247,14 +259,69 @@
         <div class="hero-slides-wrapper">
           <div class="hero-slides-track" id="heroTrack">
 
+            <!-- BEGIN TEMP: BLACK FRIDAY 2026 -->
+            <div class="hero-slide hx-bf active" role="group" aria-roledescription="slide" aria-label="Black Friday Sale" data-bf-temp>
+              <div class="container hx-bf-grid">
+                <div class="hx-copy">
+                  <span class="hx-bf-eyebrow">Black Friday Sale &bull; Nov. 23 &ndash; Nov. 28</span>
+                  <h1 id="hero-title" class="hx-title"><span class="hx-bf-gold">20% Off</span> Storewide.</h1>
+                  <span class="hx-bf-bilingual">En Toda La Tienda &bull; Already Marked / Ya Marcado</span>
+                  <p class="hx-sub">Save storewide plus 60% off Lovesac ($1,498) and 50% off any mattress with a complete bedroom set.</p>
+                  <div class="hx-bf-perks">
+                    <span class="hx-bf-perk">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                      Free Delivery &bull; Entrega Gratis
+                    </span>
+                    <span class="hx-bf-perk">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      Immediate Delivery &bull; Entrega Inmediata
+                    </span>
+                  </div>
+                  <div class="hx-actions">
+                    <a href="#black-friday" class="hx-btn hx-btn--gold">See Black Friday Deals</a>
+                    <a href="contact.html" class="hx-btn hx-btn--ghost-light">Visit Showroom</a>
+                  </div>
+                </div>
+                <div class="hx-bf-visual">
+                  <a href="living.html" class="hx-bf-mini-card">
+                    <div class="hx-bf-mini-media">
+                      <img src="photos/furniture/living-deep-seat-sofa-cream.jpg" alt="Lovesac modular sofa on Black Friday sale for $1,498">
+                      <span class="hx-bf-mini-tag">60% Off</span>
+                    </div>
+                    <div class="hx-bf-mini-body">
+                      <span class="hx-bf-mini-kicker">Lovesac &bull; En Oferta</span>
+                      <div class="hx-bf-mini-title">Modular Cloud Sofa</div>
+                      <div class="hx-bf-mini-price"><del>$3,750</del> <strong>$1,498</strong></div>
+                    </div>
+                  </a>
+                  <a href="bedroom.html" class="hx-bf-mini-card">
+                    <div class="hx-bf-mini-media">
+                      <img src="photos/furniture/bedroom-set-two-tone-led-fridge.png" alt="Complete bedroom set with 50% off any mattress Black Friday deal">
+                      <span class="hx-bf-mini-tag">50% Off Mattress</span>
+                    </div>
+                    <div class="hx-bf-mini-body">
+                      <span class="hx-bf-mini-kicker">Bedroom Bundle</span>
+                      <div class="hx-bf-mini-title">Complete Set + Mattress</div>
+                      <div class="hx-bf-mini-price"><strong>50% Off</strong> Any Mattress</div>
+                    </div>
+                  </a>
+                  <a href="financing.html" class="hx-bf-sync-pill">
+                    <span><strong>Synchrony Financing:</strong> 15 Months, 0% Interest*</span>
+                    <span>Details &rarr;</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- END TEMP: BLACK FRIDAY 2026 -->
+
             <!-- Concept 1: Full-bleed room photo (Arhaus / RH style) -->
-            <div class="hero-slide hx-s1 active" role="group" aria-roledescription="slide" aria-label="1 of 4">
+            <div class="hero-slide hx-s1" role="group" aria-roledescription="slide" aria-label="Showroom">
               <div class="hx-bg">
                 <img src="photos/furniture/hero-living.jpg" alt="A styled living room with furniture from VV Gallery">
               </div>
               <div class="container hx-s1-inner">
                 <div class="hx-copy">
-                  <h1 id="hero-title" class="hx-title">Quality furniture for real homes.</h1>
+                  <h2 class="hx-title">Quality furniture for real homes.</h2>
                   <p class="hx-sub">In-stock sofas, bedroom sets and dining tables at honest prices. Family owned, on Barber Greene Rd in DeKalb.</p>
                   <div class="hx-actions">
                     <a href="#collection-grid" class="hx-btn hx-btn--light">Shop in-stock furniture</a>
@@ -326,10 +393,11 @@
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
               </button>
               <div class="hero-carousel-dots" role="tablist" aria-label="Choose slide">
-                <button class="hero-dot active" role="tab" aria-selected="true" aria-label="Slide 1: Showroom" data-slide="0"></button>
-                <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 2: Sectional recliner" data-slide="1"></button>
-                <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 3: Shop by room" data-slide="2"></button>
-                <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 4: Financing" data-slide="3"></button>
+                <button class="hero-dot active" role="tab" aria-selected="true" aria-label="Black Friday Sale" data-slide="0" data-bf-temp></button>
+                <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 1: Showroom" data-slide="1"></button>
+                <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 2: Sectional recliner" data-slide="2"></button>
+                <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 3: Shop by room" data-slide="3"></button>
+                <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 4: Financing" data-slide="4"></button>
               </div>
               <button type="button" class="hero-nav-arrow next" aria-label="Next slide">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
@@ -396,6 +464,58 @@
         </div>
       </div>
     </section>
+
+    <!-- BEGIN TEMP: BLACK FRIDAY 2026 -->
+    <section class="bf-showcase" id="black-friday" aria-labelledby="bf-heading" data-bf-temp>
+      <div class="container">
+        <div class="bf-poster">
+          <div class="bf-poster-top">
+            <div class="bf-poster-brand">
+              <img src="photos/logo.jpg" alt="VV Gallery" class="bf-poster-logo">
+              <div>
+                <span class="bf-poster-kicker">Limited-Time Showroom Event</span>
+                <h2 id="bf-heading" class="bf-poster-heading">Black Friday Sale</h2>
+              </div>
+            </div>
+            <div class="bf-poster-meta">
+              <strong>Choose Elegance &bull; DeKalb, IL</strong>
+              Mon., Nov. 23 &ndash; Sat., Nov. 28, 2026
+            </div>
+          </div>
+
+          <div class="bf-storewide-band">
+            <div>
+              <div class="bf-storewide-num-row">
+                <span class="bf-big-pct">20% OFF</span>
+                <span class="bf-storewide-title">Storewide</span>
+              </div>
+              <div class="bf-storewide-sub">
+                <span class="bf-es-pill">En Toda La Tienda</span>
+                <span>Already marked &bull; Ya marcado</span>
+              </div>
+            </div>
+            <div class="bf-delivery-list">
+              <div class="bf-delivery-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                <span><strong>Free Delivery</strong> &bull; Entrega Gratis</span>
+              </div>
+              <div class="bf-delivery-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span><strong>Immediate Delivery</strong> &bull; Entrega Inmediata</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bf-quick-actions">
+            <a href="living.html" class="bf-link-btn">Lovesac 60% Off ($1,498) &rarr;</a>
+            <a href="bedroom.html" class="bf-link-ghost">Bedroom Set + 50% Off Mattress &rarr;</a>
+            <a href="mattresses.html" class="bf-link-ghost">Mattresses &rarr;</a>
+            <a href="financing.html" class="bf-link-ghost">15 Mo. 0% Interest (Synchrony) &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END TEMP: BLACK FRIDAY 2026 -->
 
     <!-- POPULAR CATEGORIES -->
     <section class="section curated-rooms" id="curated-rooms" aria-labelledby="rooms-heading">
@@ -555,7 +675,8 @@
             <div class="product-media-wrap">
               <img src="photos/furniture/living-deep-seat-sofa-cream.jpg"
                 alt="Modular Deep-Seat Sofa in Tonal Chantilly Luxe Chenille — 3 Seats, 5 Sides" class="product-img" loading="lazy">
-              <span class="product-status-tag highlight-tag">$1,499 &bull; 3 Seats + 5 Sides</span>
+              <span class="bf-card-badge" data-bf-temp>Black Friday &bull; 60% Off</span>
+              <span class="product-status-tag highlight-tag" data-bf-fallback hidden>$1,499 &bull; 3 Seats + 5 Sides</span>
             </div>
             <div class="product-details">
               <div class="product-swatch-row">
@@ -569,7 +690,8 @@
               </div>
               <div class="product-top-row">
                 <h3 class="product-name">Modular Deep-Seat Sofa</h3>
-                <span class="product-price">$1,499</span>
+                <span class="product-price bf-card-price-wrap" data-bf-temp><del class="bf-card-price-old">$3,750</del> <span class="bf-card-price-sale">$1,498</span></span>
+                <span class="product-price" data-bf-fallback hidden>$1,499</span>
               </div>
               <p class="product-sub"><strong>3 Seats + 5 Sides Setup.</strong> Available in 4 colors: Tonal Chantilly Luxe Chenille, Charcoal Grey Corded Velvet, Sky Grey Corded Velvet, and Flagstone Brushed Weave.</p>
               <div class="product-actions">
@@ -977,6 +1099,9 @@
     <span class="bubble-text">Contact Us</span>
   </a>
 
+  <!-- BEGIN TEMP: BLACK FRIDAY 2026 -->
+  <script src="black-friday.js"></script>
+  <!-- END TEMP: BLACK FRIDAY 2026 -->
   <script src="main.js"></script>
 </body>
 

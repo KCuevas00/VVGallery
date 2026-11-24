@@ -13,11 +13,23 @@
   <link rel="icon" type="image/png" href="photos/favicon.png">
   <link rel="shortcut icon" href="photos/favicon.ico">
   <link rel="stylesheet" href="style.css?v=3.6">
+  <!-- BEGIN TEMP: BLACK FRIDAY 2026 -->
+  <link rel="stylesheet" href="black-friday.css">
+  <!-- END TEMP: BLACK FRIDAY 2026 -->
 </head>
 <body>
 
+  <!-- BEGIN TEMP: BLACK FRIDAY 2026 -->
+  <aside class="announcement-bar bf-announcement" role="region" aria-label="Black Friday Sale Announcement" data-bf-temp>
+    <div class="container announcement-inner">
+      <span class="announcement-text"><span class="bf-announcement-badge">BLACK FRIDAY</span><strong>20% Off Storewide</strong> <span class="announcement-desktop">&bull; Free &amp; Immediate Delivery &bull; Nov. 23&ndash;28</span></span>
+      <a href="index.html#black-friday" class="announcement-link">All Deals &rarr;</a>
+    </div>
+  </aside>
+  <!-- END TEMP: BLACK FRIDAY 2026 -->
+
   <!-- Announcement Bar -->
-  <aside class="announcement-bar" role="region" aria-label="Store Announcement">
+  <aside class="announcement-bar" role="region" aria-label="Store Announcement" data-bf-fallback hidden>
     <div class="container announcement-inner">
       <span class="announcement-text"><span class="announcement-desktop">In-Stock Furniture &amp; Mattresses &bull; Fast Local Delivery &bull; </span>1586 Barber Greene Rd, DeKalb</span>
       <a href="tel:8473060959" class="announcement-link">Call Store &rarr;</a>
@@ -335,6 +347,9 @@
     <span class="bubble-text">Contact Us</span>
   </a>
 
+  <!-- BEGIN TEMP: BLACK FRIDAY 2026 -->
+  <script src="black-friday.js"></script>
+  <!-- END TEMP: BLACK FRIDAY 2026 -->
   <script src="main.js"></script>
 </body>
 </html>

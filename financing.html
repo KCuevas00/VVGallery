@@ -13,11 +13,23 @@
   <link rel="icon" type="image/png" href="photos/favicon.png">
   <link rel="shortcut icon" href="photos/favicon.ico">
   <link rel="stylesheet" href="style.css?v=3.6">
+  <!-- BEGIN TEMP: BLACK FRIDAY 2026 -->
+  <link rel="stylesheet" href="black-friday.css">
+  <!-- END TEMP: BLACK FRIDAY 2026 -->
 </head>
 <body>
 
+  <!-- BEGIN TEMP: BLACK FRIDAY 2026 -->
+  <aside class="announcement-bar bf-announcement" role="region" aria-label="Black Friday Sale Announcement" data-bf-temp>
+    <div class="container announcement-inner">
+      <span class="announcement-text"><span class="bf-announcement-badge">BLACK FRIDAY</span><strong>20% Off Storewide</strong> <span class="announcement-desktop">&bull; Synchrony 15 Months, 0% Interest &bull; Nov. 23&ndash;28</span></span>
+      <a href="index.html#black-friday" class="announcement-link">All Deals &rarr;</a>
+    </div>
+  </aside>
+  <!-- END TEMP: BLACK FRIDAY 2026 -->
+
   <!-- Announcement Bar -->
-  <aside class="announcement-bar" role="region" aria-label="Store Announcement">
+  <aside class="announcement-bar" role="region" aria-label="Store Announcement" data-bf-fallback hidden>
     <div class="container announcement-inner">
       <span class="announcement-text"><span class="announcement-desktop">In-Stock Furniture &amp; Mattresses &bull; Fast Local Delivery &bull; </span>1586 Barber Greene Rd, DeKalb</span>
       <a href="tel:8473060959" class="announcement-link">Call Store &rarr;</a>
@@ -154,6 +166,20 @@
         <h1 class="page-hero-title">Financing</h1>
       </div>
     </section>
+
+    <!-- BEGIN TEMP: BLACK FRIDAY 2026 -->
+    <section class="bf-category-strip" aria-label="Black Friday Financing Offer" data-bf-temp>
+      <div class="container bf-category-inner">
+        <div class="bf-category-copy">
+          <span class="bf-es-pill">Black Friday &bull; Nov. 23&ndash;28</span>
+          <span><strong>Synchrony Special: 15 Months, 0% Interest*</strong> &bull; 20% Off Storewide</span>
+        </div>
+        <div class="bf-category-actions">
+          <a href="index.html#black-friday" class="bf-link-btn">View Black Friday Deals &rarr;</a>
+        </div>
+      </div>
+    </section>
+    <!-- END TEMP: BLACK FRIDAY 2026 -->
 
     <!-- Financing Plans Section -->
     <section class="section" style="padding-top: 48px;">
@@ -363,6 +389,9 @@
     <span class="bubble-text">Contact Us</span>
   </a>
 
+  <!-- BEGIN TEMP: BLACK FRIDAY 2026 -->
+  <script src="black-friday.js"></script>
+  <!-- END TEMP: BLACK FRIDAY 2026 -->
   <script src="main.js"></script>
 </body>
 </html>

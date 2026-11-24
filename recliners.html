@@ -26,6 +26,9 @@
   <link rel="apple-touch-icon" href="photos/favicon.png">
 
   <link rel="stylesheet" href="style.css?v=3.6">
+  <!-- BEGIN TEMP: BLACK FRIDAY 2026 -->
+  <link rel="stylesheet" href="black-friday.css">
+  <!-- END TEMP: BLACK FRIDAY 2026 -->
   <link rel="canonical" href="https://vanevgallery.com/recliners.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="VV Gallery">
@@ -37,8 +40,17 @@
 
 <body>
 
+  <!-- BEGIN TEMP: BLACK FRIDAY 2026 -->
+  <aside class="announcement-bar bf-announcement" role="region" aria-label="Black Friday Sale Announcement" data-bf-temp>
+    <div class="container announcement-inner">
+      <span class="announcement-text"><span class="bf-announcement-badge">BLACK FRIDAY</span><strong>20% Off Storewide</strong> <span class="announcement-desktop">&bull; Free &amp; Immediate Delivery &bull; Nov. 23&ndash;28</span></span>
+      <a href="index.html#black-friday" class="announcement-link">All Deals &rarr;</a>
+    </div>
+  </aside>
+  <!-- END TEMP: BLACK FRIDAY 2026 -->
+
   <!-- Top Announcement Bar -->
-  <aside class="announcement-bar" role="region" aria-label="Store Announcement">
+  <aside class="announcement-bar" role="region" aria-label="Store Announcement" data-bf-fallback hidden>
     <div class="container announcement-inner">
       <span class="announcement-text">In-Stock Furniture &amp; Mattresses &bull; Fast Local Delivery &bull; 1586 Barber Greene Rd, DeKalb</span>
       <a href="contact.html" class="announcement-link">Showroom &rarr;</a>
@@ -177,6 +189,20 @@
         <p class="page-hero-desc">Experience cinema-grade home theater relaxation. Dual-motor power reclining sofas and loveseats with ambient blue LED mood lighting, integrated Bluetooth speakers, and fold-down consoles.</p>
       </div>
     </section>
+
+    <!-- BEGIN TEMP: BLACK FRIDAY 2026 -->
+    <section class="bf-category-strip" aria-label="Black Friday Storewide Offer" data-bf-temp>
+      <div class="container bf-category-inner">
+        <div class="bf-category-copy">
+          <span class="bf-es-pill">Black Friday &bull; Nov. 23&ndash;28</span>
+          <span><strong>20% Off Storewide</strong> (Already Marked) &bull; Free &amp; Immediate Delivery &bull; 15 Months 0% Interest Financing*</span>
+        </div>
+        <div class="bf-category-actions">
+          <a href="index.html#black-friday" class="bf-link-btn">View All Deals &rarr;</a>
+        </div>
+      </div>
+    </section>
+    <!-- END TEMP: BLACK FRIDAY 2026 -->
 
     <!-- Recliners Product Grid -->
     <section class="section collection-matrix" style="padding-top: 40px;">
@@ -391,6 +417,9 @@
     <span class="bubble-text">Contact Us</span>
   </a>
 
+  <!-- BEGIN TEMP: BLACK FRIDAY 2026 -->
+  <script src="black-friday.js"></script>
+  <!-- END TEMP: BLACK FRIDAY 2026 -->
   <script src="main.js"></script>
 </body>
 
