@@ -335,15 +335,30 @@
    ========================================================================== */
 @media (max-width: 900px) {
   .hx-hero {
-    --hx-h: 560px;
+    --hx-h: 480px;
+  }
+
+  .hx-title {
+    font-size: clamp(1.9rem, 6.8vw, 2.5rem);
+    margin-bottom: 8px;
+  }
+
+  .hx-sub {
+    font-size: 0.9rem;
+    line-height: 1.48;
+    margin-bottom: 16px;
+  }
+
+  .hx-s1 {
+    justify-content: center;
   }
 
   .hx-s2 .hx-grid,
   .hx-s3 .hx-grid {
     grid-template-columns: 1fr;
-    padding-top: 28px;
-    padding-bottom: 84px;
-    gap: 20px;
+    padding-top: 18px;
+    padding-bottom: 68px;
+    gap: 10px;
   }
 
   .hx-s2 .hx-stage {
@@ -351,15 +366,23 @@
   }
 
   .hx-s2 .hx-stage img {
-    max-height: 230px;
+    max-height: 150px;
   }
 
   .hx-s1-inner {
-    padding-bottom: 84px;
+    padding-top: 28px;
+    padding-bottom: 72px;
+  }
+
+  .hx-actions {
+    gap: 8px;
   }
 
   .hx-actions .hx-btn {
-    flex: 1 1 200px;
+    flex: 1 1 140px;
+    padding: 11px 10px;
+    font-size: 0.81rem;
+    text-align: center;
   }
 }
 
